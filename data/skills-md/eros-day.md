@@ -21,6 +21,8 @@ This is the ONLY scheduler for EROS work. No crons run in the background anymore
 
 **Path C content rotation (decided 2026-04-29):** 35 sites total (4 Lovable + 31 microsites with custom domains) cycle across 4 weekday buckets. Each weekday fires ~8-9 sites. Each site gets a blog every ~3-4 weekdays. Realistic pace: 8-10 quality blogs/day with full E-E-A-T + fact-check + uniqueness gate. Memory: `feedback_path_c_rotation.md`. Today's targets: `node ~/Workspaces/eros-workspace/scripts/rotation-calendar.mjs`.
 
+**🎯 HARD FLOOR — 10 blogs/day minimum (added 2026-05-14):** every weekday /eros-day session MUST ship at least **10 production blog posts** before Phase 8 closes. This is a quota gate, not a target. If apply-loop work (Phase 4 fact-check / uniqueness / research-apply) takes longer than expected, reduce other work but do NOT drop below the 10-blog floor. If a hard blocker prevents 10 blogs (e.g., all 4 Lovable sites blocked + no microsite bucket sites available), surface it in Phase 0 AND in the Phase 8 email — never silently ship fewer than 10. Phase 8 final report Section #27 ("Per-Site Change Log") explicitly counts today's blog total; if blogs < 10, the report flags `🚨 BELOW 10-BLOG FLOOR` at the top of the email. Memory: `feedback_eros_day_10_blog_floor.md`.
+
 Work through the phases **in order**. Each phase is idempotent — safe to re-run the same day. Skip a phase only if its explicit skip condition is met.
 
 ---
@@ -294,7 +296,22 @@ Memory: `feedback_blog_fact_check.md` — the no-skip rules:
   - Token rotation: when CF returns `code: 10000`, generate a new token at dash.cloudflare.com → My Profile → API Tokens (Cloudflare Pages:Edit + User Read), then sync to `~/Workspaces/test-1-bail-bond/.env`, `eros-workspace/.env`, `angelos-workspace/.env`, `bailbondsdomesticviolence/.env`.
   - **Workspace folder name ≠ production domain.** Always verify via `npx wrangler pages project list` before deploying. Example: `tustinbailbonds/` → bailbondstustin.com (NOT tustinbailbonds.com which is a separate WP site). Memory: `feedback_microsite_domain_map.md`
   - CF Pages deploys via direct wrangler upload, not GitHub auto-deploy. Memory: `feedback_cf_pages_deploy.md`
-- **Lovable sites (4 main):** hosted by Lovable, NOT Cloudflare Pages. DO NOT WRITE CONTENT until SPA prerender ships. Memory: `feedback_lovable_sites_hosting.md`
+- **Lovable sites (4 main) — continue authoring + push to GitHub (deferred-value rule, updated 2026-05-14):** hosted by Lovable, NOT Cloudflare Pages. Even though Googlebot currently sees an empty React shell, EROS continues writing content + pushing to each site's GitHub remote. The moment Angelo picks a prerender path (A/B/C standing reminder), pre-existing content gets indexed at the speed of Googlebot's next crawl — stockpiling now front-loads the post-prerender SEO recovery.
+  - **Workflow per Lovable repo:**
+    1. Edit blog post + supporting files in the local workspace (e.g., `~/Workspaces/cali-bond-swift/src/data/blogPosts.ts`, `~/Workspaces/vital-radar-ai/src/content/articles/`, etc.)
+    2. `npm run build` must pass (test-before-done rule)
+    3. `git add -A && git commit -m "blog(YYYY-MM-DD): <title>"`
+    4. `git push` — uses `~/.netrc` PAT for vitalradarai-source remote
+    5. Open Lovable editor → Pull from GitHub → Publish (manual step Angelo handles via Lovable canary check)
+  - **The 4 Lovable repos + GitHub remotes:**
+    | Site domain | Local repo | GitHub remote |
+    |---|---|---|
+    | bailbondsdomesticviolence.com | `~/Workspaces/cali-bond-swift` | vitalradarai-source/cali-bond-swift |
+    | vitalradar.ai | `~/Workspaces/vital-radar-ai` | vitalradarai-source/vital-radar-ai |
+    | bulliondealer.com | `~/Workspaces/bulllion-dealer` | vitalradarai-source/bulllion-dealer |
+    | boundlessglobal.com | `~/Workspaces/boundless-global` | vitalradarai-source/boundless-global |
+  - **Lovable blogs DO count toward the 10-blog floor.** Memory: `feedback_eros_day_10_blog_floor.md`, `feedback_lovable_sites_hosting.md`, Master Rule (revised 2026-04-27).
+  - **Phase 8 canary check** verifies GitHub HEAD vs live site after every Lovable commit — surfaces DRIFT (= "Lovable editor needs Pull + Publish click") in the email so Angelo can complete the loop.
 
 ### 4d. Verify (test-before-done)
 
@@ -320,6 +337,7 @@ After each blog ships:
 - Microsites: 4-8 quality posts per session
 - Main sites: 2-4 per session
 - Never promise "all 28 today"
+- **HARD FLOOR — 10 blogs/day minimum** *(added 2026-05-14)*. The pace ranges above are guidance; the 10-blog floor is a quota gate. Session is NOT complete until ≥10 blog files were authored + deployed today. Counted by `build-site-changelog.mjs` (Phase 8 step 8.5) which feeds Section #27. If blocked, document the blocker in the Phase 8 email — never silently skip the floor. Memory: `feedback_eros_day_10_blog_floor.md`.
 
 ---
 
@@ -526,9 +544,10 @@ Empirical evidence the SEO methodology itself is sound: ReEnergized (WordPress, 
   - Memory: `feedback_no_bail_loans.md`. The 10% premium is a STATUTORY FEE (Cal Ins Code §1800.4), not money lent.
 - **Microsite keyword stagger** — never same topic across 28 cities on one day. Memory: `feedback_microsite_keyword_stagger.md`
 - **Blog pace** — realistic: 4-8 microsite posts or 2-4 main-site posts per session. Memory: `feedback_blog_realistic_pace.md`
+- **Blog floor** — minimum 10 blogs per weekday /eros-day session (added 2026-05-14). Quota gate, not target. Memory: `feedback_eros_day_10_blog_floor.md`
 
 ### Deploy
-- **Lovable SPA sites frozen** — BailbondsDV, VitalRadar, Boundless, Bullion until prerender ships. Memory: `feedback_spa_prerender_budget.md`, `feedback_lovable_sites_hosting.md`
+- **Lovable SPA sites — continue authoring + push to GitHub (updated 2026-05-14)** — BailbondsDV, VitalRadar, Boundless, Bullion. Googlebot indexing waits for prerender to ship, but EROS keeps writing + pushing to each site's GitHub remote (vitalradarai-source/<repo>) so the content backlog is ready the moment prerender goes live. Lovable blog commits count toward the 10-blog/day floor. Memory: `feedback_spa_prerender_budget.md`, `feedback_lovable_sites_hosting.md`, `feedback_eros_day_10_blog_floor.md`, Master Rule (revised 2026-04-27).
 - **Workspace folder ≠ production domain** — always resolve via `npx wrangler pages project list`. Memory: `feedback_microsite_domain_map.md`
 - **Test before done** — `npm run build` for Lovable repos, dry-run for scripts, curl check for deployed pages. Memory: `feedback_test_before_done.md`
 

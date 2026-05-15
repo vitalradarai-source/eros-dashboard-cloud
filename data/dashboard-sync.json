@@ -1,24 +1,19 @@
 {
-  "generatedAt": "2026-05-14T22:35:00.038Z",
-  "date": "2026-05-14",
-  "verdict": "IN SYNC",
-  "driftScore": 95,
+  "generatedAt": "2026-05-15T23:38:11.917Z",
+  "date": "2026-05-15",
+  "verdict": "BROKEN",
+  "driftScore": 75,
   "summary": {
-    "pass": 9,
-    "warn": 1,
-    "fail": 0,
-    "total": 10
+    "pass": 5,
+    "warn": 2,
+    "fail": 1,
+    "total": 8
   },
   "checks": [
     {
       "name": "Server reachable",
-      "status": "pass",
-      "details": "200 OK on port 3737"
-    },
-    {
-      "name": "Skills listing matches disk",
-      "status": "pass",
-      "details": "9 skills, all in sync"
+      "status": "fail",
+      "details": "HTTP 401 — start with: cd ~/Workspaces/eros-dashboard && npm start"
     },
     {
       "name": "Data-sinks registry exists",
@@ -38,12 +33,12 @@
     {
       "name": "Glossary covers acronyms",
       "status": "warn",
-      "details": "55 acronyms not in glossary: two, and, frozen, head, drift, yyyy, notes, xlsx"
+      "details": "59 acronyms not in glossary: floor, and, below, blog, two, frozen, head, drift"
     },
     {
       "name": "Skill-audit covers every skill",
-      "status": "pass",
-      "details": "9/9 skills rated"
+      "status": "warn",
+      "details": "1 skills without audit entry: progress-report"
     },
     {
       "name": "Strategies registry populated",
@@ -53,12 +48,7 @@
     {
       "name": "Referenced scripts exist on disk",
       "status": "pass",
-      "details": "All 22 referenced scripts present"
-    },
-    {
-      "name": "Today's data files reachable via API",
-      "status": "pass",
-      "details": "5/5 JSONs previewable"
+      "details": "All 23 referenced scripts present"
     }
   ],
   "remediation": {

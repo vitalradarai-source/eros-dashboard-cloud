@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-14T22:34:59.688Z",
-  "date": "2026-05-14",
-  "priorDate": "2026-05-13",
+  "generatedAt": "2026-05-15T23:15:43.976Z",
+  "date": "2026-05-15",
+  "priorDate": "2026-05-14",
   "findings": {
-    "uniquenessFailing": 124,
+    "uniquenessFailing": 0,
     "factcheckHard": 0,
-    "factcheckWarn": 52
+    "factcheckWarn": 0
   },
   "applied": {
-    "uniquenessFixed": 2,
-    "factcheckHardFixed": 3,
-    "factcheckWarnFixed": 3
+    "uniquenessFixed": 0,
+    "factcheckHardFixed": 0,
+    "factcheckWarnFixed": 52
   },
   "quotas": {
     "uniqueness": 2,
@@ -19,26 +19,19 @@
     "researchApply": 1
   },
   "passed": {
-    "uniqueness": true,
+    "uniqueness": false,
     "factcheckHard": true,
     "factcheckWarn": true,
-    "researchApply": true
+    "researchApply": false
   },
-  "applyRatioPct": 100,
-  "verdict": "HEALTHY",
+  "applyRatioPct": 50,
+  "verdict": "NEEDS ATTENTION",
   "details": {
-    "blogsAdded": 2,
-    "blogsModified": 2,
-    "servicePages": 1,
-    "schemaChanges": 1,
-    "researchApplied": 6,
-    "researchEvidence": [
-      "bailbond-agent/blog/how-bail-bonds-work-california.html: AEO Answer Block",
-      "bailbond-agent/blog/how-much-is-bail-california.html: AEO Answer Block",
-      "bailbondhuntingtonbeach/blog/2026-05-12-hbpd-to-oc-jail-transfer-walkthrough.html: AEO direct answer",
-      "bailbondsencinitas/blog/2026-05-14-sdsd-encinitas-station-booking-walkthrough.html: AEO Answer Block",
-      "bailbondsrowlandheights/index.html: Hyperlocal landmarks section",
-      "fountainvalleybailbond/blog/2026-05-14-fountain-valley-domestic-violence-bail-no-72hour-myth.html: AEO Answer Block"
-    ]
+    "blogsAdded": 10,
+    "blogsModified": 0,
+    "servicePages": 0,
+    "schemaChanges": 0,
+    "researchApplied": 0,
+    "researchEvidence": []
   }
 }

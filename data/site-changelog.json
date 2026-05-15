@@ -1,67 +1,12 @@
 {
-  "generatedAt": "2026-05-14T22:34:59.618Z",
-  "date": "2026-05-14",
+  "generatedAt": "2026-05-15T23:15:43.908Z",
+  "date": "2026-05-15",
   "totalSites": 35,
-  "touchedSites": 5,
+  "touchedSites": 10,
   "sites": {
-    "bailbond-agent": {
-      "site": "bailbond-agent",
-      "domain": "bailbond-agent.com",
-      "commitCount": 1,
-      "counts": {
-        "blogsAdded": 0,
-        "blogsModified": 1,
-        "servicePages": 0,
-        "schemaChanges": 0,
-        "fixes": 0,
-        "deploys": 0,
-        "sessionCommits": 0,
-        "other": 0
-      },
-      "files": [
-        "blog/how-bail-bonds-work-california.html",
-        "blog/how-much-is-bail-california.html"
-      ],
-      "commits": [
-        {
-          "sha": "dfc29310",
-          "time": "2026-05-14 14:24:17 -0700",
-          "subject": "session(2026-05-14): EROS Day Apply Loop + new content",
-          "type": "content",
-          "fileCount": 2
-        }
-      ]
-    },
-    "bailbondhuntingtonbeach": {
-      "site": "bailbondhuntingtonbeach",
-      "domain": "bailbondhuntingtonbeach.com",
-      "commitCount": 1,
-      "counts": {
-        "blogsAdded": 0,
-        "blogsModified": 1,
-        "servicePages": 0,
-        "schemaChanges": 0,
-        "fixes": 0,
-        "deploys": 0,
-        "sessionCommits": 0,
-        "other": 0
-      },
-      "files": [
-        "blog/2026-05-12-hbpd-to-oc-jail-transfer-walkthrough.html"
-      ],
-      "commits": [
-        {
-          "sha": "0c9b185a",
-          "time": "2026-05-14 14:24:20 -0700",
-          "subject": "session(2026-05-14): EROS Day Apply Loop + new content",
-          "type": "content",
-          "fileCount": 1
-        }
-      ]
-    },
-    "bailbondsencinitas": {
-      "site": "bailbondsencinitas",
-      "domain": "bailbondsencinitas.com",
+    "cali-bond-swift": {
+      "site": "cali-bond-swift",
+      "domain": "bailbondsdomesticviolence.com",
       "commitCount": 1,
       "counts": {
         "blogsAdded": 1,
@@ -74,13 +19,121 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-14-sdsd-encinitas-station-booking-walkthrough.html"
+        "blog/2026-05-15-stalking-bail-california-pc-646-9.html"
       ],
       "commits": [
         {
-          "sha": "231513aa",
-          "time": "2026-05-14 14:24:22 -0700",
-          "subject": "session(2026-05-14): EROS Day Apply Loop + new content",
+          "sha": "56279252",
+          "time": "2026-05-15 16:12:07 -0700",
+          "subject": "blog(2026-05-15): Stalking Bail in California - PC 646.9 Defense Guide (deferred-value)",
+          "type": "content",
+          "fileCount": 1
+        }
+      ]
+    },
+    "bailbond-california": {
+      "site": "bailbond-california",
+      "domain": "bailbond-california.com",
+      "commitCount": 1,
+      "counts": {
+        "blogsAdded": 1,
+        "blogsModified": 0,
+        "servicePages": 0,
+        "schemaChanges": 0,
+        "fixes": 0,
+        "deploys": 0,
+        "sessionCommits": 0,
+        "other": 0
+      },
+      "files": [
+        "blog/2026-05-15-ab-109-realignment-bail-california.html"
+      ],
+      "commits": [
+        {
+          "sha": "90bd9c2b",
+          "time": "2026-05-15 16:15:24 -0700",
+          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "type": "content",
+          "fileCount": 1
+        }
+      ]
+    },
+    "bailbonds-placentia": {
+      "site": "bailbonds-placentia",
+      "domain": "bailbonds-placentia.com",
+      "commitCount": 1,
+      "counts": {
+        "blogsAdded": 1,
+        "blogsModified": 0,
+        "servicePages": 0,
+        "schemaChanges": 0,
+        "fixes": 0,
+        "deploys": 0,
+        "sessionCommits": 0,
+        "other": 0
+      },
+      "files": [
+        "blog/2026-05-15-weekend-bail-placentia-after-hours.html"
+      ],
+      "commits": [
+        {
+          "sha": "837fab9c",
+          "time": "2026-05-15 16:15:26 -0700",
+          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "type": "content",
+          "fileCount": 1
+        }
+      ]
+    },
+    "bailbondsangels": {
+      "site": "bailbondsangels",
+      "domain": "bailbondsangels.com",
+      "commitCount": 1,
+      "counts": {
+        "blogsAdded": 1,
+        "blogsModified": 0,
+        "servicePages": 0,
+        "schemaChanges": 0,
+        "fixes": 0,
+        "deploys": 0,
+        "sessionCommits": 0,
+        "other": 0
+      },
+      "files": [
+        "blog/2026-05-15-twin-towers-correctional-facility-bail-los-angeles.html"
+      ],
+      "commits": [
+        {
+          "sha": "27ea7060",
+          "time": "2026-05-15 16:15:38 -0700",
+          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "type": "content",
+          "fileCount": 1
+        }
+      ]
+    },
+    "bailbondsgardengrove": {
+      "site": "bailbondsgardengrove",
+      "domain": "bailbondsgardengrove.com",
+      "commitCount": 1,
+      "counts": {
+        "blogsAdded": 1,
+        "blogsModified": 0,
+        "servicePages": 0,
+        "schemaChanges": 0,
+        "fixes": 0,
+        "deploys": 0,
+        "sessionCommits": 0,
+        "other": 0
+      },
+      "files": [
+        "blog/2026-05-15-dui-bail-garden-grove-vc-23152.html"
+      ],
+      "commits": [
+        {
+          "sha": "ea3e45af",
+          "time": "2026-05-15 16:15:28 -0700",
+          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
           "type": "content",
           "fileCount": 1
         }
@@ -91,31 +144,31 @@
       "domain": "bailbondsrowlandheights.com",
       "commitCount": 1,
       "counts": {
-        "blogsAdded": 0,
+        "blogsAdded": 1,
         "blogsModified": 0,
-        "servicePages": 1,
-        "schemaChanges": 1,
+        "servicePages": 0,
+        "schemaChanges": 0,
         "fixes": 0,
         "deploys": 0,
         "sessionCommits": 0,
         "other": 0
       },
       "files": [
-        "index.html"
+        "blog/2026-05-15-drug-possession-bail-rowland-heights-hs-11377.html"
       ],
       "commits": [
         {
-          "sha": "9bb370a7",
-          "time": "2026-05-14 14:52:51 -0700",
-          "subject": "feat: Local Landmarks section — strategy local-landmarks-section treatment",
-          "type": "other",
+          "sha": "60f56bc6",
+          "time": "2026-05-15 16:15:40 -0700",
+          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "type": "content",
           "fileCount": 1
         }
       ]
     },
-    "fountainvalleybailbond": {
-      "site": "fountainvalleybailbond",
-      "domain": "fountainvalleybailbond.com",
+    "bailbondsstanton": {
+      "site": "bailbondsstanton",
+      "domain": "bailbondsstanton.com",
       "commitCount": 1,
       "counts": {
         "blogsAdded": 1,
@@ -128,13 +181,94 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-14-fountain-valley-domestic-violence-bail-no-72hour-myth.html"
+        "blog/2026-05-15-theft-bail-stanton-pc-484-487.html"
       ],
       "commits": [
         {
-          "sha": "78d66aeb",
-          "time": "2026-05-14 14:24:24 -0700",
-          "subject": "session(2026-05-14): EROS Day Apply Loop + new content",
+          "sha": "2bf733e3",
+          "time": "2026-05-15 16:15:30 -0700",
+          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "type": "content",
+          "fileCount": 1
+        }
+      ]
+    },
+    "gardenabailbonds": {
+      "site": "gardenabailbonds",
+      "domain": "gardenabailbonds.com",
+      "commitCount": 1,
+      "counts": {
+        "blogsAdded": 1,
+        "blogsModified": 0,
+        "servicePages": 0,
+        "schemaChanges": 0,
+        "fixes": 0,
+        "deploys": 0,
+        "sessionCommits": 0,
+        "other": 0
+      },
+      "files": [
+        "blog/2026-05-15-probation-violation-bail-gardena-pc-1203.html"
+      ],
+      "commits": [
+        {
+          "sha": "1d9ecb7f",
+          "time": "2026-05-15 16:15:32 -0700",
+          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "type": "content",
+          "fileCount": 1
+        }
+      ]
+    },
+    "lagunaniguelbailbonds": {
+      "site": "lagunaniguelbailbonds",
+      "domain": "lagunaniguelbailbonds.com",
+      "commitCount": 1,
+      "counts": {
+        "blogsAdded": 1,
+        "blogsModified": 0,
+        "servicePages": 0,
+        "schemaChanges": 0,
+        "fixes": 0,
+        "deploys": 0,
+        "sessionCommits": 0,
+        "other": 0
+      },
+      "files": [
+        "blog/2026-05-15-domestic-battery-bail-laguna-niguel-pc-243.html"
+      ],
+      "commits": [
+        {
+          "sha": "a77ec92d",
+          "time": "2026-05-15 16:15:34 -0700",
+          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "type": "content",
+          "fileCount": 1
+        }
+      ]
+    },
+    "ocbailbondsman": {
+      "site": "ocbailbondsman",
+      "domain": "ocbailbondsman.com",
+      "commitCount": 1,
+      "counts": {
+        "blogsAdded": 1,
+        "blogsModified": 0,
+        "servicePages": 0,
+        "schemaChanges": 0,
+        "fixes": 0,
+        "deploys": 0,
+        "sessionCommits": 0,
+        "other": 0
+      },
+      "files": [
+        "blog/2026-05-15-theo-lacy-facility-bail-orange-county.html"
+      ],
+      "commits": [
+        {
+          "sha": "83e2d5e1",
+          "time": "2026-05-15 16:15:36 -0700",
+          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
           "type": "content",
           "fileCount": 1
         }

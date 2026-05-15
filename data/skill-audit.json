@@ -1,7 +1,7 @@
 {
   "eros-day": {
     "rating": 9,
-    "summary": "The flagship skill. 9 phases, 23 sections in final report, 35 active sites tracked. Auto-execute on. Mature.",
+    "summary": "The flagship skill. 9 phases, 23 sections in final report, 35 active sites tracked. Auto-execute on. Mature. Added 10-blog/day floor + Lovable continue-pushing rule on 2026-05-14/15.",
     "whatWorks": [
       "9 phases run idempotently — safe to re-run any phase same day",
       "Auto-execute eliminates the friction of manual approvals at each phase",
@@ -159,5 +159,22 @@
       "Move to a separate Claude profile entirely so it can't accidentally be invoked here"
     ],
     "flaggedObsolete": []
+  },
+  "progress-report": {
+    "rating": 8,
+    "summary": "New skill — plain-English 24h recap to Google Drive. Three sections (Completed / In Progress / Blockage), audience is non-technical. Idempotent (re-running same day updates in place). First test 2026-05-14.",
+    "whatWorks": [
+      "Saves to same Drive folder as daily Claude Progress docs (continuity for Angelo)",
+      "Hardcoded layman-translation cheat sheet (engineer-speak -> plain English) in skill spec",
+      "Drive doc title format: Claude Progress Report - MM-DD-YY",
+      "Idempotent — same-day re-run updates in place, no duplicates",
+      "Three required sections always rendered: Completed / In Progress / Blockage"
+    ],
+    "whatCouldBeBetter": [
+      "Not auto-triggered by /eros-day Phase 8 yet — Angelo must invoke manually",
+      "Inputs are still pulled by Claude per session (git log, learning log, todo files) rather than from a single structured source"
+    ],
+    "notWorking": [],
+    "lastReviewed": "2026-05-15"
   }
 }

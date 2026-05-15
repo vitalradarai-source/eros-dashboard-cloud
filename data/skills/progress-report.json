@@ -1,0 +1,136 @@
+{
+  "name": "progress-report",
+  "title": "/progress-report — Plain-English 24-Hour Recap to Google Drive",
+  "filePath": "/Users/emmanuelpableo/.claude/commands/progress-report.md",
+  "mtime": "2026-05-15T03:49:55.303Z",
+  "sizeBytes": 7370,
+  "preamble": "Generates an easy-to-understand progress report covering everything Claude/EROS did in the **last 24 hours**, and saves it to Google Drive as a new doc in the same parent folder as the daily Claude Progress docs.\n\n**Doc title:** `Claude Progress Report — MM-DD-YY` (e.g. `Claude Progress Report — 05-14-26`)\n**Drive folder:** `March - April Claude Code Task` (ID `1RmGJ0ND1eTfGk2b9yzInwpIpNdpGUtfO`)\n**Audience:** Angelo — written so a non-technical reader (a friend, a stakeholder, future-Angelo skimming on the phone) can understand what happened without needing to read code.\n\n---",
+  "sections": [
+    {
+      "heading": "When to run",
+      "depth": 2,
+      "startLine": 11,
+      "body": "\n- After a `/eros-day` session ends and Angelo wants a quick recap\n- Anytime Angelo asks \"what did we do today\" / \"send me a progress report\"\n- Standalone — does NOT require /eros-day to have run first\n\nRe-running the same day **updates in place** (doc ID + revision history preserved). Safe to run multiple times.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Three required sections — every report",
+      "depth": 2,
+      "startLine": 21,
+      "body": "\nThe doc body MUST have exactly these three top-level sections in this order:\n\n1. **✅ Completed** — work that finished in the last 24h. One bullet per item. Plain English, no jargon. Mention the project name. End with a one-line \"Why this matters\" if non-obvious.\n2. **🔄 In Progress** — work started but not finished. Include the next step and roughly when it should ship.\n3. **🚧 Blockage** — anything waiting on Angelo, a third party, or an external dependency. Include WHAT is blocked + WHO/WHAT unblocks it. Sorted by urgency.\n\nIf a section has nothing to report, write \"Nothing today.\" rather than omitting the section.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 1 — Gather inputs (last 24h)",
+      "depth": 2,
+      "startLine": 33,
+      "body": "\nPull from these sources:\n\n```bash\n# Git activity across all Sean-scope workspaces\ncd ~/Workspaces && for d in $(ls -d */ | grep -vE \"^(ava-workspace|ftmg|cpc|oasis)\"); do\n  log=$(cd \"$d\" 2>/dev/null && git log --since=\"24 hours ago\" --pretty=format:\"%h|%s\" 2>/dev/null)\n  [ -n \"$log\" ] && echo \"=== $d ===\" && echo \"$log\"\ndone\n\n# Learning log (last few entries)\ntail -200 ~/Workspaces/angelos-workspace/eros/learning-log.md\n\n# Today's daily report (if /eros-day ran)\nLATEST=$(ls -t ~/Workspaces/angelos-workspace/eros/daily-reports/*.md 2>/dev/null | head -1)\n[ -n \"$LATEST\" ] && cat \"$LATEST\"\n\n# Open blockers\ncat ~/Workspaces/angelos-workspace/todo-angelo.md\ncat ~/Workspaces/angelos-workspace/eros/todo-eros.md\n\n# ClickUp blocked + pending review\nnode ~/Workspaces/eros-workspace/scripts/clickup-status-snapshot.mjs 2>/dev/null || true\n```\n\nAlso draw from this conversation's session memory — Claude knows what was done in this session even if it didn't commit/log.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node ~/Workspaces/eros-workspace/scripts/clickup-status-snapshot.mjs"
+      ],
+      "files": [
+        "~/Workspaces/angelos-workspace/eros/learning-log.md",
+        "~/Workspaces/angelos-workspace/eros/daily-reports/",
+        "~/Workspaces/angelos-workspace/todo-angelo.md",
+        "~/Workspaces/angelos-workspace/eros/todo-eros.md",
+        "~/Workspaces/eros-workspace/scripts/clickup-status-snapshot.mjs"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 2 — Translate to plain English",
+      "depth": 2,
+      "startLine": 63,
+      "body": "\nThis is the entire point of the skill. Apply these rewriting rules:\n\n| Engineer-speak | Plain English |\n|---|---|\n| \"Refactored authentication middleware\" | \"Made logging into the dashboard work\" |\n| \"Synced SHARED_KEYS across 11 workspaces\" | \"Made all sites share one master settings file — easier to update passwords\" |\n| \"Deployed to Cloudflare Pages\" | \"Made the dashboard live on the public web\" |\n| \"PBKDF2-SHA256 password hashing\" | \"Set up a secure login system\" |\n| \"Patched fact-check whitelist\" | \"Stopped the system from falsely flagging real phone numbers as suspicious\" |\n| \"Apply ratio 50% → 100% HEALTHY\" | \"Now applying twice as much of our SEO research as before\" |\n| \"Cron migration to /eros-day\" | \"All scheduled jobs now run when Angelo starts a session, not in the background\" |\n\nRules:\n- Drop file paths, commit hashes, env var names. Mention them only if Angelo specifically asked.\n- Replace acronyms (CF, GSC, GA4, SPA, JWT, PBKDF2) with what they actually do.\n- Every bullet starts with a verb (Built, Fixed, Deployed, Set up, Added, Removed).\n- Mention the **outcome**, not the implementation. \"Made X easier\" beats \"refactored the X module\".\n- Keep total length under one screen if possible (~300 words). Bullet density beats prose.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 3 — Format the body",
+      "depth": 2,
+      "startLine": 86,
+      "body": "\nUse this template. Save to a temp file then pass to the writer script.\n\n```\nClaude Progress Report — <Month DD, YYYY>\n\nSummary\n<2–3 sentence overview in plain English of what today was about.>\n\n============================================================\nCOMPLETED\n============================================================\n\n<Group by project. Each group: project name in bold, then bullets.>\n\nReEnergized\n* Built X — why it matters: <one line>\n* Fixed Y — why it matters: <one line>\n\nEROS Infrastructure\n* ...\n\nBail-Bond Microsites\n* ...\n\n============================================================\nIN PROGRESS\n============================================================\n\n* <Item> — currently <what stage>, expected <when>\n* ...\n\n============================================================\nBLOCKAGE\n============================================================\n\n* <Blocked item> — waiting on <Angelo / Lovable / WordPress / etc.>\n  To unblock: <one action>\n* ...\n\n============================================================\nNEXT SESSION\n============================================================\n\n* <Top 1–3 items queued for next /eros-day or next manual session>\n```\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 4 — Write the doc",
+      "depth": 2,
+      "startLine": 136,
+      "body": "\n```bash\n# Write the body to a temp file (Claude assembles the content above)\ncat > /tmp/progress-report-body.txt <<'EOF'\n<formatted body from Step 3>\nEOF\n\n# Create/update the Drive doc\nnode ~/Workspaces/eros-workspace/scripts/write-progress-report.mjs /tmp/progress-report-body.txt\n```\n\nThe script:\n- Auto-titles `Claude Progress Report — MM-DD-YY` using today's date\n- Uses Drive folder `1RmGJ0ND1eTfGk2b9yzInwpIpNdpGUtfO` (same as daily docs)\n- Idempotent: same-day re-run updates in place\n- Authenticates via `~/Workspaces/eros-workspace/.env` (GOOGLE_CLIENT_ID / SECRET / REFRESH_TOKEN — master shared keys)\n\nOptional: `--date=YYYY-MM-DD` to backfill a prior day.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node ~/Workspaces/eros-workspace/scripts/write-progress-report.mjs"
+      ],
+      "files": [
+        "~/Workspaces/eros-workspace/scripts/write-progress-report.mjs",
+        "~/Workspaces/eros-workspace/.env"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 5 — Report back to Angelo",
+      "depth": 2,
+      "startLine": 158,
+      "body": "\nAfter the script runs, surface:\n- ✅ Created / Updated `Claude Progress Report — MM-DD-YY`\n- URL: `https://docs.google.com/document/d/<id>`\n- One-sentence summary of the three section counts: e.g. \"8 completed, 2 in progress, 3 blocked.\"\n\nDo NOT email it. Angelo opens the doc directly.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [
+        "https://docs.google.com/document/d/<id>"
+      ],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Hard rules",
+      "depth": 2,
+      "startLine": 169,
+      "body": "\n- **No code blocks, no commit hashes, no file paths in the doc body** (unless Angelo asked specifically). The doc is for humans, not for me.\n- **Three sections always:** Completed / In Progress / Blockage. If empty, say \"Nothing today.\"\n- **24-hour window** — older work belongs in the daily Claude Progress doc, not here.\n- **Never send via email** — global rule says emails go only to 4434lifeline@gmail.com via /eros-day Phase 6. /progress-report is a Drive doc only.\n- **One report per day** — re-running updates the existing doc, never creates duplicates.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Relationship to other skills",
+      "depth": 2,
+      "startLine": 179,
+      "body": "\n| Skill | What it does | Audience |\n|---|---|---|\n| `/eros-day` Phase 8 → daily Claude Progress doc | Technical full-detail recap, project-organized | Future EROS (machine) |\n| `/progress-report` (this skill) | Plain-English layman summary, 24h scope | Angelo + non-technical readers |\n| `/eros-report-check` | Audits the /eros-day report quality | EROS self-improvement |\n\nBoth progress docs live in the same Drive folder so Angelo can scan history in one place.\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    }
+  ],
+  "rawLength": 7300,
+  "sectionCount": 9,
+  "phaseCount": 0
+}
