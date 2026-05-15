@@ -1,0 +1,157 @@
+{
+  "name": "update-looker",
+  "title": "/update-looker — One-Click ReEnergized BQ Refresh",
+  "filePath": "/Users/emmanuelpableo/.claude/commands/update-looker.md",
+  "mtime": "2026-04-30T09:32:36.499Z",
+  "sizeBytes": 8771,
+  "preamble": "Single entry point for the weekly ReEnergized BigQuery refresh that powers the Looker Studio Command Center. Replaces the manual \"edit FILE_CONFIG → dry-run → run\" loop. Built 2026-04-30.\n\n**Looker report:** https://lookerstudio.google.com/reporting/3bc9cc6f-fca2-44f1-a45f-520f236a2d0f\n**BQ project:** rich-tome-488802-a2 (datasets: `stg`, `prod`)\n**Refresh script:** `~/Workspaces/birdseye-view/scripts/jt-full-refresh.mjs`\n**Token:** `~/.birdseye-full-token.json` (auto-refreshes; if revoked → see \"Token re-auth\" below)\n\n---",
+  "sections": [
+    {
+      "heading": "Required files in ~/Downloads/",
+      "depth": 2,
+      "startLine": 16,
+      "body": "\n| Role | Filename pattern | Source |\n|---|---|---|\n| QuickBooks | `CSV Output (N).xlsx` | QuickBooks GL email export |\n| Active members | `MemberList 14389 (N).csv` or `MemberList 1218 (N).csv` (smaller file) | ClubReady → Members → Active |\n| Lost members | `MemberList 14389 (N).csv` or `MemberList 1218 (N).csv` (larger file) | ClubReady → Members → Inactive |\n| Leads | `Leads Added 14389 - 1-1-2024 - <today>.csv` | ClubReady → Leads Added (full range) |\n| Payments | `Payment Transactions 14389 - 1-1-2024 - <today>.csv` | ClubReady → Payment Transactions (full range) |\n| Bookings | `Bookings Attendance 14389 - 1-1-2024 - <today>.csv` | ClubReady → Bookings Attendance (full range) |\n\n**CRITICAL:** Leads, Payments, Bookings must be FULL RANGE exports (1-1-2024 → today). Partial exports lose history.\n\n**MemberList active vs lost:** active file is ~15 KB (~20 rows), lost file is ~60 KB (~80+ rows). When in doubt, ask Angelo.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Usage",
+      "depth": 2,
+      "startLine": 33,
+      "body": "\n### Default (auto-detect newest)\nUser: `/update-looker`\n\nEROS:\n1. `ls -lt ~/Downloads/` to find newest file matching each pattern.\n2. Show the 6 files chosen + a confirmation prompt.\n3. Wait for \"go\" before patching FILE_CONFIG.\n\n### With explicit filenames\nUser: `/update-looker active=MemberList 14389 (2).csv lost=MemberList 1218 (6).csv qb=CSV Output (8).xlsx leads=Leads Added 14389 - 1-1-2024 - 4-29-2026.csv payments=Payment Transactions 14389 - 1-1-2024 - 4-29-2026.csv bookings=Bookings Attendance 14389 - 1-1-2024 - 4-29-2026.csv`\n\nEROS uses the names verbatim, no auto-detect.\n\n### Pasted list (current convention)\nUser pastes a list of filenames. EROS infers role from filename pattern and confirms before running.\n\n---\n\n",
+      "subsections": [
+        {
+          "heading": "Default (auto-detect newest)",
+          "startLine": 35
+        },
+        {
+          "heading": "With explicit filenames",
+          "startLine": 43
+        },
+        {
+          "heading": "Pasted list (current convention)",
+          "startLine": 48
+        }
+      ],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Phases EROS runs",
+      "depth": 2,
+      "startLine": 53,
+      "body": "\n### Phase 1 — Verify files exist\n`ls -la ~/Downloads/<each>` — fail loudly if any missing.\n\n### Phase 2 — Patch FILE_CONFIG\nEdit `~/Workspaces/birdseye-view/scripts/jt-full-refresh.mjs` lines 30–37:\n```js\nconst FILE_CONFIG = {\n  qb:           join(DL, \"CSV Output (N).xlsx\"),\n  activeMembers: join(DL, \"MemberList ... .csv\"),\n  lostMembers:  join(DL, \"MemberList ... .csv\"),\n  leadsAdded:   join(DL, \"Leads Added ... .csv\"),\n  payments:     join(DL, \"Payment Transactions ... .csv\"),\n  bookings:     join(DL, \"Bookings Attendance ... .csv\"),\n  leadsExport:  join(DL, \"02_20_26 LeadsExport (1).xlsm\"),  // optional, leave as-is\n};\n```\n\n### Phase 3 — Dry run\n```bash\ncd ~/Workspaces/birdseye-view && node scripts/jt-full-refresh.mjs --dry-run\n```\n- Verifies all files parse.\n- Reports row counts. Flag any drop > 20% from prior week.\n- \"60 data rows\" for active members is normal — that's CSV line count (20 members × 3 lines per multi-line header). Real `members_prod` count is checked in Phase 5.\n\n### Phase 4 — Full refresh\n```bash\ncd ~/Workspaces/birdseye-view && node scripts/jt-full-refresh.mjs\n```\n- Backs up 17 prod tables → `_backup_YYYYMMDD`.\n- Loads 7 stg tables (WRITE_TRUNCATE).\n- Rebuilds 18 prod tables in dependency order.\n- Verifies + prints summary.\n\n### Phase 5 — Verify\n- Compare key counts vs prior refresh (memory: `project_reenergized_pipeline.md`).\n- Members active should match ClubReady UI (likely off by 1 if a member lacks ContractDesc — known quirk, not a bug).\n- Revenue sum for current year should be reasonable.\n\n### Phase 6 — Tell Angelo to refresh Looker\nLooker auto-picks up BQ changes within minutes, but cached tiles may need:\n- Per-tile: ⋮ on tile → Refresh data\n- Report-wide: Resource → Manage data sources → Reconnect on `daily_transactions`\n\n---\n\n",
+      "subsections": [
+        {
+          "heading": "Phase 1 — Verify files exist",
+          "startLine": 55
+        },
+        {
+          "heading": "Phase 2 — Patch FILE_CONFIG",
+          "startLine": 58
+        },
+        {
+          "heading": "Phase 3 — Dry run",
+          "startLine": 72
+        },
+        {
+          "heading": "Phase 4 — Full refresh",
+          "startLine": 80
+        },
+        {
+          "heading": "Phase 5 — Verify",
+          "startLine": 89
+        },
+        {
+          "heading": "Phase 6 — Tell Angelo to refresh Looker",
+          "startLine": 94
+        }
+      ],
+      "scripts": [
+        "node scripts/jt-full-refresh.mjs"
+      ],
+      "files": [
+        "~/Workspaces/birdseye-view/scripts/jt-full-refresh.mjs",
+        "~/Workspaces/birdseye-view"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Token re-auth (only if `invalid_grant` error)",
+      "depth": 2,
+      "startLine": 101,
+      "body": "\nThe OAuth refresh token can be revoked by Google after long inactivity (~6 months) or password change.\n\nIf `node scripts/jt-full-refresh.mjs` fails with `Token has been expired or revoked`:\n\n1. Build the consent URL (EROS does this):\n   ```bash\n   node -e '\n   const fs = require(\"fs\");\n   const env = {};\n   for (const line of fs.readFileSync(\"/Users/emmanuelpableo/Workspaces/birdseye-view/.env\", \"utf8\").split(\"\\n\")) {\n     const m = line.match(/^([A-Z_]+)=\"?([^\"#\\n]+)\"?/);\n     if (m) env[m[1]] = m[2].trim();\n   }\n   const scopes = [\n     \"https://www.googleapis.com/auth/analytics.readonly\",\n     \"https://www.googleapis.com/auth/webmasters.readonly\",\n     \"https://www.googleapis.com/auth/analytics\",\n     \"https://www.googleapis.com/auth/gmail.readonly\",\n     \"https://www.googleapis.com/auth/bigquery\",\n     \"https://www.googleapis.com/auth/bigquery.insertdata\",\n     \"https://www.googleapis.com/auth/drive\",\n     \"https://www.googleapis.com/auth/spreadsheets\",\n     \"https://www.googleapis.com/auth/datastudio\",\n   ].join(\" \");\n   const params = new URLSearchParams({\n     client_id: env.VITE_GOOGLE_CLIENT_ID,\n     redirect_uri: \"http://localhost:9999/oauth/callback\",\n     response_type: \"code\",\n     scope: scopes,\n     access_type: \"offline\",\n     prompt: \"consent\",\n   });\n   console.log(\"https://accounts.google.com/o/oauth2/v2/auth?\" + params.toString());\n   '\n   ```\n\n2. Angelo opens that URL, signs in as `4434lifeline@gmail.com`, clicks Allow.\n3. Browser shows `localhost:9999` connection error — that's expected (no listener). Angelo copies the `code=...` value out of the URL bar and pastes back to EROS.\n4. EROS exchanges the code for a token:\n   ```bash\n   node -e '\n   const fs = require(\"fs\");\n   const env = {};\n   for (const line of fs.readFileSync(\"/Users/emmanuelpableo/Workspaces/birdseye-view/.env\", \"utf8\").split(\"\\n\")) {\n     const m = line.match(/^([A-Z_]+)=\"?([^\"#\\n]+)\"?/);\n     if (m) env[m[1]] = m[2].trim();\n   }\n   const code = \"<PASTED_CODE>\";\n   (async () => {\n     const res = await fetch(\"https://oauth2.googleapis.com/token\", {\n       method: \"POST\",\n       headers: { \"Content-Type\": \"application/x-www-form-urlencoded\" },\n       body: new URLSearchParams({\n         code, client_id: env.VITE_GOOGLE_CLIENT_ID,\n         client_secret: env.VITE_GOOGLE_CLIENT_SECRET,\n         redirect_uri: \"http://localhost:9999/oauth/callback\",\n         grant_type: \"authorization_code\",\n       }),\n     });\n     const data = await res.json();\n     if (!data.access_token) { console.error(JSON.stringify(data,null,2)); process.exit(1); }\n     const tokenObj = {\n       access_token: data.access_token,\n       refresh_token: data.refresh_token,\n       scope: data.scope,\n       token_type: data.token_type,\n       expires_at: new Date(Date.now() + data.expires_in * 1000).toISOString(),\n     };\n     fs.writeFileSync(require(\"os\").homedir() + \"/.birdseye-full-token.json\", JSON.stringify(tokenObj, null, 2));\n     console.log(\"Token saved.\");\n   })();\n   '\n   ```\n\n5. Re-run Phase 4.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node scripts/jt-full-refresh.mjs"
+      ],
+      "files": [
+        "/Users/emmanuelpableo/Workspaces/birdseye-view/.env"
+      ],
+      "urls": [
+        "https://www.googleapis.com/auth/analytics.readonly",
+        "https://www.googleapis.com/auth/webmasters.readonly",
+        "https://www.googleapis.com/auth/analytics",
+        "https://www.googleapis.com/auth/gmail.readonly",
+        "https://www.googleapis.com/auth/bigquery",
+        "https://www.googleapis.com/auth/bigquery.insertdata",
+        "https://www.googleapis.com/auth/drive",
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/datastudio",
+        "http://localhost:9999/oauth/callback",
+        "https://accounts.google.com/o/oauth2/v2/auth?",
+        "https://oauth2.googleapis.com/token"
+      ],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Rollback",
+      "depth": 2,
+      "startLine": 181,
+      "body": "\nIf a refresh produces bad data:\n```sql\n-- Restore any prod table from backup\nCREATE OR REPLACE TABLE `rich-tome-488802-a2.prod.<table>` AS\nSELECT * FROM `rich-tome-488802-a2.prod.<table>_backup_YYYYMMDD`;\n```\n\nBackups live for at least one week; expire per BQ default.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Notes / gotchas",
+      "depth": 2,
+      "startLine": 194,
+      "body": "\n- **Active member count off by 1**: SQL filter requires `ContractDesc IS NOT NULL`. ClubReady UI shows total active including non-contract members. Expected, not a bug.\n- **JT's stale Looker tile**: JT's original pipeline broke and their dashboard tile still serves cached numbers. Our refreshed numbers will diverge from JT's — that's correct, ours is the source of truth.\n- **`daily_transactions` only has `date` column**: not `PaymentDate` like JT's. If a chart references `PaymentDate`, it's bound to JT's old data source, not ours.\n- **MemberList file numbering**: ClubReady appends `(1)`, `(2)`, etc. on re-download. Always check timestamp, not number — newest may be the lowest number if Angelo cleared older files.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "After successful run, EROS reports",
+      "depth": 2,
+      "startLine": 203,
+      "body": "\n1. Row counts vs prior refresh (Δ for each table)\n2. Total revenue YTD\n3. Active vs inactive member counts\n4. Any anomalies (drops > 20%, date range gaps, etc.)\n5. \"Refresh Looker now\" prompt to Angelo\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    }
+  ],
+  "rawLength": 8709,
+  "sectionCount": 7,
+  "phaseCount": 0
+}

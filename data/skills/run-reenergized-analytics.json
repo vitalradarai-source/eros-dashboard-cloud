@@ -1,0 +1,173 @@
+{
+  "name": "run-reenergized-analytics",
+  "title": "/run-reenergized-analytics — Full Pipeline Refresh",
+  "filePath": "/Users/emmanuelpableo/.claude/commands/run-reenergized-analytics.md",
+  "mtime": "2026-04-30T09:10:03.100Z",
+  "sizeBytes": 10222,
+  "preamble": "End-to-end refresh of the ReEnergized leads-to-revenue workbook. Built 2026-04-29.\n\n**Workbook:** https://docs.google.com/spreadsheets/d/1VkPOTSSPLL-fXtasyQg8_kTz50EYn5Fe8zOA9bYOZ9U\n**Folder:** https://drive.google.com/drive/folders/1_RGwxX2XHGMRhQsS7Uihhe38bJyEJGkF\n**Auth:**\n- Gmail read (form scrapes) → contact@reenergized.com (`SCRAPER_GOOGLE_CLIENT_ID/SECRET` + `CONTACT_GMAIL_REFRESH_TOKEN`) — ⚠️ Testing-mode token expires every 7 days\n- GA4 + Sheets + Drive → 4434lifeline@gmail.com (`GOOGLE_CLIENT_ID/SECRET` + `GOOGLE_REFRESH_TOKEN`)\n- All three vars live in `~/Workspaces/reenergized/.env`\n\n**Working dir:** `~/Workspaces/reenergized`\n**Scripts dir:** `scripts/leads-analysis/`\n**Plan + history:** `scripts/leads-analysis/PLAN.md`\n\n---",
+  "sections": [
+    {
+      "heading": "Required input files (must be in `~/Downloads`)",
+      "depth": 2,
+      "startLine": 22,
+      "body": "\n| File | Source | Refresh cadence |\n|---|---|---|\n| `Leads Added 14389 - 1-1-2024 - <today>.csv` | ClubReady → Reports → Leads Added (full date range) | Weekly |\n| `Payment Transactions 14389 - 1-1-2024 - <today>.csv` | ClubReady → Reports → Payment Transactions (full date range) | Weekly |\n| `Bookings Attendance 14389 - 1-1-2024 - <today>.csv` | ClubReady → Reports → Bookings (full date range) | Weekly |\n| `MemberList 14389 (X).csv` (×2 — active + inactive) | ClubReady → Members | Weekly |\n| `ReEnergized - calls export (N).csv` | CTM → Calls export | Weekly |\n| `Exported data from Tidio for httpsreenergized.com project (N).csv` | Tidio → Export contacts | Weekly |\n| `CSV Output (N).xlsx` | QuickBooks → CSV Output (GL) | Weekly |\n| `02_20_26 LeadsExport (N).xlsm` | OPTIONAL — referral-type taxonomy reference | Quarterly |\n\nIf a filename has changed (different `(N)` suffix), update the `SRC` constants at the top of the relevant phase script before running.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Phase 0 — Pre-flight checks",
+      "depth": 2,
+      "startLine": 39,
+      "body": "\n1. Confirm we're in `/Users/emmanuelpableo/Workspaces/reenergized` (`pwd`)\n2. Verify all input files present (`ls ~/Downloads/ | grep -E \"Leads Added|Payment Transactions|Bookings Attendance|MemberList|calls export|Tidio|CSV Output\"`)\n3. Verify env keys: `grep -E \"^(SCRAPER_)?GOOGLE_|CONTACT_GMAIL\" ~/Workspaces/reenergized/.env | sed 's/=.*/=***SET***/'`\n4. **Test Gmail token** (it expires every 7 days):\n   ```\n   node scripts/test-gmail-access.mjs\n   ```\n   If it fails with `invalid_grant` → re-auth: `node scripts/oauth-reauth-contact.mjs` (sign in as contact@reenergized.com).\n5. Skip the rest if any input file is missing — print exactly which one and stop.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node scripts/test-gmail-access.mjs",
+        "node scripts/oauth-reauth-contact.mjs"
+      ],
+      "files": [
+        "/Users/emmanuelpableo/Workspaces/reenergized",
+        "~/Workspaces/reenergized/.env"
+      ],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "0"
+    },
+    {
+      "heading": "Phase 1-6 — Refresh raw data (run in order, foreground)",
+      "depth": 2,
+      "startLine": 53,
+      "body": "\nEach script is idempotent. Each writes its output CSV to `scripts/leads-analysis/data/`.\n\n```bash\nnode scripts/leads-analysis/scrape-gmail-forms.mjs           # Gmail → claim + hbot CSVs\nnode scripts/leads-analysis/parse-ctm-calls.mjs              # CTM → ctm-calls-cleaned.csv\nnode scripts/leads-analysis/extract-referral-reference.mjs   # xlsm → referral-type-mapping.csv\nnode scripts/leads-analysis/build-main.mjs                   # base enriched main (Phase 5)\nnode scripts/leads-analysis/pull-ga4-funnel.mjs              # GA4 → funnel + traffic sources CSVs\nnode scripts/leads-analysis/pull-ga4-extras.mjs              # GA4 → device/cities/landing/source-quality/campaigns/new-vs-returning\n```\n\nAfter each, eyeball the printed summary — if a count drops dramatically (>30%) vs the prior run, **stop and investigate** before continuing. Reasons it might drop: a CSV failed to parse, a date range was clipped, or the data file is corrupt.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node scripts/leads-analysis/scrape-gmail-forms.mjs",
+        "node scripts/leads-analysis/parse-ctm-calls.mjs",
+        "node scripts/leads-analysis/extract-referral-reference.mjs",
+        "node scripts/leads-analysis/build-main.mjs",
+        "node scripts/leads-analysis/pull-ga4-funnel.mjs",
+        "node scripts/leads-analysis/pull-ga4-extras.mjs"
+      ],
+      "files": [],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "1"
+    },
+    {
+      "heading": "Phase 7-13 — Conversion + ROI layer (run in order)",
+      "depth": 2,
+      "startLine": 70,
+      "body": "\n```bash\nnode scripts/leads-analysis/parse-tidio.mjs              # Tidio → tidio-leads + not-in-CR\nnode scripts/leads-analysis/parse-payments.mjs           # Payments → user-revenue-summary\nnode scripts/leads-analysis/parse-bookings.mjs           # Bookings → user-bookings-summary\nnode scripts/leads-analysis/parse-members.mjs            # MemberList → members.csv\nnode scripts/leads-analysis/parse-quickbooks.mjs         # QB → expenses-monthly + accounts\nnode scripts/leads-analysis/build-main-enriched-v2.mjs       # big join → main-leads-enriched-v2\nnode scripts/leads-analysis/apply-chronological-channels.mjs # chronological first-touch attribution + flow columns\nnode scripts/leads-analysis/apply-registration-type.mjs      # Direct/Indirect/Manual taxonomy (per Zach Apr 27 ask)\nnode scripts/leads-analysis/build-channel-roi.mjs            # ROI rollups (referrals + first-touch)\nnode scripts/leads-analysis/build-channel-monthly-breakdowns.mjs  # per-channel × month + referral × month\nnode scripts/leads-analysis/build-benchmarks.mjs                  # industry-standard benchmarks (PASS/WATCH/FAIL scorecard + 4 target tabs + sources)\nnode scripts/leads-analysis/build-column-glossary.mjs             # column glossary tab + JSON for header hover notes\nnode scripts/leads-analysis/build-summary-tab.mjs                 # exec snapshot for tab 1 (includes benchmark scorecard now)\nnode scripts/leads-analysis/upload-raw-sources.mjs                # upload raw + cleaned files to Drive Raw Sources subfolder + write reference-sources.csv\n```\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node scripts/leads-analysis/parse-tidio.mjs",
+        "node scripts/leads-analysis/parse-payments.mjs",
+        "node scripts/leads-analysis/parse-bookings.mjs",
+        "node scripts/leads-analysis/parse-members.mjs",
+        "node scripts/leads-analysis/parse-quickbooks.mjs",
+        "node scripts/leads-analysis/build-main-enriched-v2.mjs",
+        "node scripts/leads-analysis/apply-chronological-channels.mjs",
+        "node scripts/leads-analysis/apply-registration-type.mjs",
+        "node scripts/leads-analysis/build-channel-roi.mjs",
+        "node scripts/leads-analysis/build-channel-monthly-breakdowns.mjs",
+        "node scripts/leads-analysis/build-benchmarks.mjs",
+        "node scripts/leads-analysis/build-column-glossary.mjs",
+        "node scripts/leads-analysis/build-summary-tab.mjs",
+        "node scripts/leads-analysis/upload-raw-sources.mjs"
+      ],
+      "files": [],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "7"
+    },
+    {
+      "heading": "Phase 14 — Verification",
+      "depth": 2,
+      "startLine": 91,
+      "body": "\n```bash\nnode scripts/leads-analysis/verify-scraped-data.mjs   # phase 2 (Gmail forms)\nnode scripts/leads-analysis/verify-ctm.mjs            # phase 3 (CTM)\nnode scripts/leads-analysis/verify-main.mjs           # phase 5 (channel attribution)\nnode scripts/leads-analysis/verify-ga4.mjs            # phase 6 (GA4)\nnode scripts/leads-analysis/verify-main-v2.mjs        # phase 12 (conversions)\nnode scripts/leads-analysis/double-check.mjs          # cross-check vs raw files (30 checks)\n```\n\nAll six **must** print `✅ PASS` / `✅ ALL CROSS-CHECKS PASS` (current count: 30 cross-checks in `double-check.mjs`). If any fails:\n- Read the failing report CSV under `scripts/leads-analysis/data/verification-*.csv`\n- Fix the upstream issue\n- Re-run the failing script + verifier\n- Do NOT push to the workbook with a failing verification\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node scripts/leads-analysis/verify-scraped-data.mjs",
+        "node scripts/leads-analysis/verify-ctm.mjs",
+        "node scripts/leads-analysis/verify-main.mjs",
+        "node scripts/leads-analysis/verify-ga4.mjs",
+        "node scripts/leads-analysis/verify-main-v2.mjs",
+        "node scripts/leads-analysis/double-check.mjs"
+      ],
+      "files": [],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "14"
+    },
+    {
+      "heading": "Phase 15 — Push to Google Sheet workbook (with polish)",
+      "depth": 2,
+      "startLine": 110,
+      "body": "\n```bash\nnode scripts/leads-analysis/build-workbook.mjs\n```\n\nThis rewrites **all 38 tabs** (📘 Read Me + 📖 Column Glossary + 36 numbered) in the same workbook, then applies polish:\n- Reorders tabs to numeric sequence (📘 Read Me → 📖 Column Glossary → 1. Summary → … → 36. Verification)\n- Populates 📘 Read Me with HYPERLINK navigation to every tab + FAQ + glossary\n- Injects clickable HYPERLINK formulas into the TAB GUIDE section of 1. Summary\n- Applies hover-tooltip notes (~451 of them) to every column header across all 36 numbered tabs (sourced from `data/column-glossary.json`)\n- Applies header formatting (slate `#37474F` bg, white bold, frozen first row)\n- Applies banded rows (white / `#FAFAFA` alternating)\n- Auto-resizes columns\n- Applies conditional formatting on `roi_pct` column (green = positive, red = negative ROI)\n- Applies conditional formatting on benchmark `Status` column in Summary (green PASS / amber WATCH / red FAIL)\n- Amber background on `18. Tidio Not in ClubReady` (warning visual)\n\nThe script reuses the existing folder + sheet by name — never creates duplicates.\n\nAfter it completes, read `scripts/leads-analysis/data/workbook-link.txt` and report the URL back to the user.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node scripts/leads-analysis/build-workbook.mjs"
+      ],
+      "files": [],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "15"
+    },
+    {
+      "heading": "Phase 16 — (Optional, manual) Email helpers",
+      "depth": 2,
+      "startLine": 134,
+      "body": "\n**Not automatic.** Per Angelo's Option A choice, no auto-email or remote agent. Three one-shot email scripts available:\n\n```bash\nnode scripts/leads-analysis/email-introduction.mjs   # Quick-tour intro: where to start, what is in the workbook, raw-source folder link\nnode scripts/leads-analysis/email-limitations.mjs    # 9 known data limitations + suggested fixes\n```\n\nAll send to `4434lifeline@gmail.com` only (per workspace email rule). Not part of the weekly cycle.\n\nClickUp updates also remain manual.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node scripts/leads-analysis/email-introduction.mjs",
+        "node scripts/leads-analysis/email-limitations.mjs"
+      ],
+      "files": [],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "16"
+    },
+    {
+      "heading": "Known caveats",
+      "depth": 2,
+      "startLine": 149,
+      "body": "\n- **Members file** uses two separate CSV exports (active + inactive segments) — both required. If only one is in Downloads, member-status data will be incomplete.\n- **MemberList drops members from \"Leads Added\"** once they sign a contract. Member match must use phone/email fallback, not UserId only. (Already handled in `build-main-enriched-v2.mjs`.)\n- **Bookings file is in vertically-stacked format** (~14 lines per booking) — uses the parser from `parse-bookings.mjs`, not naive CSV parsing.\n- **GA4 form-submit events capture only ~22% of actual submissions** (Elementor/GTM trigger broken). Gmail count is ground truth in the workbook. Don't \"fix\" the discrepancy by trusting GA4.\n- **Same Gmail submission appears in both original + Fwd messages.** Dedup uses `(form_type, email, phone)`, keeps earliest.\n- **CTM Tracking # Label** maps to a `ctm_verified_source` (e.g., GBP / Yelp / Groupon). The mapping lives in `parse-ctm-calls.mjs` — extend it if a new tracking number is added.\n- **`Grey Poupon` in CTM data is a typo for `Groupon`** — already mapped.\n- **Older Free Session form (`NEW: Free Session Submission`) was retired Nov 2025** and replaced by the Elementor `CLAIM FREE SESSION` form. Both are scraped together as the Claim funnel.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Failure recovery",
+      "depth": 2,
+      "startLine": 162,
+      "body": "\nIf the script chain dies mid-run, the data dir keeps the last successful CSV from each phase — just re-run from the failing phase forward, not from scratch. The workbook update at Phase 15 is also idempotent (reuses sheet ID, not append).\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "How long it takes",
+      "depth": 2,
+      "startLine": 168,
+      "body": "\n- Phase 0 (pre-flight): ~10 sec\n- Phase 1-6 (raw data + GA4 pulls): ~4-6 min (Gmail scrape ~286 message fetches + GA4 funnel + GA4 extras)\n- Phase 7-13 (joins + ROI + summary + Drive upload): ~1 min\n- Phase 14 (verification — 6 scripts + 30 cross-checks): ~2 min (re-fetches 25 Gmail messages for live recheck)\n- Phase 15 (workbook upload + polish — 38 tabs + 451 header notes + formatting + conditional rules): ~4-5 min (rate-limited at ~54 calls/min)\n- **Total: ~10-15 min** end-to-end.\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    }
+  ],
+  "rawLength": 10103,
+  "sectionCount": 10,
+  "phaseCount": 6
+}

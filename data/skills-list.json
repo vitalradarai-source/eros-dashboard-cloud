@@ -1,0 +1,56 @@
+[
+  {
+    "name": "analyze-data",
+    "filePath": "/Users/emmanuelpableo/.claude/commands/analyze-data.md",
+    "sizeBytes": 9432,
+    "mtime": "2026-05-08T01:29:34.272Z"
+  },
+  {
+    "name": "bail-reports",
+    "filePath": "/Users/emmanuelpableo/.claude/commands/bail-reports.md",
+    "sizeBytes": 6917,
+    "mtime": "2026-05-08T02:25:38.424Z"
+  },
+  {
+    "name": "bd",
+    "filePath": "/Users/emmanuelpableo/.claude/commands/bd.md",
+    "sizeBytes": 2370,
+    "mtime": "2026-05-13T02:46:21.783Z"
+  },
+  {
+    "name": "eros-day",
+    "filePath": "/Users/emmanuelpableo/.claude/commands/eros-day.md",
+    "sizeBytes": 61190,
+    "mtime": "2026-05-14T23:06:49.126Z"
+  },
+  {
+    "name": "eros-report-check",
+    "filePath": "/Users/emmanuelpableo/.claude/commands/eros-report-check.md",
+    "sizeBytes": 6969,
+    "mtime": "2026-05-06T10:00:15.018Z"
+  },
+  {
+    "name": "hug-prompt",
+    "filePath": "/Users/emmanuelpableo/.claude/commands/hug-prompt.md",
+    "sizeBytes": 14466,
+    "mtime": "2026-05-08T22:59:49.651Z"
+  },
+  {
+    "name": "pickleball",
+    "filePath": "/Users/emmanuelpableo/.claude/commands/pickleball.md",
+    "sizeBytes": 1015,
+    "mtime": "2026-04-07T03:43:01.965Z"
+  },
+  {
+    "name": "run-reenergized-analytics",
+    "filePath": "/Users/emmanuelpableo/.claude/commands/run-reenergized-analytics.md",
+    "sizeBytes": 10222,
+    "mtime": "2026-04-30T09:10:03.100Z"
+  },
+  {
+    "name": "update-looker",
+    "filePath": "/Users/emmanuelpableo/.claude/commands/update-looker.md",
+    "sizeBytes": 8771,
+    "mtime": "2026-04-30T09:32:36.499Z"
+  }
+]

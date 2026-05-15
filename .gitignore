@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+nohup.out
+.env
+.env.local
+.wrangler/

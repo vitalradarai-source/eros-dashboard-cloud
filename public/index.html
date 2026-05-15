@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EROS Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <h1>EROS Dashboard</h1>
+        <div class="subtitle">Local visualization of EROS skills</div>
+        <div class="meta" id="server-status">Connecting…</div>
+      </header>
+      <nav class="skill-list" id="skill-list">
+        <div class="loading">Loading skills…</div>
+      </nav>
+      <footer class="sidebar-footer">
+        <div class="sidebar-actions">
+          <button id="btn-reports" class="action-btn" title="All EROS Day + bail-reports reports — email + sheet embed">📊 Reports</button>
+          <button id="btn-research" class="action-btn" title="Read all EROS research findings">📚 Research</button>
+        </div>
+        <div class="sidebar-actions">
+          <button id="btn-strategies" class="action-btn" title="Strategy A/B tests — what's working / not working / kill-or-keep">🧪 Strategies</button>
+          <button id="btn-audits" class="action-btn" title="Per-skill ratings + flagged issues + improvement suggestions">🚦 Audits</button>
+        </div>
+        <div class="sidebar-actions">
+          <button id="btn-glossary" class="action-btn" title="Plain-English definitions of every term">📖 Glossary</button>
+          <button id="btn-tour" class="action-btn" title="Walk me through this dashboard">🎓 Tour</button>
+        </div>
+        <div class="legend">v1.1 — Plain English mode</div>
+        <div class="legend-sub">Source: <code>~/.claude/commands/*.md</code></div>
+      </footer>
+    </aside>
+
+    <main class="main">
+      <header class="main-header" id="main-header">
+        <h2 id="skill-title">Select a skill</h2>
+        <div class="skill-meta" id="skill-meta"></div>
+        <div class="view-toggle">
+          <button id="tab-tree" class="tab-btn active" title="Step-by-step cards (easiest to read)">Tree</button>
+          <button id="tab-flow" class="tab-btn" title="Visual diagram of phases + data flow">Flow</button>
+          <button id="tab-source" class="tab-btn" title="Raw markdown file (advanced)">Source (.md)</button>
+          <span class="view-toggle-spacer"></span>
+          <label class="plain-toggle" title="Show plain-English summaries above the technical text">
+            <input type="checkbox" id="plain-mode" checked />
+            <span>Plain English</span>
+          </label>
+        </div>
+      </header>
+      <section class="content" id="content">
+        <div class="empty-state">
+          <p>Pick a skill from the sidebar to see its full instruction tree.</p>
+          <p class="hint">Every phase is rendered verbatim from the <code>.md</code> file —
+             this dashboard is a viewer, not a copy.</p>
+        </div>
+      </section>
+    </main>
+
+    <aside class="preview" id="preview-pane">
+      <header class="preview-header">
+        <span id="preview-title">Preview</span>
+        <button id="preview-close" class="preview-close" title="Close">×</button>
+      </header>
+      <div class="preview-meta" id="preview-meta"></div>
+      <div class="preview-content" id="preview-content">
+        <div class="empty-state-sm">Click a data sink in any phase to preview here.</div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Glossary drawer -->
+  <aside id="glossary-drawer" class="glossary-drawer">
+    <header class="glossary-header">
+      <div>
+        <div class="glossary-title">📖 Glossary</div>
+        <div class="glossary-subtitle">Every term, in plain English. Click any term to expand.</div>
+      </div>
+      <button id="glossary-close" class="preview-close" title="Close">×</button>
+    </header>
+    <input type="text" id="glossary-search" class="glossary-search" placeholder="Search terms…" />
+    <div id="glossary-list" class="glossary-list"></div>
+  </aside>
+  <div id="glossary-backdrop" class="glossary-backdrop"></div>
+
+  <!-- Onboarding tour modal -->
+  <div id="tour-modal" class="tour-modal hidden">
+    <div class="tour-inner">
+      <header class="tour-header">
+        <span id="tour-step">Step 1 of 6</span>
+        <button id="tour-close" class="preview-close" title="Skip tour">×</button>
+      </header>
+      <div class="tour-body" id="tour-body"></div>
+      <footer class="tour-footer">
+        <button id="tour-prev" class="action-btn">← Back</button>
+        <button id="tour-next" class="action-btn primary">Next →</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

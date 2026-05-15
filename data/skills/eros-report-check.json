@@ -1,0 +1,217 @@
+{
+  "name": "eros-report-check",
+  "title": "/eros-report-check — Report Quality + Cadence Audit",
+  "filePath": "/Users/emmanuelpableo/.claude/commands/eros-report-check.md",
+  "mtime": "2026-05-06T10:00:15.018Z",
+  "sizeBytes": 6969,
+  "preamble": "Runs after `/eros-day` to verify the latest daily report is correct AND that the publishing pipeline is actually shipping content. Findings feed back into `/eros-day` improvements.\n\n**When to run:** end of any `/eros-day` session, or anytime Angelo asks for a sanity check on report quality / blog cadence.\n\n**Inputs (all read-only):**\n- `~/Workspaces/angelos-workspace/eros/daily-reports/<latest>.md`\n- `~/Workspaces/eros-workspace/data/daily/<latest>/` (gsc.json, ga4.json, network-score.json, keyword-priorities.json)\n- `~/Workspaces/<main-site>/seo-tasks/<latest>/analysis.json` (per main site)\n- `git log` per Lovable repo + microsite\n\n**Output:** structured \"report card\" written to `~/Workspaces/eros-workspace/data/daily/<today>/report-check.md` AND surfaced inline to Angelo.\n\n---",
+  "sections": [
+    {
+      "heading": "Step 1 — Locate latest report",
+      "depth": 2,
+      "startLine": 21,
+      "body": "\n```bash\nLATEST_REPORT=$(ls -t ~/Workspaces/angelos-workspace/eros/daily-reports/*.md | head -1)\necho \"Auditing: $LATEST_REPORT\"\n```\n\nReport path is the only authoritative input. If missing, abort with \"no report to audit — run /eros-day first\".\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [
+        "~/Workspaces/angelos-workspace/eros/daily-reports/"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 2 — Error scan (report quality)",
+      "depth": 2,
+      "startLine": 32,
+      "body": "\nGrep for known failure markers. Each hit = a defect to fix in `eros-day-final-report.mjs`.\n\n```bash\ngrep -niE \"undefined|\\bnull\\b|\\bNaN\\b|TypeError|Error:|MODULE_NOT_FOUND|^\\| 0 \\| 0 \\| 0 \\|\" \"$LATEST_REPORT\"\ngrep -nE \"stale|⚠️|FROZEN|FAIL\" \"$LATEST_REPORT\"\n```\n\n**Known historical defects (already fixed — re-flag if they reappear):**\n- `undefined` in best-position table → `kwName(k)` helper missing\n- `0/0/0/0` rows for main sites → `listSnapshots()` not filtering empty seo-tasks dirs\n- microsite section silently dropping rows → `micrositeStanding()` not filtering dirs without `gsc.json`\n- \"Keyword bank stale\" warning persisting → `sync-keyword-bank.mjs` auto-run failed\n\n**Defect classification:**\n- **Hard error** (TypeError, MODULE_NOT_FOUND, undefined in tables) → fix `eros-day-final-report.mjs` immediately\n- **Soft warning** (stale data, missing snapshot) → diagnose source script, queue fix in `todo-angelo.md`\n- **Expected** (FROZEN Lovable rows, planned skips) → no action\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 3 — Blog cadence audit (per surface)",
+      "depth": 2,
+      "startLine": 54,
+      "body": "\nThree surfaces, three different cadence rules.\n\n### 3a. Lovable main sites (4 repos)\n\n```bash\nfor repo in cali-bond-swift vital-radar-ai bulllion-dealer boundless-global; do\n  echo \"=== $repo ===\"\n  cd ~/Workspaces/$repo 2>/dev/null\n  latest=$(git log --since=\"60 days ago\" --pretty=format:\"%ai %s\" 2>/dev/null | grep -iE \"blog|post|article\" | head -1)\n  echo \"  Latest blog commit: ${latest:-NONE in 60d}\"\ndone\n```\n\n**Cadence expectation per Path C rotation:** every Lovable site gets a blog every ~3–4 weekdays.\n\n**Verdicts:**\n- < 7 days since last blog commit → ✅ HEALTHY\n- 7–14 days → ⚠️ SLIPPING\n- 14–30 days → 🚨 STALE — flag in next /eros-day Phase 3\n- > 30 days → 🚨🚨 STARVED — top of action queue\n\n**Lovable storage gotcha:** VitalRadar articles live in Supabase admin panel, not git. ReEnergized blogs live in WordPress. A 0-commit count is NOT proof of zero publishing — cross-check with the live site or admin panel before declaring starvation. Note this caveat in the report.\n\n### 3b. Microsites (31 with custom domains)\n\n```bash\ntouch -t $(date -v-14d +%Y%m%d%H%M) /tmp/.14d_marker\ncd ~/Workspaces && find . -maxdepth 4 -name \"*.html\" -path \"*/blog/*\" -newer /tmp/.14d_marker 2>/dev/null \\\n  | grep -v node_modules \\\n  | awk -F/ '{print $2}' | sort | uniq -c | sort -rn\n```\n\n**Cadence expectation:** ≥20 sites touched in 14d, ≥30 blog files total.\n\n**Verdicts:**\n- ≥20 sites / ≥30 files → ✅ HEALTHY\n- 10–19 sites → ⚠️ THIN — Path C rotation may be skipping buckets\n- <10 sites → 🚨 BROKEN — investigate rotation calendar\n\n### 3c. ReEnergized (WordPress — Angelo applies manually)\n\n```bash\nls ~/Workspaces/reenergized/blog-drafts/ 2>/dev/null | tail -5\n```\n\nDrafts exist but never auto-publish. Cadence verdict is based on draft creation, not live posts. If 0 drafts in 14d → flag for `/eros-day` Phase 4 to draft new content.\n\n---\n\n",
+      "subsections": [
+        {
+          "heading": "3a. Lovable main sites (4 repos)",
+          "startLine": 58
+        },
+        {
+          "heading": "3b. Microsites (31 with custom domains)",
+          "startLine": 79
+        },
+        {
+          "heading": "3c. ReEnergized (WordPress — Angelo applies manually)",
+          "startLine": 95
+        }
+      ],
+      "scripts": [],
+      "files": [
+        "~/Workspaces/reenergized/blog-drafts/"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 4 — Cross-reference rotation expectation vs actual",
+      "depth": 2,
+      "startLine": 105,
+      "body": "\nPath C rotation says today's bucket should have shipped N specific sites. Did they?\n\n```bash\nnode ~/Workspaces/eros-workspace/scripts/rotation-calendar.mjs --today\n# Compare expected list to actual `git log --since=today` per site\n```\n\nFor each site in today's bucket: ✅ shipped | ⚠️ committed but not deployed | 🚨 untouched.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node ~/Workspaces/eros-workspace/scripts/rotation-calendar.mjs"
+      ],
+      "files": [
+        "~/Workspaces/eros-workspace/scripts/rotation-calendar.mjs"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 5 — Data freshness gate",
+      "depth": 2,
+      "startLine": 118,
+      "body": "\nConfirm the inputs feeding the report are fresh:\n\n| Source | Path | Max age |\n|---|---|---|\n| GSC per-site | `<site>/seo-tasks/<date>/analysis.json` | 24h |\n| GSC network | `eros-workspace/data/daily/<date>/gsc.json` | 24h |\n| GA4 daily | `eros-workspace/data/daily/<date>/ga4.json` | 24h |\n| Network score | `eros-workspace/data/daily/<date>/network-score.json` | 24h |\n| Keyword priorities | `eros-workspace/data/daily/<date>/keyword-priorities.json` | 24h |\n| Keyword bank sheet | summary.json `lastSync` | 7d |\n| Blog links sheet | (sheet last modified) | 7d |\n\nAny source >max-age = ⚠️ in the report card.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 6 — Output report card",
+      "depth": 2,
+      "startLine": 136,
+      "body": "\nWrite `~/Workspaces/eros-workspace/data/daily/<today>/report-check.md`:\n\n```markdown\n# EROS Report Check — <date>\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [
+        "~/Workspaces/eros-workspace/data/daily/"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Errors found",
+      "depth": 2,
+      "startLine": 143,
+      "body": "- (list of grep hits with line numbers, classified hard/soft/expected)\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Blog cadence",
+      "depth": 2,
+      "startLine": 146,
+      "body": "### Lovable\n| repo | last commit | days | verdict |\n|---|---|---:|---|\n\n### Microsites\n- 14-day total: <N> files / <M> sites — verdict\n- (table or top-10)\n\n### ReEnergized\n- drafts in 14d: <N> — verdict\n\n",
+      "subsections": [
+        {
+          "heading": "Lovable",
+          "startLine": 147
+        },
+        {
+          "heading": "Microsites",
+          "startLine": 151
+        },
+        {
+          "heading": "ReEnergized",
+          "startLine": 155
+        }
+      ],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Rotation drift",
+      "depth": 2,
+      "startLine": 158,
+      "body": "- Today's expected: [a, b, c]\n- Today's actual: [a, c]\n- Missed: [b]\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Data freshness",
+      "depth": 2,
+      "startLine": 163,
+      "body": "| source | age | status |\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Prescriptive fixes for /eros-day",
+      "depth": 2,
+      "startLine": 166,
+      "body": "1. (concrete edit to a phase or script)\n2. ...\n```\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Step 7 — Feed back into /eros-day",
+      "depth": 2,
+      "startLine": 173,
+      "body": "\nEach prescriptive fix in step 6 must result in one of:\n\n- **Edit `~/.claude/commands/eros-day.md`** — add/change a phase step\n- **Edit a script** — patch `eros-day-final-report.mjs`, `prioritize-keywords.mjs`, etc.\n- **Add a memory** — if the fix is a rule, save to `feedback_*.md` and link in `MEMORY.md`\n- **Open ClickUp task** — if the fix needs Angelo's input (e.g., Lovable Vite prerender)\n\n**Never let an audit finding sit in a doc without a destination.** Every issue → fix or task.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Skip conditions",
+      "depth": 2,
+      "startLine": 186,
+      "body": "\n- No latest report exists → abort, tell Angelo to run /eros-day first\n- Today is Saturday or Sunday → cadence audit only, skip rotation drift (no rotation runs weekends)\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Length",
+      "depth": 2,
+      "startLine": 191,
+      "body": "\nKeep the inline summary to Angelo under 200 words. Full detail goes to `report-check.md`.\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    }
+  ],
+  "rawLength": 6835,
+  "sectionCount": 14,
+  "phaseCount": 0
+}

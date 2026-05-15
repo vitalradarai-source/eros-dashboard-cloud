@@ -1,0 +1,96 @@
+{
+  "name": "bail-reports",
+  "title": "/bail-reports",
+  "filePath": "/Users/emmanuelpableo/.claude/commands/bail-reports.md",
+  "mtime": "2026-05-08T02:25:38.424Z",
+  "sizeBytes": 6917,
+  "preamble": "Generate this week's bail-bond network snapshot.",
+  "sections": [
+    {
+      "heading": "Always comprehensive — no tier focus",
+      "depth": 2,
+      "startLine": 9,
+      "body": "\nEvery run produces:\n\n1. **Email** to `4434lifeline@gmail.com` — same comprehensive template as the original \"UPDATED findings\" report:\n   - Total bail-bond site count from Lee's / Dan's / Lonnie's / Angelo's lists\n   - Multi-layer probe status table (Live / Truly dead / Server problems / Redirects / Misconfigured)\n   - Performance across the last 90 days\n   - **Time-period comparison: current month / previous month / last 3 months / last 6 months / YTD**\n   - Score breakdown S→D with delta vs previous weekly tab\n   - A-tier site callouts\n   - Hosting breakdown\n   - Decommission shortlist with estimated savings\n   - \"What to do this week\" — 5 ranked tasks\n   - Going-forward cadence\n   - Where everything lives\n\n2. **Google Sheet — new tab `Report YYYY-Www`** (ISO week):\n   - Full S→D per-tier breakdown with every domain listed\n   - Time-period comparison section (network totals across 5 windows)\n   - HTTP health table\n   - Hosting breakdown\n   - Top 10 by score\n   - Decommission shortlist with renewal cost\n   - **Never overwrites prior weekly tabs** — additive history for week-over-week comparison\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Relationship to /eros-day",
+      "depth": 2,
+      "startLine": 35,
+      "body": "\n`/eros-day` (the daily operational session) **references** /bail-reports output in Phase 0 (stale-data check) and Phase 8 (final-report section #20: \"Bail-Bond Network Snapshot\"). It does NOT auto-trigger /bail-reports.\n\n- **Daily**: /eros-day reads the latest `master-domain-inventory-scored.json` and surfaces tier counts + decom count + sheet link.\n- **Weekly (Mondays)**: /eros-day Phase 1 reminds Angelo to run /bail-reports manually. That's the trigger.\n- **Monthly (first Monday)**: full refresh — run all phases (HTTP probe + GSC multi-window + scoring + action plan + report).\n- **Other times**: `/bail-reports` reuses the latest cached data (no fresh probe / GSC pull) so it returns in seconds.\n\nThis separation keeps daily /eros-day fast (no 30-min full-refresh on every session) while keeping the weekly bail-network snapshot timely.\n\nMemory: `feedback_eros_day_bail_reports_integration.md`.\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "What to do",
+      "depth": 2,
+      "startLine": 48,
+      "body": "\nRun the pipeline (refresh data, then build report):\n\n```bash\ncd ~/Workspaces/test-1-bail-bond\n\n# 1. Refresh probe (only if data is stale or first-of-month)\nnode scripts/phase2-http-probe.mjs\nnode scripts/phase2.6-multi-layer-probe.mjs\n\n# 2. Refresh GSC (90-day per-site + multi-window network totals)\nnode scripts/phase2-gsc-pull.mjs\nnode scripts/phase2-gsc-multi-window.mjs\n\n# 3. Re-roll-up master inventory + scoring\nnode scripts/rebuild-master-clean.mjs\nnode scripts/phase3-score.mjs\nnode scripts/phase4-action-plan.mjs\n\n# 4. Build this week's report (always comprehensive)\nnode scripts/bail-reports-weekly.mjs\n```\n\nFor routine weekly runs (data already refreshed today/yesterday), just run step 4. Once-a-month, run all four steps for the full refresh.\n\n",
+      "subsections": [],
+      "scripts": [
+        "node scripts/phase2-http-probe.mjs",
+        "node scripts/phase2.6-multi-layer-probe.mjs",
+        "node scripts/phase2-gsc-pull.mjs",
+        "node scripts/phase2-gsc-multi-window.mjs",
+        "node scripts/rebuild-master-clean.mjs",
+        "node scripts/phase3-score.mjs",
+        "node scripts/phase4-action-plan.mjs",
+        "node scripts/bail-reports-weekly.mjs"
+      ],
+      "files": [
+        "~/Workspaces/test-1-bail-bond"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "No arguments — comprehensive every time",
+      "depth": 2,
+      "startLine": 74,
+      "body": "\nPrevious versions accepted a tier-focus argument. **That's been removed** — every report is comprehensive. The featured-tier emphasis was confusing and made some tiers feel deprioritized.\n\nIf you need a deep-dive on a specific tier, use the per-tier section in the new weekly tab — every tier always has its own section with all sites listed.\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Source data",
+      "depth": 2,
+      "startLine": 80,
+      "body": "\n| File | Producer | Purpose |\n|---|---|---|\n| `dns-audit/master-domain-inventory-scored.json` | phase3-score.mjs | scored master with bucket per domain |\n| `dns-audit/http-probe-YYYY-MM-DD.json` | phase2-http-probe + phase2.6 | live / dead / broken classification |\n| `dns-audit/gsc-90d-YYYY-MM-DD.json` | phase2-gsc-pull.mjs | 90-day per-site GSC totals |\n| `dns-audit/gsc-multi-window-YYYY-MM-DD.json` | phase2-gsc-multi-window.mjs | 5-window network totals |\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Hard rules",
+      "depth": 2,
+      "startLine": 89,
+      "body": "\n- **GSC totals must be reported in THREE separate group aggregations**, never blended:\n\n  | # | Group | Sites | Domain list |\n  |---|---|---|---|\n  | 1 | **Bail-bond network** | 215 | every domain containing \"bail\" or \"plotkin\" — see master inventory. Includes `bailbondsdomesticviolence.com` which overlaps with Sean Sites. |\n  | 2 | **Sean Sites (Lovable)** | 4 | `bailbondsdomesticviolence.com` (cali-bond-swift), `vitalradar.ai` (vital-radar-ai), `bulliondealer.com` (bulllion-dealer), `boundlessglobal.com` (boundless-global). |\n  | 3 | **ReEnergized** | 1 | `reenergized.com` ONLY. WordPress, **NOT Lovable**. Standalone group. |\n\n  Hard-coded constants in `scripts/bail-reports-weekly.mjs`:\n    - `SEAN_SITES_DOMAINS` = the 4 Lovable Sean sites above\n    - `REENERGIZED_DOMAIN` = `'reenergized.com'`\n\n  **Earlier versions had three regressions, all now codified to never repeat:**\n  - Blended reports inflated bail performance by ~98% — reenergized.com alone was 1,694 of 1,736 YTD clicks (Angelo flagged 2026-05-07).\n  - reenergized.com was incorrectly grouped under Lovable — it's WordPress, separated 2026-05-07.\n  - GSC's https vs http property duplicates double-counted some domains. `dedupeBestPerDomain()` keeps the entry with the higher last-3-month impressions and discards the lower one.\n\n  Email and sheet must show all three groups separately. Adding a fourth Lovable site? Update `SEAN_SITES_DOMAINS` in the script + this table + the memory file in a single commit.\n- **Data source label is mandatory in the email**: every report says \"Google Search Console\" and explicitly notes \"(NOT GA4)\". No GA4 data is in the pipeline.\n- **A `GSC Bank YYYY-Www` tab must accompany every weekly report tab** — per-site contribution breakdown across all 5 windows (current month, previous month, last 3/6, YTD). Bail / non-bail / \"no GSC access\" sections separated.\n- **Email lists EVERY tier (S/A/B/C/D) with its top sites in the body.** Not just A-tier. Each non-empty tier gets its own section with: count, range, explainer, top 5–8 sites, \"plus N more\" link. Skipping B/C/D in the email body is a regression — Angelo flagged this 2026-05-07. The only tier that may be omitted is one with 0 sites.\n- **Email follows the UPDATED-findings template** (the version Angelo approved).\n- **Sheet always shows full S→D** — no skipping tiers.\n- **Never overwrite prior weekly tabs** — additive only.\n- **Time-period comparison section required**: current month, previous month, last 3 months, last 6 months, YTD.\n- **bail-bonds.com is WordPress** (memory `feedback_bailbonds_com_is_wordpress.md`). Don't propose Cloudflare-side fixes for it.\n- Email goes only to `4434lifeline@gmail.com` (global rule).\n- **No tier-focus arguments.** Removed 2026-05-07. Every report is comprehensive.\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    }
+  ],
+  "rawLength": 6875,
+  "sectionCount": 6,
+  "phaseCount": 0
+}

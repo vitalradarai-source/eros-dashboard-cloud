@@ -1,0 +1,163 @@
+{
+  "eros-day": {
+    "rating": 9,
+    "summary": "The flagship skill. 9 phases, 23 sections in final report, 35 active sites tracked. Auto-execute on. Mature.",
+    "whatWorks": [
+      "9 phases run idempotently — safe to re-run any phase same day",
+      "Auto-execute eliminates the friction of manual approvals at each phase",
+      "Final report Section #24 mirrors full /bail-reports detail (added today)",
+      "Phase 1 step 5 — Semrush LHF integration gives content direction (added today)",
+      "Tier-driven triage (S/A/B/C/D) prevents wasting effort on wrong sites",
+      "Operator-notes hook (Phase 0 step 10) closes the dashboard improvement loop"
+    ],
+    "whatDoesntWork": [
+      "No external duplicate-content check today — internal Jaccard catches microsite-vs-microsite, but the 245-blog backlog has 126 below 70% unique (just discovered)",
+      "Fact-check is currently manual (Phase 4a WebSearch + verify). The new verify-blog-facts.mjs (added today) needs wiring into Phase 4d",
+      "Phase 8 final report is now ~250 markdown rows — pushing email truncation limits in some clients",
+      "No GBP automation. Mondays Phase 5 generates GBP posts for ReEnergized only; the 31 microsites' GBPs are managed manually"
+    ],
+    "couldBeBetter": [
+      "Add Phase 4d.5 = run verify-blog-facts.mjs before deploy. If hard errors > 0, block deploy with red flag",
+      "Add Phase 2 step 7 = run check-external-duplicates.mjs. Flag <70% pages as backlog for variant-rotation rewriter",
+      "Surface estimated session time per phase in the plan output (Phase 3) so Angelo can see 'this run will be ~45min of writes'",
+      "Add 'Answer Block' insertion to Phase 4b blog template (40-60 word direct answer right after H1) — research finding from Phase 7"
+    ],
+    "flaggedObsolete": [
+      "Phase 0 step 7 references 'STANDING REMINDER' as plural but only Lovable Path A/B/C is currently active — text wording implies more"
+    ]
+  },
+  "bail-reports": {
+    "rating": 9,
+    "summary": "Weekly bail-network snapshot. 215 domains, 3-group GSC totals, additive weekly tabs. Mature.",
+    "whatWorks": [
+      "Three-group rule (Bail / Sean Sites / ReEnergized never blended) permanently fixed via hard-coded constants",
+      "Additive weekly tabs preserve history — no data lost",
+      "Every tier (S→D) shown in email body, full list in sheet tab",
+      "Time-period comparison across 5 windows surfaces month-over-month CTR trends"
+    ],
+    "whatDoesntWork": [
+      "Manual trigger only — easy to forget on a Monday",
+      "Full data refresh (HTTP probe + GSC multi-window) only on first Monday of month — other Mondays reuse stale data without an indicator of staleness in the email subject"
+    ],
+    "couldBeBetter": [
+      "Add 'data age' to email subject line: 'Weekly Report W20 (data 4d old)'",
+      "Add /bail-reports auto-suggestion to /eros-day Phase 1 every Monday (currently a Phase 1 reminder, not a trigger — keep manual but more visible)",
+      "Compare current week's tier counts to last week directly in the email body, not just the sheet"
+    ],
+    "flaggedObsolete": []
+  },
+  "eros-report-check": {
+    "rating": 7,
+    "summary": "Audit yesterday's /eros-day report for errors + check blog cadence. Useful but secondary.",
+    "whatWorks": [
+      "Catches the historical defect patterns (undefined, 0/0/0/0 rows, stale snapshots)",
+      "Blog cadence audit splits Lovable / microsites / ReEnergized correctly",
+      "Each defect classified hard/soft/expected"
+    ],
+    "whatDoesntWork": [
+      "Manually invoked — Angelo has to remember to run it after /eros-day",
+      "Output goes to a file, not surfaced in the next session unless Angelo opens it"
+    ],
+    "couldBeBetter": [
+      "Could run automatically as Phase 8.5 of /eros-day right after the final report saves",
+      "Findings could feed into operator-notes/<date>.md so next /eros-day reads them automatically"
+    ],
+    "flaggedObsolete": []
+  },
+  "bd": {
+    "rating": 6,
+    "summary": "Update BirdsEye View. Lightweight slash command for one-off status updates.",
+    "whatWorks": [
+      "Simple invocation — Angelo provides slug + status, EROS applies"
+    ],
+    "whatDoesntWork": [
+      "BirdsEye View blockers from todo-angelo.md never resolved (GA4 property ID wrong, Projects migration not applied, seed key missing)",
+      "No automation — every BD update is manual"
+    ],
+    "couldBeBetter": [
+      "Resolve the underlying BD blockers so the skill can do more than status text",
+      "Add a bulk-update mode: 'mark all microsites with status=X as live'"
+    ],
+    "flaggedObsolete": []
+  },
+  "run-reenergized-analytics": {
+    "rating": 8,
+    "summary": "Rebuilds the 38-tab ReEnergized leads/conversion/ROI workbook. Multiple data sources, 30 cross-checks gate publish.",
+    "whatWorks": [
+      "Verified every phase before publishing",
+      "30 cross-checks prevent silent data corruption",
+      "Pulls from ClubReady + Gmail + GA4 + CTM + Tidio + QuickBooks"
+    ],
+    "whatDoesntWork": [
+      "Long runtime — 5-10 minutes per full refresh",
+      "Requires fresh exports from ClubReady + QB to be in ~/Downloads"
+    ],
+    "couldBeBetter": [
+      "Pre-flight check: confirm ~/Downloads has all expected files before running",
+      "Email Sophie the freshness status weekly instead of on-demand only"
+    ],
+    "flaggedObsolete": []
+  },
+  "analyze-data": {
+    "rating": 7,
+    "summary": "Cross-source reconciliation (QB P&L vs BQ vs Looker vs ClubReady). Read-only.",
+    "whatWorks": [
+      "Read-only — can't accidentally corrupt the pipeline",
+      "Produces a Google Sheet + email per run"
+    ],
+    "whatDoesntWork": [
+      "Discrepancies surface but resolution still requires Sophie/Sean manual judgement",
+      "Sometimes used when /update-looker or /run-reenergized-analytics would have been more appropriate"
+    ],
+    "couldBeBetter": [
+      "Add a flowchart in the skill .md showing 'use this skill when X, use that skill when Y'"
+    ],
+    "flaggedObsolete": []
+  },
+  "update-looker": {
+    "rating": 8,
+    "summary": "Weekly BQ + Looker refresh from ClubReady + QB downloads.",
+    "whatWorks": [
+      "Auto-detects newest files in ~/Downloads",
+      "Dry-run before full refresh",
+      "Backup before destructive operations"
+    ],
+    "whatDoesntWork": [
+      "Tied to weekly Sophie cadence — if exports late, the refresh stalls"
+    ],
+    "couldBeBetter": [
+      "Auto-email Sophie a reminder if exports >7 days old"
+    ],
+    "flaggedObsolete": []
+  },
+  "hug-prompt": {
+    "rating": 8,
+    "summary": "Image-to-video prompt generator tuned per video platform (HF Wan 2.2 default).",
+    "whatWorks": [
+      "Per-tool tuning — different prompts for HF vs Kling vs Pixverse",
+      "Built around source-image-defines-WHAT, prompt-defines-HOW-IT-MOVES rule"
+    ],
+    "whatDoesntWork": [
+      "Tied to one user (creative work, not Sean business)"
+    ],
+    "couldBeBetter": [
+      "Out of scope for EROS — keep as is"
+    ],
+    "flaggedObsolete": []
+  },
+  "pickleball": {
+    "rating": 5,
+    "summary": "Emmanuel's separate pickleball app workspace. Not EROS scope. Locked away from auto-trigger.",
+    "whatWorks": [
+      "Explicit auto-trigger ban — 'never invoke without explicit /pickleball'",
+      "Uses angelopaulferrer-ui account (approved exception)"
+    ],
+    "whatDoesntWork": [
+      "Cross-contamination risk — keywords like 'app' or 'Emmanuel' could trigger it if rules slip"
+    ],
+    "couldBeBetter": [
+      "Move to a separate Claude profile entirely so it can't accidentally be invoked here"
+    ],
+    "flaggedObsolete": []
+  }
+}

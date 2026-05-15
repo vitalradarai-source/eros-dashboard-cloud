@@ -1,0 +1,181 @@
+{
+  "name": "analyze-data",
+  "title": "/analyze-data — Cross-Source Reconciliation Skill",
+  "filePath": "/Users/emmanuelpableo/.claude/commands/analyze-data.md",
+  "mtime": "2026-05-08T01:29:34.272Z",
+  "sizeBytes": 9432,
+  "preamble": "EROS uses this when Sean / Sophie / Angelo say \"the numbers don't add up\" or ask EROS to verify that two systems agree. The skill is **read-only** — it never touches `jt-full-refresh.mjs`, never edits BQ tables, never modifies the Looker dashboard. It only reads, compares, and reports.\n\nBuilt 2026-05-07 from the QB ↔ BQ ↔ Looker reconciliation pattern.\n\n---",
+  "sections": [
+    {
+      "heading": "When to use it",
+      "depth": 2,
+      "startLine": 13,
+      "body": "\n- Sophie / Sean / Angelo says: \"QuickBooks doesn't match Looker\", \"the dashboard is wrong\", \"this expense looks too high/low\"\n- Cross-checking ClubReady revenue against QuickBooks Income\n- Verifying BigQuery `prod.*` tables against the source files that feed them\n- Any time you need to prove WHY two views of the same business diverge\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "What it produces",
+      "depth": 2,
+      "startLine": 22,
+      "body": "\n1. **Drive folder** under the existing ReEnergized folder (`1_zcqMjqt1fabeGRTt0Ju-F0YAwtx_UXx`) — keeps all reconciliation work in one place\n2. **Google Sheet** with these tabs:\n   - `README` — methodology + how to read\n   - `Headline Summary` — exec view: monthly variance per source\n   - `Expense Reconciliation` — month-by-month gap, with COGS vs Expense handled separately\n   - `Expense by Account` — per-account drill-down, all months side-by-side\n   - `Revenue Reconciliation` — Income side\n   - `Raw P&L Data` / `Raw BQ Expenses` / `Raw BQ stg QB` / `Raw CR Payments` / `Raw CR Daily TX` — flat data behind every comparison\n   - `Root Cause Hypotheses` — 8 specific theories per discrepancy with evidence + verification steps\n   - `Source Files Manifest` — provenance: which file feeds which row\n3. **Email to `4434lifeline@gmail.com` only** — never to third parties (Sean / Sophie / Zach)\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Sources EROS knows how to compare",
+      "depth": 2,
+      "startLine": 38,
+      "body": "\n| Source | Where it lives | What it represents |\n|---|---|---|\n| QuickBooks **Profit and Loss** (`.xlsx`) | `~/Downloads/Profit and Loss*.xlsx` (one per month) | What Sean & Sophie review — calendar-snapshot, summary view |\n| QuickBooks **Transaction Detail by Account** (`CSV Output (N).xlsx`) | `~/Downloads/CSV Output*.xlsx` | Raw ledger that feeds BQ — current state, not a snapshot |\n| BigQuery **stg.quickbooks_stg** | `rich-tome-488802-a2.stg.quickbooks_stg` | Loaded by `jt-full-refresh.mjs` from the Transaction Detail xlsx |\n| BigQuery **prod.expenses** | `rich-tome-488802-a2.prod.expenses` | Filtered + classified subset of stg — feeds Looker |\n| BigQuery **prod.payment_transactions_prod** | `rich-tome-488802-a2.prod.payment_transactions_prod` | ClubReady raw payments (PaymentStatus: Paid / Fully Refunded / etc.) |\n| BigQuery **prod.daily_transactions** | `rich-tome-488802-a2.prod.daily_transactions` | ClubReady revenue rolled to daily + InvoiceDescriptionGrouped — feeds Looker Revenue Analysis |\n| Looker Studio | https://lookerstudio.google.com/reporting/3bc9cc6f-fca2-44f1-a45f-520f236a2d0f | What Sean sees — bound to BQ `prod.*` tables |\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [
+        "https://lookerstudio.google.com/reporting/3bc9cc6f-fca2-44f1-a45f-520f236a2d0f"
+      ],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Critical rules — never violate",
+      "depth": 2,
+      "startLine": 52,
+      "body": "\n1. **Read-only.** Never call `jt-full-refresh.mjs` or any script that writes to BQ. Never edit Looker.\n2. **Never alter source files in `~/Downloads/`.** Treat them as immutable.\n3. **All work in `~/Workspaces/birdseye-view/scripts/analysis/`.** That folder is sandboxed from the live pipeline.\n4. **Email goes only to `4434lifeline@gmail.com`.** No Sean, no Sophie, no Zach. Angelo forwards.\n5. **Never claim two sources \"match\" without showing the join key + the variance column.** \"Looks close\" is not a reconciliation.\n6. **Always disclose missing months / dropped duplicates / parse errors** in the Source Files Manifest tab.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [
+        "~/Workspaces/birdseye-view/scripts/analysis/"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "How EROS runs it",
+      "depth": 2,
+      "startLine": 63,
+      "body": "\n### Phase 1 — Confirm scope (always ask the user)\n\nUse `AskUserQuestion` with three questions:\n- **Scope:** expenses-only / expenses+revenue / full P&L (Income/COGS/Expense/Other)\n- **Drive folder:** under existing ReEnergized folder (default) / new top-level / pasted ID\n- **Sources to include:** which subset of the 7 sources above\n\nSkip Phase 1 only if the user gave explicit instructions (e.g. \"expenses only, dump in the existing Sheet\").\n\n### Phase 2 — Parse source files\n\n```bash\ncd ~/Workspaces/birdseye-view\nnode scripts/analysis/parse-pnl.mjs   # all \"Profit and Loss*.xlsx\" → output/pnl_*.csv\n```\n\nThe parser auto-detects month-year from row 2 of each xlsx, deduplicates by mtime, and emits:\n- `output/pnl_normalized.csv` — one row per (month, account)\n- `output/pnl_monthly_totals.csv` — one row per (month, section)\n- `output/pnl_manifest.json` — provenance + missing months\n- `output/pnl_missing_months.txt`\n\nIf the user provides additional source xlsx files (e.g. ClubReady manual exports), extend the parser — don't write a one-off script.\n\n### Phase 3 — Pull BigQuery aggregates\n\n```bash\nnode scripts/analysis/extract-bq.mjs\n```\n\nReads from `~/.birdseye-full-token.json` (auto-refresh). Pulls 6 aggregates by default:\n1. `bq_qb_raw_by_month_account.csv`\n2. `bq_qb_raw_monthly_section.csv`\n3. `bq_expenses_by_month_account.csv`\n4. `bq_expenses_monthly.csv`\n5. `bq_payments_monthly.csv`\n6. `bq_daily_tx_monthly.csv`\n\nAdd new queries by extending the `QUERIES` map in `extract-bq.mjs` — don't fork the script.\n\n### Phase 4 — Quick gap preview (optional)\n\n```bash\nnode scripts/analysis/quick-gap-analysis.mjs\n```\n\nPrints monthly variance to stdout. Useful for spotting outliers before building the Sheet, and for catching extraction bugs (e.g. wrong PaymentStatus filter — happened on 2026-05-07).\n\n### Phase 5 — Build Google Sheet\n\n```bash\nnode scripts/analysis/build-reconciliation-sheet.mjs\n```\n\nCreates the Drive folder + Sheet (13 tabs), writes `output/sheet_result.json` with the URLs.\n\n### Phase 6 — Send email\n\n```bash\nnode scripts/analysis/send-reconciliation-email.mjs\n```\n\nUses `eros-workspace/scripts/email-utils.mjs` (`safeSubject`, `emailShell`, `sendEmail`). Reads `output/sheet_result.json` for the link.\n\n---\n\n",
+      "subsections": [
+        {
+          "heading": "Phase 1 — Confirm scope (always ask the user)",
+          "startLine": 65
+        },
+        {
+          "heading": "Phase 2 — Parse source files",
+          "startLine": 74
+        },
+        {
+          "heading": "Phase 3 — Pull BigQuery aggregates",
+          "startLine": 89
+        },
+        {
+          "heading": "Phase 4 — Quick gap preview (optional)",
+          "startLine": 105
+        },
+        {
+          "heading": "Phase 5 — Build Google Sheet",
+          "startLine": 113
+        },
+        {
+          "heading": "Phase 6 — Send email",
+          "startLine": 121
+        }
+      ],
+      "scripts": [
+        "node scripts/analysis/parse-pnl.mjs",
+        "node scripts/analysis/extract-bq.mjs",
+        "node scripts/analysis/quick-gap-analysis.mjs",
+        "node scripts/analysis/build-reconciliation-sheet.mjs",
+        "node scripts/analysis/send-reconciliation-email.mjs"
+      ],
+      "files": [
+        "~/Workspaces/birdseye-view"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Common reconciliation patterns (lessons learned)",
+      "depth": 2,
+      "startLine": 131,
+      "body": "\n### Pattern 1 — Section vs combined\nQuickBooks P&L treats COGS (5xxx) and Expense (6xxx) as separate sections. BQ `prod.expenses` combines them. Always show both: `P&L Expense alone`, `P&L Expense + COGS`, `BQ prod.expenses`. Without that breakdown the gap looks bigger than it is.\n\n### Pattern 2 — Snapshot vs live\nA QuickBooks P&L PDF/xlsx is a snapshot at the moment of export. The underlying ledger (Transaction Detail → stg.quickbooks_stg) is current. If anyone edits a transaction after the P&L export, BQ will show the new value. Always note the export date in the manifest tab.\n\n### Pattern 3 — Calendar vs GAAP\nClubReady books revenue on `PaymentDate` (calendar). QuickBooks recognizes income on invoice / service date (GAAP). End-of-year membership prepayments cause large gaps in Jan and Feb that are NOT bugs.\n\n### Pattern 4 — Status filter mismatch\nDon't assume PaymentStatus values without checking. ClubReady uses \"Paid\" not \"Approved\". Always run a `SELECT DISTINCT` on enum-like columns first.\n\n### Pattern 5 — Filename ≠ content\nP&L files are named e.g. `Profit and Loss - March 2026 (1).xlsx` but the actual month is in row 2 of the sheet (\"March 1-31, 2026\"). Auto-detect from content, not filename.\n\n---\n\n",
+      "subsections": [
+        {
+          "heading": "Pattern 1 — Section vs combined",
+          "startLine": 133
+        },
+        {
+          "heading": "Pattern 2 — Snapshot vs live",
+          "startLine": 136
+        },
+        {
+          "heading": "Pattern 3 — Calendar vs GAAP",
+          "startLine": 139
+        },
+        {
+          "heading": "Pattern 4 — Status filter mismatch",
+          "startLine": 142
+        },
+        {
+          "heading": "Pattern 5 — Filename ≠ content",
+          "startLine": 145
+        }
+      ],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "What NOT to do",
+      "depth": 2,
+      "startLine": 150,
+      "body": "\n- Don't propose changes to `jt-full-refresh.mjs` or `refresh-prod-expenses.mjs` based on the analysis — that requires explicit Angelo + Sean approval (memory: `feedback_dont_touch_working_charts.md`).\n- Don't rename Looker chart bindings to make labels match QB. \"Aligned to QB\" means data values match, not pixel-perfect labels.\n- Don't include code-fix recommendations in the email — the email is for Sophie / Sean's eyes (Angelo forwards). Code-fix recommendations live in ClickUp.\n- Don't extract `.eml` files in this skill — that's a separate task. List missing months in the manifest and stop.\n- Don't email Sophie / Sean / Zach directly. Always 4434lifeline@gmail.com.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Files this skill owns",
+      "depth": 2,
+      "startLine": 160,
+      "body": "\n```\n~/Workspaces/birdseye-view/scripts/analysis/\n├── parse-pnl.mjs              # P&L .xlsx → flat CSV\n├── extract-bq.mjs             # BQ aggregates → CSVs\n├── bq-helper.mjs              # shared OAuth + query helper\n├── quick-gap-analysis.mjs     # stdout preview\n├── build-reconciliation-sheet.mjs   # Drive folder + Sheet builder\n├── send-reconciliation-email.mjs    # Gmail email sender\n└── output/\n    ├── pnl_*.csv              # parsed P&L\n    ├── pnl_manifest.json\n    ├── pnl_missing_months.txt\n    ├── bq_*.csv               # BQ aggregates\n    ├── bq_extract_manifest.json\n    └── sheet_result.json      # last-run Drive folder + Sheet URLs\n```\n\nExisting pipeline files (`jt-full-refresh.mjs`, `refresh-prod-expenses.mjs`, etc.) are off-limits to this skill.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [
+        "~/Workspaces/birdseye-view/scripts/analysis/"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Reporting back",
+      "depth": 2,
+      "startLine": 183,
+      "body": "\nAfter a successful run, EROS reports to Angelo:\n1. Drive folder URL + Sheet URL\n2. Months loaded vs months missing\n3. Top 3 monthly variances (biggest absolute gaps)\n4. Whether the gap pattern is consistent (systemic issue) or scattered (data-entry issue)\n5. One sentence on root cause hypothesis\n6. Email sent confirmation\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    }
+  ],
+  "rawLength": 9262,
+  "sectionCount": 9,
+  "phaseCount": 0
+}

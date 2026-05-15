@@ -1,0 +1,314 @@
+{
+  "eros-day": {
+    "Phase 0 — Session Start Verify": [
+      {
+        "type": "local-md",
+        "path": "~/Workspaces/angelos-workspace/todo-angelo.md",
+        "label": "todo-angelo.md (active urgent items)"
+      },
+      {
+        "type": "local-md",
+        "path": "~/Workspaces/angelos-workspace/eros/todo-eros.md",
+        "label": "todo-eros.md (EROS carry-over)"
+      },
+      {
+        "type": "local-md",
+        "path": "~/Workspaces/angelos-workspace/eros/learning-log.md",
+        "label": "learning-log.md"
+      },
+      {
+        "type": "local-json",
+        "path": "~/Workspaces/test-1-bail-bond/dns-audit/master-domain-inventory-scored.json",
+        "label": "/bail-reports master inventory (215 domains)"
+      }
+    ],
+    "Phase 1 — Data Refresh *(replaces GSC + keyword-bank crons)*": [
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/bailbondsdomesticviolence/seo-tasks/*/analysis.json",
+        "label": "BailbondsDV per-day analysis",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/reenergized/seo-tasks/*/analysis.json",
+        "label": "ReEnergized per-day analysis",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/vital-radar-ai-seo/seo-tasks/*/analysis.json",
+        "label": "VitalRadar per-day analysis",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/bulllion-dealer/seo-tasks/*/analysis.json",
+        "label": "Bullion Dealer per-day analysis",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/boundless-global/seo-tasks/*/analysis.json",
+        "label": "Boundless Global per-day analysis",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/ga4.json",
+        "label": "GA4 daily snapshot (3 properties)",
+        "latest": true
+      },
+      {
+        "type": "google-sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1i1hTIw50Vzudp_0BrclAVgBcHbwQVP0PhqGHwMrl5tw",
+        "label": "EROS Keyword Bank (live aggregated)"
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/keyword-priorities.json",
+        "label": "Network keyword priorities (GSC-based)",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/semrush-lhf.json",
+        "label": "Semrush Low-Hanging Fruit (XLSX reference)",
+        "latest": true
+      },
+      {
+        "type": "local-xlsx",
+        "path": "~/Workspaces/bailbondsdomesticviolence/seo/keywords/Angel's Bailbonds Keyword.xlsx",
+        "label": "Semrush XLSX (62k keywords, 17 tabs)"
+      }
+    ],
+    "Phase 2 — Kaizen + Health *(replaces SEO-improve + kaizen + watchdog crons)*": [
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/network-score.json",
+        "label": "Network Kaizen score",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/active-tiers.json",
+        "label": "Active site S/A/B/C/D tiers",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/gsc.json",
+        "label": "Network GSC daily snapshot",
+        "latest": true
+      }
+    ],
+    "Phase 3 — Triage + Decide": [
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/active-tiers.json",
+        "label": "Active tiers (drives triage)",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/keyword-priorities.json",
+        "label": "GSC priorities",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/semrush-lhf.json",
+        "label": "Semrush LHF (what to write next)",
+        "latest": true
+      }
+    ],
+    "Phase 4 — Apply Content": [
+      {
+        "type": "local-md",
+        "path": "~/Workspaces/eros-workspace/scripts/rotation-calendar.mjs",
+        "label": "rotation-calendar.mjs (Path C bucket)"
+      },
+      {
+        "type": "google-sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1i1hTIw50Vzudp_0BrclAVgBcHbwQVP0PhqGHwMrl5tw",
+        "label": "Blog Links Sheet (35 tabs)"
+      }
+    ],
+    "Phase 5 — GBP Posts *(Mondays only, replaces Mon 12pm cron)*": [
+      {
+        "type": "local-script",
+        "path": "~/Workspaces/reenergized/scripts/generate-gbp-posts.mjs",
+        "label": "GBP post generator (ReEnergized)"
+      }
+    ],
+    "Phase 6 — Email Digest *(replaces daily 7am cron)*": [
+      {
+        "type": "local-script",
+        "path": "~/Workspaces/eros-workspace/scripts/eros-email-digest.mjs",
+        "label": "EROS daily digest script"
+      }
+    ],
+    "Phase 7 — ClickUp Sync": [
+      {
+        "type": "clickup",
+        "url": "https://app.clickup.com/9013078540/v/li/901414136549",
+        "label": "Angels Bail Bonds Website/SEO list"
+      },
+      {
+        "type": "clickup",
+        "url": "https://app.clickup.com/9013078540/v/li/901414136743",
+        "label": "Angelo's To-do list"
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/clickup-status.json",
+        "label": "Today's ClickUp status cache",
+        "latest": true
+      }
+    ],
+    "Phase 8 — Session End *(replaces all 35 autosave crons + log-session-progress)*": [
+      {
+        "type": "local-md-glob",
+        "glob": "~/Workspaces/angelos-workspace/eros/daily-reports/*.md",
+        "label": "Daily EROS Day Final Reports",
+        "latest": true
+      },
+      {
+        "type": "google-drive-folder",
+        "url": "https://drive.google.com/drive/folders/1RmGJ0ND1eTfGk2b9yzInwpIpNdpGUtfO",
+        "label": "Claude Progress Drive folder"
+      },
+      {
+        "type": "google-sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1i1hTIw50Vzudp_0BrclAVgBcHbwQVP0PhqGHwMrl5tw",
+        "label": "EROS Keyword Bank (Phase 8 backstop refresh)"
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/site-changelog.json",
+        "label": "Per-site change log (today)",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/apply-ratio.json",
+        "label": "Apply Loop ratio (today)",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/strategy-results.json",
+        "label": "Strategy results (today)",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/dashboard-sync.json",
+        "label": "Dashboard sync check (today)",
+        "latest": true
+      }
+    ],
+    "Phase 9 — Continuous Self-Research *(Mondays only, added 2026-05-12)*": [
+      {
+        "type": "local-md-glob",
+        "glob": "~/Workspaces/eros-workspace/data/research/*/findings.md",
+        "label": "Research findings (latest)",
+        "latest": true
+      }
+    ]
+  },
+  "bail-reports": {
+    "Always comprehensive — no tier focus": [
+      {
+        "type": "google-sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1GeiGAy2kCxpm25h-1Z5vCE4IQpeP48elXNe2XYk9S-Y",
+        "label": "Master domain inventory sheet (additive weekly tabs)"
+      }
+    ],
+    "Source data": [
+      {
+        "type": "local-json",
+        "path": "~/Workspaces/test-1-bail-bond/dns-audit/master-domain-inventory-scored.json",
+        "label": "Scored master (215 domains)"
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/test-1-bail-bond/dns-audit/http-probe-*.json",
+        "label": "HTTP probe (Live/Dead/Redirect classification)",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/test-1-bail-bond/dns-audit/gsc-multi-window-*.json",
+        "label": "GSC 5-window network totals",
+        "latest": true
+      },
+      {
+        "type": "local-json-glob",
+        "glob": "~/Workspaces/test-1-bail-bond/dns-audit/gsc-90d-*.json",
+        "label": "GSC 90d per-site",
+        "latest": true
+      }
+    ],
+    "What to do": [
+      {
+        "type": "local-script",
+        "path": "~/Workspaces/test-1-bail-bond/scripts/phase2-http-probe.mjs",
+        "label": "HTTP probe"
+      },
+      {
+        "type": "local-script",
+        "path": "~/Workspaces/test-1-bail-bond/scripts/phase2.6-multi-layer-probe.mjs",
+        "label": "Multi-layer probe recovery"
+      },
+      {
+        "type": "local-script",
+        "path": "~/Workspaces/test-1-bail-bond/scripts/phase2-gsc-pull.mjs",
+        "label": "GSC 90d pull"
+      },
+      {
+        "type": "local-script",
+        "path": "~/Workspaces/test-1-bail-bond/scripts/phase2-gsc-multi-window.mjs",
+        "label": "GSC multi-window pull"
+      },
+      {
+        "type": "local-script",
+        "path": "~/Workspaces/test-1-bail-bond/scripts/rebuild-master-clean.mjs",
+        "label": "Rebuild master inventory"
+      },
+      {
+        "type": "local-script",
+        "path": "~/Workspaces/test-1-bail-bond/scripts/phase3-score.mjs",
+        "label": "Score all 215 domains"
+      },
+      {
+        "type": "local-script",
+        "path": "~/Workspaces/test-1-bail-bond/scripts/phase4-action-plan.mjs",
+        "label": "Action plan + decom shortlist"
+      },
+      {
+        "type": "local-script",
+        "path": "~/Workspaces/test-1-bail-bond/scripts/bail-reports-weekly.mjs",
+        "label": "Weekly report builder"
+      }
+    ]
+  },
+  "eros-report-check": {
+    "Step 1 — Locate latest report": [
+      {
+        "type": "local-md-glob",
+        "glob": "~/Workspaces/angelos-workspace/eros/daily-reports/*.md",
+        "label": "Latest EROS Day report",
+        "latest": true
+      }
+    ],
+    "Step 6 — Output report card": [
+      {
+        "type": "local-md-glob",
+        "glob": "~/Workspaces/eros-workspace/data/daily/*/report-check.md",
+        "label": "Today's report check output",
+        "latest": true
+      }
+    ]
+  }
+}

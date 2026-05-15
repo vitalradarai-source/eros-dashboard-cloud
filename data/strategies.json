@@ -1,0 +1,202 @@
+{
+  "_test-design-rules": {
+    "windowMinDays": 21,
+    "windowMaxDays": 60,
+    "windowDefaultDays": 28,
+    "reasoning": "Google needs 2-4 weeks to recrawl and reindex affected pages. AI Overviews + Answer Engines refresh on similar cadence. <21 days = noise. >60 days = lost opportunity cost.",
+    "successCriteria": {
+      "impressions": "+15% vs control or +30% absolute (whichever stricter)",
+      "clicks": "+20% vs control or +10 absolute on low-baseline pages",
+      "avgPosition": "improved by ≥2 positions on target keyword",
+      "ctr": "improved by ≥0.5 percentage points absolute"
+    },
+    "killCriteria": {
+      "anyMetricDown": "-15% vs control after 28 days = kill",
+      "noChange": "<5% movement after 28 days = neutral, free to drop"
+    }
+  },
+  "strategies": [
+    {
+      "id": "answer-blocks-aeo",
+      "title": "AEO Answer Blocks — 40-60 word direct-answer post-H1",
+      "hypothesis": "Pages with a concise direct answer after H1 will get cited more often in ChatGPT/Perplexity/AI Overviews and improve CTR on info-intent keywords.",
+      "source": "data/research/2026-05-12/findings.md (AEO 2026 section)",
+      "status": "active",
+      "createdAt": "2026-05-13",
+      "startDate": "2026-05-14",
+      "endDate": "2026-06-11",
+      "windowDays": 28,
+      "treatmentPages": [
+        "bailbondhuntingtonbeach.com/blog/2026-05-12-hbpd-to-oc-jail-transfer-walkthrough.html",
+        "bailbondsandimas.com/blog/2026-05-12-san-dimas-lasd-station-booking-walkthrough.html",
+        "bailbondshaciendaheights.com/blog/2026-05-12-bail-money-hacienda-heights-bonds-not-loans.html",
+        "lahabrabailbonds.com/blog/2026-05-12-la-habra-misdemeanor-bail-schedule-six-charges.html",
+        "bailbond-agent.com/blog/how-bail-bonds-work-california.html",
+        "bailbond-agent.com/blog/how-much-is-bail-california.html",
+        "bailbondsencinitas.com/blog/2026-05-14-sdsd-encinitas-station-booking-walkthrough.html",
+        "fountainvalleybailbond.com/blog/2026-05-14-fountain-valley-domestic-violence-bail-no-72hour-myth.html"
+      ],
+      "controlPages": [
+        "bailbondhuntingtonbeach.com/blog/2026-04-30-first-offense-bail-huntington-beach.html",
+        "bailbondsandimas.com/blog/2026-04-30-immigration-hold-bail-san-dimas.html",
+        "bailbondshaciendaheights.com/blog/2026-04-30-bail-bond-cost-hacienda-heights.html",
+        "lahabrabailbonds.com/blog/2026-04-30-felony-vs-misdemeanor-bail-la-habra.html"
+      ],
+      "metrics": {
+        "primary": "impressions",
+        "secondary": [
+          "clicks",
+          "avgPosition",
+          "ctr"
+        ]
+      },
+      "checkInDays": [
+        7,
+        14,
+        28
+      ],
+      "decision": null,
+      "notes": "Activated 2026-05-14. 8 treatment pages now have the 40-60 word Answer Block right after H1 (today's 4 + yesterday's 4 + the bailbond-agent rewrites). Control = same-site blogs from 2026-04-30 without the pattern. Check-in 2026-05-21 (day 7), 2026-05-28 (day 14), 2026-06-11 (day 28 verdict)."
+    },
+    {
+      "id": "compact-keywords-short-page",
+      "title": "Edward Sturm — 400-500 word compact-keyword test",
+      "hypothesis": "Short pages targeting one purchase-intent keyword outperform 2,000-word pages on conversion-stage keywords like 'bail money [city]'.",
+      "source": "data/research/2026-05-12/findings.md (Edward Sturm 2026 Playbook)",
+      "status": "planned",
+      "createdAt": "2026-05-13",
+      "startDate": null,
+      "endDate": null,
+      "windowDays": 28,
+      "treatmentPages": [],
+      "controlPages": [],
+      "metrics": {
+        "primary": "clicks",
+        "secondary": [
+          "impressions",
+          "avgPosition",
+          "conversions_calls"
+        ]
+      },
+      "checkInDays": [
+        14,
+        28
+      ],
+      "decision": null,
+      "notes": "PENDING: pick 2 microsites with low blog count to test short-page format on. Write a 400-500 word page + standard 2,000-word page on adjacent keywords. Compare GSC deltas after 28 days."
+    },
+    {
+      "id": "ctr-meta-rewrite-rowlandheights",
+      "title": "Rowland Heights — CTR meta rewrite on bail-money-loans keyword",
+      "hypothesis": "Rewriting the meta title + description from generic to urgency-first ('Bail Money in Rowland Heights? Bonds, Not Loans — Out Tonight') will lift CTR on the existing pos-5 ranking for 'bail money loans rowland heights ca' (vol 720, KD 19, 15,415 imps in last 3 mo).",
+      "source": "Today's A-tier triage decision (2026-05-12)",
+      "status": "active",
+      "createdAt": "2026-05-12",
+      "startDate": "2026-05-12",
+      "endDate": "2026-06-09",
+      "windowDays": 28,
+      "treatmentPages": [
+        "bailbondsrowlandheights.com/blog/2026-04-14-bail-bonds-vs-loans-rowland-heights.html"
+      ],
+      "controlPages": [],
+      "metrics": {
+        "primary": "clicks",
+        "secondary": [
+          "ctr",
+          "impressions"
+        ]
+      },
+      "checkInDays": [
+        7,
+        14,
+        21,
+        28
+      ],
+      "decision": null,
+      "notes": "Baseline (pre-rewrite): pos 5, 15,415 imps, 1 click, CTR ~0.006%. Expected +647 monthly clicks per priorities calc. First check-in 2026-05-19."
+    },
+    {
+      "id": "local-landmarks-section",
+      "title": "Hyperlocal Local Landmarks on microsite homepages",
+      "hypothesis": "Adding a 'Local Landmarks' section (freeway exits, neighborhoods, hospitals, courthouses by name) to microsite homepages will improve local-pack ranking + local-intent CTR.",
+      "source": "data/research/2026-05-12/findings.md (Hyperlocal SEO section)",
+      "status": "active",
+      "createdAt": "2026-05-13",
+      "startDate": "2026-05-14",
+      "endDate": "2026-06-11",
+      "windowDays": 28,
+      "treatmentPages": [
+        "bailbondsrowlandheights.com/"
+      ],
+      "controlPages": [
+        "bailbondsandimas.com/",
+        "bailbondshaciendaheights.com/"
+      ],
+      "metrics": {
+        "primary": "impressions",
+        "secondary": [
+          "avgPosition",
+          "ga4_sessions",
+          "clicks"
+        ]
+      },
+      "checkInDays": [
+        14,
+        28
+      ],
+      "decision": null,
+      "notes": "Activated 2026-05-14. Treatment: bailbondsrowlandheights.com homepage gets a 'Local Landmarks & Service Area' section (LASD Industry Station address, Cal Poly Pomona, City of Industry, Walnut, Diamond Bar, Hacienda Heights neighborhoods, 60/57/210 freeway exits). Control: bailbondsandimas + bailbondshaciendaheights — same San Gabriel Valley peer group, no landmarks section. Check-in day 14 (2026-05-28), verdict day 28 (2026-06-11). If KEEP, roll out to 30 more microsites."
+    },
+    {
+      "id": "solution-based-content-arc",
+      "title": "Matt Diamante — solution-based content arc audit",
+      "hypothesis": "Blogs with explicit problem→solution structure (vs topic description) get higher engagement, lower bounce, and stronger CTR.",
+      "source": "data/research/2026-05-12/findings.md (Matt Diamante HeyTony section)",
+      "status": "planned",
+      "createdAt": "2026-05-13",
+      "startDate": null,
+      "endDate": null,
+      "windowDays": 28,
+      "treatmentPages": [],
+      "controlPages": [],
+      "metrics": {
+        "primary": "ga4_avg_engagement_duration",
+        "secondary": [
+          "clicks",
+          "impressions"
+        ]
+      },
+      "checkInDays": [
+        21
+      ],
+      "decision": null,
+      "notes": "PENDING: audit 5 random recent blogs for solution-arc adherence. If only 2/5 pass, rewrite the other 3 with explicit P→S structure. Compare GA4 engagement duration 21 days post-rewrite."
+    },
+    {
+      "id": "decision-intent-faq-blogs",
+      "title": "AEO Decision-intent content — 'should I' / 'is it worth' / 'when to'",
+      "hypothesis": "Decision-intent content (e.g., 'Should I post bail with an ICE hold?') ranks better in AI Overviews than process-intent because it gives users a clear yes/no with conditions.",
+      "source": "data/research/2026-05-12/findings.md (AEO content-by-intent)",
+      "status": "planned",
+      "createdAt": "2026-05-13",
+      "startDate": null,
+      "endDate": null,
+      "windowDays": 28,
+      "treatmentPages": [],
+      "controlPages": [],
+      "metrics": {
+        "primary": "impressions",
+        "secondary": [
+          "clicks",
+          "avgPosition"
+        ]
+      },
+      "checkInDays": [
+        14,
+        28
+      ],
+      "decision": null,
+      "notes": "PENDING: write 3 decision-intent blogs in next 2 weeks ('should I post bail / is bail bond worth it / when to call a bondsman'). Compare to existing process blogs on same site."
+    }
+  ]
+}

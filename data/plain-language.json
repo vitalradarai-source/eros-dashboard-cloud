@@ -1,0 +1,65 @@
+{
+  "eros-day": {
+    "_skill_summary": {
+      "what": "Your daily run-everything command. Replaces what used to be 35+ background tasks (crons).",
+      "why": "Used to have 35 separate scheduled jobs across all sites — daily SEO reports, content drafts, autosave commits, ClickUp updates, GBP posts, email digests. All replaced by one session you run yourself.",
+      "how": "Type /eros-day in Claude. It runs Phase 0 → Phase 8 in order. Each phase does one type of work (verify, gather data, score health, decide today's plan, write content, etc).",
+      "when": "Daily Monday–Friday. Skip weekends. Goal: one session per weekday.",
+      "result": "End of session you get an email + Google Doc + ClickUp tasks summarizing exactly what shipped today + what's left."
+    },
+    "Phase 0 — Session Start Verify": {
+      "plain": "Quick health check before doing real work. Reads todo lists, checks if any Lovable site is broken for Google, scans for 'no-loans' rule violations, confirms last week's bail-report data isn't stale, and surfaces standing reminders Angelo deferred. Takes about a minute. If something's wrong, you find out NOW instead of mid-blog."
+    },
+    "Phase 1 — Data Refresh *(replaces GSC + keyword-bank crons)*": {
+      "plain": "Pulls fresh data from Google so you know what people actually searched for. Per-site GSC reports (which keywords brought visitors), GA4 (what visitors did), syncs the keyword bank Google Sheet, computes today's keyword priorities, and runs the Semrush low-hanging-fruit ranking against the local XLSX. Output of this phase decides what gets written in Phase 4."
+    },
+    "Phase 2 — Kaizen + Health *(replaces SEO-improve + kaizen + watchdog crons)*": {
+      "plain": "Scores every site (1–100 + S/A/B/C/D tier) and flags problems. Looks for duplicate content across the 31 microsites (Google hates near-identical pages — 'doorway page' penalty). Builds the active-tiers.json that Phase 3 uses to decide where to invest today's time."
+    },
+    "Phase 3 — Triage + Decide": {
+      "plain": "Picks today's bucket of sites and decides what each one needs. A-tier gets a meta rewrite (existing rankings + bad CTR = fast win). B-tier gets a new blog. C-tier gets an infra fix (GBP, schema, redirect). D-tier waits. Output: a 5-line plan. Auto-execute is ON — Angelo said 'run the whole thing' so /eros-day doesn't pause for approval."
+    },
+    "Phase 4 — Apply Content": {
+      "plain": "The actual writing + publishing. Pre-write gates first: no-loans audit, fact-check via WebSearch, E-E-A-T checklist. Then write 4–8 microsite blogs OR 2–4 main-site blogs OR meta rewrites OR all of the above. Deploy via wrangler. Verify each URL is live (200 + 400+ words). This is the primary deliverable of every weekday."
+    },
+    "Phase 5 — GBP Posts *(Mondays only, replaces Mon 12pm cron)*": {
+      "plain": "Mondays only — generate Google Business Profile posts for ReEnergized. Other Sean sites skip GBP work for now. Skip rule: never rename a GBP. Use parentOrganization schema + weekly posts + geotagged photos instead."
+    },
+    "Phase 6 — Email Digest *(replaces daily 7am cron)*": {
+      "plain": "Send Angelo the daily summary email. Always to 4434lifeline@gmail.com only (never third parties). Subject sanitized for Gmail, body converted from markdown to proper HTML tables."
+    },
+    "Phase 7 — ClickUp Sync": {
+      "plain": "Update task tracker. Close stale duplicates from old crons. Create a new task for today's session. Mark today's work complete or pending-review. Always assign Angelo. Every status change gets a comment so future-EROS can see why it moved."
+    },
+    "Phase 8 — Session End *(replaces all 35 autosave crons + log-session-progress)*": {
+      "plain": "Wrap up: commit + push every workspace that has changes, refresh the blog-links sheet, sync the keyword bank, build site-changelog + apply-ratio + strategy-results + dashboard-sync, then generate the EROS Day Final Report (30+ sections). Email to Angelo + Google Doc copy."
+    },
+    "Phase 9 — Continuous Self-Research *(Mondays only, added 2026-05-12)*": {
+      "plain": "Mondays only — WebSearch latest SEO/AEO/GEO/hyperlocal/Claude API best practices. Rotates 3-4 topics weekly through named sources (Edward Sturm, Matt Diamante, AEO, GEO, hyperlocal). Saves findings.md to data/research/<date>/. Dashboard 'Research' tab surfaces all findings automatically. Surfaces 2-3 actionable improvements per run that feed the next session's Apply Loop."
+    }
+  },
+  "bail-reports": {
+    "_skill_summary": {
+      "what": "Weekly report on the entire 215-domain bail network.",
+      "why": "Network is too big to handle daily. Once a week — Mondays — refresh probe data, GSC pull, score all 215 domains, build the strategic snapshot.",
+      "how": "Type /bail-reports. Runs the data refresh if stale, scores all 215, writes a new sheet tab (Report YYYY-Www, never overwrite prior weeks), sends email with comprehensive S→D breakdown.",
+      "when": "Manual. Suggested Monday. First Monday of each month: full refresh including HTTP probe + GSC multi-window. Other Mondays: reuse cached data.",
+      "result": "Email + new weekly tab in the master sheet. /eros-day Section #20 references this output as its 5-line summary; Section #24 mirrors the full detail."
+    },
+    "Always comprehensive — no tier focus": {
+      "plain": "Every run produces the SAME report — full S→D tier breakdown, all three groups (Bail / Sean Sites / ReEnergized) reported separately, time-period comparisons, top 10 by score, decom shortlist. No 'focus on one tier' mode — that was confusing and got removed."
+    },
+    "Hard rules": {
+      "plain": "Three groups, NEVER blended (reenergized used to inflate bail numbers by 98% — that mistake stays permanently fixed). Every tier shows in the email body. Sheet tabs are additive (never overwrite). Time-period comparison required."
+    }
+  },
+  "eros-report-check": {
+    "_skill_summary": {
+      "what": "Audit yesterday's /eros-day report for errors and check blog cadence.",
+      "why": "Reports can ship with `undefined` values, broken tables, or missed sites. This catches the regressions before they pile up.",
+      "how": "Run /eros-report-check after /eros-day. Scans the latest report for error markers + checks blog cadence per surface (Lovable, microsites, ReEnergized). Outputs prescriptive fixes that get folded back into /eros-day.",
+      "when": "End of any /eros-day session or any time you want a sanity check.",
+      "result": "Inline summary under 200 words + full detail at data/daily/<today>/report-check.md."
+    }
+  }
+}

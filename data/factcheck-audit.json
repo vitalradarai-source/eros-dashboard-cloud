@@ -1,0 +1,775 @@
+{
+  "generatedAt": "2026-05-14T21:50:15.029Z",
+  "date": "2026-05-14",
+  "recentDays": 30,
+  "summary": {
+    "blogsScanned": 235,
+    "blogsWithIssues": 50,
+    "hardErrors": 0,
+    "warnings": 52
+  },
+  "results": [
+    {
+      "site": "bailbond-california",
+      "file": "california-bail-laws-2026.html",
+      "slug": "california-bail-laws-2026",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": " <tbody> <tr><td><strong>dui — 1st offense</strong></td><td>$5,000</td><td>$5,000</td><td>$2,500</td",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "PC §1305 cited but context does not include any canonical keywords",
+          "sample": "s the bail forfeited on the record. the court clerk mails a notice of forfeiture to the bail agent. ",
+          "fix": "Add context describing: bond exoneration / surrender procedure"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 2
+    },
+    {
+      "site": "fountainvalleybailbond",
+      "file": "2026-04-16-fountain-valley-bail-bonds.html",
+      "slug": "2026-04-16-fountain-valley-bail-bonds",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "esponds, booking at 10200 slater. first-offense vc 23152 at $15,000 bail. post at fvpd for the faste",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        },
+        {
+          "severity": "WARN",
+          "rule": "PC §459 cited but context does not include any canonical keywords",
+          "sample": "c irc within 4–6 hours if no bond posted first.</p><p>a shoplifting or organized retail theft call f",
+          "fix": "Add context describing: burglary (first-degree residential or second-degree)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 2
+    },
+    {
+      "site": "1800bail911",
+      "file": "how-bail-bonds-work-los-angeles.html",
+      "slug": "how-bail-bonds-work-los-angeles",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "800bail911",
+      "file": "domestic-violence-bail-bonds-800bail911.html",
+      "slug": "domestic-violence-bail-bonds-800bail911",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": " locate them in the lasd system</li> <li><strong>the arresting agency</strong> — lapd, lasd, or a sp",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "800bail911",
+      "file": "how-bail-bonds-work-los-angeles.html",
+      "slug": "how-bail-bonds-work-los-angeles",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "800bail911",
+      "file": "what-is-bail-california-guide.html",
+      "slug": "what-is-bail-california-guide",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "assault with a deadly weapon</td> <td>pc 245</td> <td>$30,000</td> <td>$3,000</td> </tr> <tr> <td>do",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbond-california",
+      "file": "how-bail-bonds-work-california.html",
+      "slug": "how-bail-bonds-work-california",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondhuntingtonbeach",
+      "file": "2026-04-16-huntington-beach-bail-bonds.html",
+      "slug": "2026-04-16-huntington-beach-bail-bonds",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "d at $30,000. hbpd processes these on-site; weekend volume can slow booking but bonds still move qui",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondhuntingtonbeach",
+      "file": "2026-04-27-choosing-bail-bondsman-huntington-beach.html",
+      "slug": "2026-04-27-choosing-bail-bondsman-huntington-beach",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "ta ana)</strong> — 700 civic center dr w — handles oc felonies</li> <li><strong>oc bail schedule</st",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondhuntingtonbeach",
+      "file": "how-bail-bonds-work-huntington-beach.html",
+      "slug": "how-bail-bonds-work-huntington-beach",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondhuntingtonbeach",
+      "file": "how-long-bail-takes-huntington-beach.html",
+      "slug": "how-long-bail-takes-huntington-beach",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "unknown phone number(s) in blog body",
+          "sample": "7145365691",
+          "fix": "Expected (714) 220-1717. Verify the other number(s) are legit (station, legal aid, etc) or replace."
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondhuntingtonbeach",
+      "file": "huntington-beach-jail-booking-process.html",
+      "slug": "huntington-beach-jail-booking-process",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "unknown phone number(s) in blog body",
+          "sample": "7149608811, 7145365691, 7146477000, 6576225900",
+          "fix": "Expected (714) 220-1717. Verify the other number(s) are legit (station, legal aid, etc) or replace."
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondhuntingtonbeach",
+      "file": "orange-county-bail-bonds-guide.html",
+      "slug": "orange-county-bail-bonds-guide",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "unknown phone number(s) in blog body",
+          "sample": "7145365691, 7149608811, 7146477000, 6576225900, 6576228000",
+          "fix": "Expected (714) 220-1717. Verify the other number(s) are legit (station, legal aid, etc) or replace."
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondlapalma",
+      "file": "how-bail-bonds-work-la-palma.html",
+      "slug": "how-bail-bonds-work-la-palma",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbonds-picorivera",
+      "file": "2026-05-11-domestic-violence-bail-pico-rivera.html",
+      "slug": "2026-05-11-domestic-violence-bail-pico-rivera",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": ".png\"}}, \"mainentityofpage\":{\"@type\":\"webpage\",\"@id\":\"https://bailbonds-picorivera.com/blog/2026-05-",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbonds-placentia",
+      "file": "how-bail-bonds-work-placentia.html",
+      "slug": "how-bail-bonds-work-placentia",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondsandimas",
+      "file": "how-bail-bonds-work-san-dimas.html",
+      "slug": "how-bail-bonds-work-san-dimas",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondsandimas",
+      "file": "san-dimas-bail-bonds-guide.html",
+      "slug": "san-dimas-bail-bonds-guide",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "unknown phone number(s) in blog body",
+          "sample": "2134736100",
+          "fix": "Expected (626) 478-1062. Verify the other number(s) are legit (station, legal aid, etc) or replace."
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondsangels",
+      "file": "how-bail-bonds-work-los-angeles.html",
+      "slug": "how-bail-bonds-work-los-angeles",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondsencinitas",
+      "file": "how-bail-bonds-work-encinitas.html",
+      "slug": "how-bail-bonds-work-encinitas",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondsgardengrove",
+      "file": "how-bail-bonds-work-garden-grove.html",
+      "slug": "how-bail-bonds-work-garden-grove",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondshaciendaheights",
+      "file": "hacienda-heights-bail-bonds-guide.html",
+      "slug": "hacienda-heights-bail-bonds-guide",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "unknown phone number(s) in blog body",
+          "sample": "2134736080",
+          "fix": "Expected (626) 478-1062. Verify the other number(s) are legit (station, legal aid, etc) or replace."
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondshaciendaheights",
+      "file": "how-bail-bonds-work-hacienda-heights.html",
+      "slug": "how-bail-bonds-work-hacienda-heights",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondsrowlandheights",
+      "file": "2026-04-27-bench-warrant-rowland-heights.html",
+      "slug": "2026-04-27-bench-warrant-rowland-heights",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "unknown phone number(s) in blog body",
+          "sample": "9096203120",
+          "fix": "Expected (626) 478-1062. Verify the other number(s) are legit (station, legal aid, etc) or replace."
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondsrowlandheights",
+      "file": "how-bail-bonds-work-rowland-heights.html",
+      "slug": "how-bail-bonds-work-rowland-heights",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondssangabriel",
+      "file": "2026-05-05-domestic-violence-bail-san-gabriel.html",
+      "slug": "2026-05-05-domestic-violence-bail-san-gabriel",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondssangabriel",
+      "file": "how-bail-bonds-work-san-gabriel.html",
+      "slug": "how-bail-bonds-work-san-gabriel",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondsstanton",
+      "file": "how-bail-bonds-work-stanton.html",
+      "slug": "how-bail-bonds-work-stanton",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondstustin",
+      "file": "how-bail-bonds-work-tustin.html",
+      "slug": "how-bail-bonds-work-tustin",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "bailbondwestcovina",
+      "file": "how-bail-bonds-work-west-covina.html",
+      "slug": "how-bail-bonds-work-west-covina",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "city-of-industry-bail-bonds",
+      "file": "how-bail-bonds-work-city-of-industry.html",
+      "slug": "how-bail-bonds-work-city-of-industry",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "fountainvalleybailbond",
+      "file": "2026-05-08-domestic-violence-bail-fountain-valley.html",
+      "slug": "2026-05-08-domestic-violence-bail-fountain-valley",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": " \"mainentityofpage\":{\"@type\":\"webpage\",\"@id\":\"https://fountainvalleybailbond.com/blog/2026-05-08-dom",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "fountainvalleybailbond",
+      "file": "how-bail-bonds-work-fountain-valley.html",
+      "slug": "how-bail-bonds-work-fountain-valley",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "gardenabailbonds",
+      "file": "how-bail-bonds-work-gardena.html",
+      "slug": "how-bail-bonds-work-gardena",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "gaybailbonds",
+      "file": "how-bail-bonds-work-los-angeles.html",
+      "slug": "how-bail-bonds-work-los-angeles",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "hermosa-beach-bail-bonds",
+      "file": "how-bail-bonds-work-hermosa-beach.html",
+      "slug": "how-bail-bonds-work-hermosa-beach",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "lagunabailbonds",
+      "file": "2026-04-16-laguna-beach-bail-bonds.html",
+      "slug": "2026-04-16-laguna-beach-bail-bonds",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "u call (626) 478-1062. we confirm the bail amount from the orange county bail schedule — laguna beac",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "lagunabailbonds",
+      "file": "bail-bonds-laguna-beach.html",
+      "slug": "bail-bonds-laguna-beach",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "HS §11351 cited but context does not include any canonical keywords",
+          "sample": "irst degree)</td> <td>pc 211</td> <td>$100,000</td> </tr> <tr> <td>possession of controlled substanc",
+          "fix": "Add context describing: possession for sale (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "lagunabailbonds",
+      "file": "how-bail-bonds-work-laguna-beach.html",
+      "slug": "how-bail-bonds-work-laguna-beach",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "lagunahillsbailbonds",
+      "file": "how-bail-bonds-work-laguna-hills.html",
+      "slug": "how-bail-bonds-work-laguna-hills",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "lagunaniguelbailbonds",
+      "file": "how-bail-bonds-work-laguna-niguel.html",
+      "slug": "how-bail-bonds-work-laguna-niguel",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "lahabrabailbonds",
+      "file": "how-bail-bonds-work-la-habra.html",
+      "slug": "how-bail-bonds-work-la-habra",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "lahabrabailbonds",
+      "file": "la-habra-bail-bonds-guide.html",
+      "slug": "la-habra-bail-bonds-guide",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "trolled substance)</td> <td>hs 11351</td> <td>$30,000</td> </tr> <tr> <td>felony domestic violence w",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "lakersbailbonds",
+      "file": "los-angeles-domestic-violence-bail-bonds-lakers.html",
+      "slug": "los-angeles-domestic-violence-bail-bonds-lakers",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "ale=1.0\"> <title>los angeles domestic violence bail bonds | angels bail bonds</title> <meta name=\"de",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "losalamitosbailbond",
+      "file": "how-bail-bonds-work-los-alamitos.html",
+      "slug": "how-bail-bonds-work-los-alamitos",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "montereyparkbailbonds",
+      "file": "monterey-park-bail-bonds-guide.html",
+      "slug": "monterey-park-bail-bonds-guide",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "r><td>assault with a deadly weapon (pc 245)</td><td>$30,000</td></tr> <tr><td>domestic violence batt",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "ocbailbondsman",
+      "file": "orange-county-domestic-violence-bail-bonds.html",
+      "slug": "orange-county-domestic-violence-bail-bonds",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "title>orange county domestic violence bail bonds | angels bail bonds</title> <meta name=\"description",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "sanbernardinobailbond",
+      "file": "how-bail-bonds-work-san-bernardino.html",
+      "slug": "how-bail-bonds-work-san-bernardino",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §136.2 cited but context does not include any canonical keywords",
+          "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
+          "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "sandimasbailbond",
+      "file": "san-dimas-dv-bail-bonds.html",
+      "slug": "san-dimas-dv-bail-bonds",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": " arrests | angels bail bonds</title> <meta name=\"description\" content=\"san dimas domestic violence b",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    },
+    {
+      "site": "veteranbailbonds",
+      "file": "veteran-domestic-violence-bail-bonds-california.html",
+      "slug": "veteran-domestic-violence-bail-bonds-california",
+      "issues": [
+        {
+          "severity": "WARN",
+          "rule": "PC §273.5 cited but context does not include any canonical keywords",
+          "sample": "-width, initial-scale=1.0\"> <title>veteran domestic violence bail bonds in california | angels bail ",
+          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
+        }
+      ],
+      "hardCount": 0,
+      "warnCount": 1
+    }
+  ]
+}

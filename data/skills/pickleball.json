@@ -1,0 +1,65 @@
+{
+  "name": "pickleball",
+  "title": "/pickleball — Emmanuel's Pickleball App",
+  "filePath": "/Users/emmanuelpableo/.claude/commands/pickleball.md",
+  "mtime": "2026-04-07T03:43:01.965Z",
+  "sizeBytes": 1015,
+  "preamble": "When Angelo says `/pickleball`, switch context to Emmanuel's pickleball app workspace.",
+  "sections": [
+    {
+      "heading": "Workspace",
+      "depth": 2,
+      "startLine": 5,
+      "body": "- Directory: `~/EmmanuelWorkspace/`\n- GitHub: `angelopaulferrer-ui` (exception — this workspace only)\n- CLAUDE.md: `/Users/emmanuelpableo/EmmanuelWorkspace/CLAUDE.md`\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [
+        "/Users/emmanuelpableo/EmmanuelWorkspace/CLAUDE.md"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Rules",
+      "depth": 2,
+      "startLine": 10,
+      "body": "- All work happens in `~/EmmanuelWorkspace/`\n- Push to `angelopaulferrer-ui` only — never `vitalradarai-source`\n- Do NOT apply EROS/Sean Plotkin rules here\n- This is Emmanuel's personal project — treat it independently\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "On invocation",
+      "depth": 2,
+      "startLine": 16,
+      "body": "1. Confirm context is now the pickleball app\n2. List the contents of `~/EmmanuelWorkspace/Pickleballgamemanagementapp/` to orient\n3. Show the current git branch and last commit\n4. Ask Angelo what he needs for the pickleball app\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "GitHub",
+      "depth": 2,
+      "startLine": 22,
+      "body": "- Remote: `https://github.com/angelopaulferrer-ui/Pickleballgamemanagementapp`\n- Token stored in remote URL — push/pull works without account switching\n- NEVER push to vitalradarai-source from this workspace\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [
+        "https://github.com/angelopaulferrer-ui/Pickleballgamemanagementapp"
+      ],
+      "isPhase": false,
+      "phaseNumber": null
+    }
+  ],
+  "rawLength": 1005,
+  "sectionCount": 4,
+  "phaseCount": 0
+}

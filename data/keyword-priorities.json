@@ -1,0 +1,204 @@
+{
+  "generatedAt": "2026-05-14T23:08:26.125Z",
+  "total": 18,
+  "opportunities": [
+    {
+      "site": "bailbondsrowlandheights",
+      "kind": "microsite",
+      "keyword": "bail money loans rowland heights ca",
+      "position": 5.1,
+      "impressions": 13857,
+      "currentCtr": 1,
+      "expectedCtr": 5.2,
+      "monthlyClicksUpside": 582,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "gardenabailbonds",
+      "kind": "microsite",
+      "keyword": "gardena ca bail bonds $0 down",
+      "position": 1.4,
+      "impressions": 5,
+      "currentCtr": 0,
+      "expectedCtr": 39.8,
+      "monthlyClicksUpside": 2,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "bailbondshaciendaheights",
+      "kind": "microsite",
+      "keyword": "bail money loans rowland heights ca",
+      "position": 11.8,
+      "impressions": 100,
+      "currentCtr": 0,
+      "expectedCtr": 1.7,
+      "monthlyClicksUpside": 1.7,
+      "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "gardenabailbonds",
+      "kind": "microsite",
+      "keyword": "$0 down bail bonds gardena",
+      "position": 2.8,
+      "impressions": 11,
+      "currentCtr": 0,
+      "expectedCtr": 10.3,
+      "monthlyClicksUpside": 1.1,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "gardenabailbonds",
+      "kind": "microsite",
+      "keyword": "bail bonds gardena",
+      "position": 1.8,
+      "impressions": 4,
+      "currentCtr": 0,
+      "expectedCtr": 18.7,
+      "monthlyClicksUpside": 0.7,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "\"viome precision health\"",
+      "position": 2,
+      "impressions": 3,
+      "currentCtr": 0,
+      "expectedCtr": 18.7,
+      "monthlyClicksUpside": 0.6,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "gardenabailbonds",
+      "kind": "microsite",
+      "keyword": "$0 down bail bonds gardena ca",
+      "position": 3.9,
+      "impressions": 8,
+      "currentCtr": 0,
+      "expectedCtr": 7.2,
+      "monthlyClicksUpside": 0.6,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "gardenabailbonds",
+      "kind": "microsite",
+      "keyword": "gardena $0 down bail bonds",
+      "position": 2,
+      "impressions": 3,
+      "currentCtr": 0,
+      "expectedCtr": 18.7,
+      "monthlyClicksUpside": 0.6,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "gardenabailbonds",
+      "kind": "microsite",
+      "keyword": "gardena california bail bonds $0 down",
+      "position": 2.3,
+      "impressions": 3,
+      "currentCtr": 0,
+      "expectedCtr": 18.7,
+      "monthlyClicksUpside": 0.6,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro red light mask",
+      "position": 5,
+      "impressions": 10,
+      "currentCtr": 0,
+      "expectedCtr": 5.2,
+      "monthlyClicksUpside": 0.5,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "360 dna test",
+      "position": 2.6,
+      "impressions": 5,
+      "currentCtr": 0,
+      "expectedCtr": 10.3,
+      "monthlyClicksUpside": 0.5,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro face mask",
+      "position": 6.8,
+      "impressions": 9,
+      "currentCtr": 0,
+      "expectedCtr": 3.2,
+      "monthlyClicksUpside": 0.3,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro led mask",
+      "position": 12.5,
+      "impressions": 13,
+      "currentCtr": 0,
+      "expectedCtr": 1.5,
+      "monthlyClicksUpside": 0.2,
+      "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "\"brainwave entrainment\" headset visor earphones led",
+      "position": 9.3,
+      "impressions": 7,
+      "currentCtr": 0,
+      "expectedCtr": 2.2,
+      "monthlyClicksUpside": 0.2,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro led face mask at-home light therapy",
+      "position": 14.8,
+      "impressions": 5,
+      "currentCtr": 0,
+      "expectedCtr": 1.3,
+      "monthlyClicksUpside": 0.1,
+      "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro led",
+      "position": 10.8,
+      "impressions": 4,
+      "currentCtr": 0,
+      "expectedCtr": 1.8,
+      "monthlyClicksUpside": 0.1,
+      "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "360 dna",
+      "position": 7.3,
+      "impressions": 3,
+      "currentCtr": 0,
+      "expectedCtr": 3.2,
+      "monthlyClicksUpside": 0.1,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro facial mask",
+      "position": 14,
+      "impressions": 3,
+      "currentCtr": 0,
+      "expectedCtr": 1.4,
+      "monthlyClicksUpside": 0,
+      "action": "CONTENT-PUSH (add depth/links)"
+    }
+  ]
+}

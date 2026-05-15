@@ -1,0 +1,2544 @@
+{
+  "generatedAt": "2026-05-14T21:21:59.897Z",
+  "date": "2026-05-14",
+  "config": {
+    "uniquenessFloor": 0.7,
+    "similarityCeiling": 0.30000000000000004,
+    "ngramSize": 3,
+    "blogsScanned": 247
+  },
+  "summary": {
+    "totalBlogs": 247,
+    "passingFloor": 123,
+    "failingFloor": 124,
+    "passRate": 0.498,
+    "flaggedPairCount": 1270
+  },
+  "flaggedPairs": [
+    {
+      "a": "1800bail911/how-much-is-bail-los-angeles",
+      "b": "800bail911/how-much-is-bail-los-angeles",
+      "similarity": 0.969,
+      "uniqueness": 0.031
+    },
+    {
+      "a": "1800bail911/how-much-is-bail-los-angeles",
+      "b": "bailbondsangels/how-much-is-bail-los-angeles",
+      "similarity": 0.964,
+      "uniqueness": 0.036
+    },
+    {
+      "a": "800bail911/how-much-is-bail-los-angeles",
+      "b": "bailbondsangels/how-much-is-bail-los-angeles",
+      "similarity": 0.964,
+      "uniqueness": 0.036
+    },
+    {
+      "a": "bailbond-agent/how-to-get-someone-out-of-jail-california",
+      "b": "bailbond-california/how-to-get-someone-out-of-jail-california",
+      "similarity": 0.958,
+      "uniqueness": 0.042
+    },
+    {
+      "a": "1800bail911/how-bail-bonds-work-los-angeles",
+      "b": "bailbondsangels/how-bail-bonds-work-los-angeles",
+      "similarity": 0.943,
+      "uniqueness": 0.057
+    },
+    {
+      "a": "bailbond-agent/how-to-get-someone-out-of-jail-california",
+      "b": "gaybailbonds/how-to-get-someone-out-of-jail-los-angeles",
+      "similarity": 0.932,
+      "uniqueness": 0.068
+    },
+    {
+      "a": "bailbond-california/how-to-get-someone-out-of-jail-california",
+      "b": "gaybailbonds/how-to-get-someone-out-of-jail-los-angeles",
+      "similarity": 0.93,
+      "uniqueness": 0.07
+    },
+    {
+      "a": "bailbondshaciendaheights/how-to-get-someone-out-of-jail-hacienda-heights",
+      "b": "bailbondsrowlandheights/how-to-get-someone-out-of-jail-rowland-heights",
+      "similarity": 0.925,
+      "uniqueness": 0.075
+    },
+    {
+      "a": "lagunahillsbailbonds/how-to-get-someone-out-of-jail-laguna-hills",
+      "b": "lagunaniguelbailbonds/how-to-get-someone-out-of-jail-laguna-niguel",
+      "similarity": 0.923,
+      "uniqueness": 0.077
+    },
+    {
+      "a": "1800bail911/how-bail-bonds-work-los-angeles",
+      "b": "800bail911/how-bail-bonds-work-los-angeles",
+      "similarity": 0.911,
+      "uniqueness": 0.089
+    },
+    {
+      "a": "bailbondshaciendaheights/how-bail-bonds-work-hacienda-heights",
+      "b": "bailbondsrowlandheights/how-bail-bonds-work-rowland-heights",
+      "similarity": 0.906,
+      "uniqueness": 0.094
+    },
+    {
+      "a": "lagunahillsbailbonds/how-bail-bonds-work-laguna-hills",
+      "b": "lagunaniguelbailbonds/how-bail-bonds-work-laguna-niguel",
+      "similarity": 0.906,
+      "uniqueness": 0.094
+    },
+    {
+      "a": "800bail911/how-bail-bonds-work-los-angeles",
+      "b": "bailbondsangels/how-bail-bonds-work-los-angeles",
+      "similarity": 0.901,
+      "uniqueness": 0.099
+    },
+    {
+      "a": "lagunahillsbailbonds/how-much-is-bail-laguna-hills",
+      "b": "lagunaniguelbailbonds/how-much-is-bail-laguna-niguel",
+      "similarity": 0.897,
+      "uniqueness": 0.103
+    },
+    {
+      "a": "bailbondsangels/how-much-is-bail-los-angeles",
+      "b": "gaybailbonds/how-much-is-bail-los-angeles",
+      "similarity": 0.891,
+      "uniqueness": 0.109
+    },
+    {
+      "a": "bailbondlapalma/how-bail-bonds-work-la-palma",
+      "b": "losalamitosbailbond/how-bail-bonds-work-los-alamitos",
+      "similarity": 0.89,
+      "uniqueness": 0.11
+    },
+    {
+      "a": "bailbondshaciendaheights/how-much-is-bail-hacienda-heights",
+      "b": "bailbondsrowlandheights/how-much-is-bail-rowland-heights",
+      "similarity": 0.89,
+      "uniqueness": 0.11
+    },
+    {
+      "a": "1800bail911/how-to-get-someone-out-of-jail-los-angeles",
+      "b": "800bail911/how-to-get-someone-out-of-jail-los-angeles",
+      "similarity": 0.887,
+      "uniqueness": 0.113
+    },
+    {
+      "a": "1800bail911/how-much-is-bail-los-angeles",
+      "b": "gaybailbonds/how-much-is-bail-los-angeles",
+      "similarity": 0.883,
+      "uniqueness": 0.117
+    },
+    {
+      "a": "800bail911/how-much-is-bail-los-angeles",
+      "b": "gaybailbonds/how-much-is-bail-los-angeles",
+      "similarity": 0.883,
+      "uniqueness": 0.117
+    },
+    {
+      "a": "1800bail911/how-to-get-someone-out-of-jail-los-angeles",
+      "b": "bailbondsangels/how-to-get-someone-out-of-jail-los-angeles",
+      "similarity": 0.882,
+      "uniqueness": 0.118
+    },
+    {
+      "a": "bailbondlapalma/how-to-get-someone-out-of-jail-la-palma",
+      "b": "losalamitosbailbond/how-to-get-someone-out-of-jail-los-alamitos",
+      "similarity": 0.88,
+      "uniqueness": 0.12
+    },
+    {
+      "a": "bailbond-agent/how-to-get-someone-out-of-jail-california",
+      "b": "gardenabailbonds/how-to-get-someone-out-of-jail-gardena",
+      "similarity": 0.877,
+      "uniqueness": 0.123
+    },
+    {
+      "a": "bailbondlapalma/how-much-is-bail-la-palma",
+      "b": "losalamitosbailbond/how-much-is-bail-los-alamitos",
+      "similarity": 0.877,
+      "uniqueness": 0.123
+    },
+    {
+      "a": "bailbondsangels/how-to-get-someone-out-of-jail-los-angeles",
+      "b": "gaybailbonds/how-to-get-someone-out-of-jail-los-angeles",
+      "similarity": 0.876,
+      "uniqueness": 0.124
+    },
+    {
+      "a": "800bail911/how-to-get-someone-out-of-jail-los-angeles",
+      "b": "bailbondsangels/how-to-get-someone-out-of-jail-los-angeles",
+      "similarity": 0.874,
+      "uniqueness": 0.126
+    },
+    {
+      "a": "bailbondssangabriel/how-much-is-bail-san-gabriel",
+      "b": "gardenabailbonds/how-much-is-bail-gardena",
+      "similarity": 0.873,
+      "uniqueness": 0.127
+    },
+    {
+      "a": "bailbondssangabriel/how-to-get-someone-out-of-jail-san-gabriel",
+      "b": "gardenabailbonds/how-to-get-someone-out-of-jail-gardena",
+      "similarity": 0.873,
+      "uniqueness": 0.127
+    },
+    {
+      "a": "fountainvalleybailbond/how-to-get-someone-out-of-jail-fountain-valley",
+      "b": "losalamitosbailbond/how-to-get-someone-out-of-jail-los-alamitos",
+      "similarity": 0.873,
+      "uniqueness": 0.127
+    },
+    {
+      "a": "bailbonds-placentia/how-to-get-someone-out-of-jail-placentia",
+      "b": "bailbondstustin/how-to-get-someone-out-of-jail-tustin",
+      "similarity": 0.871,
+      "uniqueness": 0.129
+    },
+    {
+      "a": "bailbond-agent/how-to-get-someone-out-of-jail-california",
+      "b": "bailbondssangabriel/how-to-get-someone-out-of-jail-san-gabriel",
+      "similarity": 0.87,
+      "uniqueness": 0.13
+    },
+    {
+      "a": "bailbondlapalma/how-to-get-someone-out-of-jail-la-palma",
+      "b": "bailbonds-placentia/how-to-get-someone-out-of-jail-placentia",
+      "similarity": 0.868,
+      "uniqueness": 0.132
+    },
+    {
+      "a": "bailbonds-placentia/how-much-is-bail-placentia",
+      "b": "lahabrabailbonds/how-much-is-bail-la-habra",
+      "similarity": 0.868,
+      "uniqueness": 0.132
+    },
+    {
+      "a": "bailbondsangels/how-to-get-someone-out-of-jail-los-angeles",
+      "b": "bailbondssangabriel/how-to-get-someone-out-of-jail-san-gabriel",
+      "similarity": 0.868,
+      "uniqueness": 0.132
+    },
+    {
+      "a": "bailbond-california/how-to-get-someone-out-of-jail-california",
+      "b": "bailbondssangabriel/how-to-get-someone-out-of-jail-san-gabriel",
+      "similarity": 0.867,
+      "uniqueness": 0.133
+    },
+    {
+      "a": "bailbonds-placentia/how-much-is-bail-placentia",
+      "b": "bailbondstustin/how-much-is-bail-tustin",
+      "similarity": 0.867,
+      "uniqueness": 0.133
+    },
+    {
+      "a": "bailbond-agent/what-happens-after-arrest-california",
+      "b": "bailbond-california/what-happens-after-arrest-california",
+      "similarity": 0.866,
+      "uniqueness": 0.134
+    },
+    {
+      "a": "bailbondsandimas/how-to-get-someone-out-of-jail-san-dimas",
+      "b": "bailbondshaciendaheights/how-to-get-someone-out-of-jail-hacienda-heights",
+      "similarity": 0.866,
+      "uniqueness": 0.134
+    },
+    {
+      "a": "bailbondsandimas/how-to-get-someone-out-of-jail-san-dimas",
+      "b": "bailbondsrowlandheights/how-to-get-someone-out-of-jail-rowland-heights",
+      "similarity": 0.866,
+      "uniqueness": 0.134
+    },
+    {
+      "a": "bailbondstustin/how-much-is-bail-tustin",
+      "b": "lahabrabailbonds/how-much-is-bail-la-habra",
+      "similarity": 0.866,
+      "uniqueness": 0.134
+    },
+    {
+      "a": "bailbond-california/how-to-get-someone-out-of-jail-california",
+      "b": "gardenabailbonds/how-to-get-someone-out-of-jail-gardena",
+      "similarity": 0.865,
+      "uniqueness": 0.135
+    },
+    {
+      "a": "bailbondlapalma/how-to-get-someone-out-of-jail-la-palma",
+      "b": "bailbondstustin/how-to-get-someone-out-of-jail-tustin",
+      "similarity": 0.865,
+      "uniqueness": 0.135
+    },
+    {
+      "a": "bailbondsangels/how-to-get-someone-out-of-jail-los-angeles",
+      "b": "gardenabailbonds/how-to-get-someone-out-of-jail-gardena",
+      "similarity": 0.865,
+      "uniqueness": 0.135
+    },
+    {
+      "a": "bailbond-agent/how-to-get-someone-out-of-jail-california",
+      "b": "bailbondsangels/how-to-get-someone-out-of-jail-los-angeles",
+      "similarity": 0.864,
+      "uniqueness": 0.136
+    },
+    {
+      "a": "bailbondssangabriel/how-to-get-someone-out-of-jail-san-gabriel",
+      "b": "bailbondwestcovina/how-to-get-someone-out-of-jail-west-covina",
+      "similarity": 0.864,
+      "uniqueness": 0.136
+    },
+    {
+      "a": "bailbondsstanton/how-much-is-bail-stanton",
+      "b": "lahabrabailbonds/how-much-is-bail-la-habra",
+      "similarity": 0.864,
+      "uniqueness": 0.136
+    },
+    {
+      "a": "fountainvalleybailbond/how-much-is-bail-fountain-valley",
+      "b": "lahabrabailbonds/how-much-is-bail-la-habra",
+      "similarity": 0.864,
+      "uniqueness": 0.136
+    },
+    {
+      "a": "lahabrabailbonds/how-to-get-someone-out-of-jail-la-habra",
+      "b": "losalamitosbailbond/how-to-get-someone-out-of-jail-los-alamitos",
+      "similarity": 0.864,
+      "uniqueness": 0.136
+    },
+    {
+      "a": "bailbondhuntingtonbeach/how-much-is-bail-huntington-beach",
+      "b": "lagunabailbonds/how-much-is-bail-laguna-beach",
+      "similarity": 0.863,
+      "uniqueness": 0.137
+    },
+    {
+      "a": "bailbonds-placentia/how-bail-bonds-work-placentia",
+      "b": "lahabrabailbonds/how-bail-bonds-work-la-habra",
+      "similarity": 0.863,
+      "uniqueness": 0.137
+    }
+  ],
+  "pageStats": [
+    {
+      "page": "1800bail911/how-much-is-bail-los-angeles",
+      "uniqueness": 0.031,
+      "maxSimilarity": 0.969,
+      "worstMatch": "800bail911/how-much-is-bail-los-angeles",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "800bail911/how-much-is-bail-los-angeles",
+      "uniqueness": 0.031,
+      "maxSimilarity": 0.969,
+      "worstMatch": "1800bail911/how-much-is-bail-los-angeles",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsangels/how-much-is-bail-los-angeles",
+      "uniqueness": 0.036,
+      "maxSimilarity": 0.964,
+      "worstMatch": "1800bail911/how-much-is-bail-los-angeles",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbond-agent/how-to-get-someone-out-of-jail-california",
+      "uniqueness": 0.042,
+      "maxSimilarity": 0.958,
+      "worstMatch": "bailbond-california/how-to-get-someone-out-of-jail-california",
+      "avgSimilarity": 0.109,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbond-california/how-to-get-someone-out-of-jail-california",
+      "uniqueness": 0.042,
+      "maxSimilarity": 0.958,
+      "worstMatch": "bailbond-agent/how-to-get-someone-out-of-jail-california",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "1800bail911/how-bail-bonds-work-los-angeles",
+      "uniqueness": 0.057,
+      "maxSimilarity": 0.943,
+      "worstMatch": "bailbondsangels/how-bail-bonds-work-los-angeles",
+      "avgSimilarity": 0.106,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsangels/how-bail-bonds-work-los-angeles",
+      "uniqueness": 0.057,
+      "maxSimilarity": 0.943,
+      "worstMatch": "1800bail911/how-bail-bonds-work-los-angeles",
+      "avgSimilarity": 0.106,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "gaybailbonds/how-to-get-someone-out-of-jail-los-angeles",
+      "uniqueness": 0.068,
+      "maxSimilarity": 0.932,
+      "worstMatch": "bailbond-agent/how-to-get-someone-out-of-jail-california",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondshaciendaheights/how-to-get-someone-out-of-jail-hacienda-heights",
+      "uniqueness": 0.075,
+      "maxSimilarity": 0.925,
+      "worstMatch": "bailbondsrowlandheights/how-to-get-someone-out-of-jail-rowland-heights",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsrowlandheights/how-to-get-someone-out-of-jail-rowland-heights",
+      "uniqueness": 0.075,
+      "maxSimilarity": 0.925,
+      "worstMatch": "bailbondshaciendaheights/how-to-get-someone-out-of-jail-hacienda-heights",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunahillsbailbonds/how-to-get-someone-out-of-jail-laguna-hills",
+      "uniqueness": 0.077,
+      "maxSimilarity": 0.923,
+      "worstMatch": "lagunaniguelbailbonds/how-to-get-someone-out-of-jail-laguna-niguel",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunaniguelbailbonds/how-to-get-someone-out-of-jail-laguna-niguel",
+      "uniqueness": 0.077,
+      "maxSimilarity": 0.923,
+      "worstMatch": "lagunahillsbailbonds/how-to-get-someone-out-of-jail-laguna-hills",
+      "avgSimilarity": 0.107,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "800bail911/how-bail-bonds-work-los-angeles",
+      "uniqueness": 0.089,
+      "maxSimilarity": 0.911,
+      "worstMatch": "1800bail911/how-bail-bonds-work-los-angeles",
+      "avgSimilarity": 0.105,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondshaciendaheights/how-bail-bonds-work-hacienda-heights",
+      "uniqueness": 0.094,
+      "maxSimilarity": 0.906,
+      "worstMatch": "bailbondsrowlandheights/how-bail-bonds-work-rowland-heights",
+      "avgSimilarity": 0.1,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsrowlandheights/how-bail-bonds-work-rowland-heights",
+      "uniqueness": 0.094,
+      "maxSimilarity": 0.906,
+      "worstMatch": "bailbondshaciendaheights/how-bail-bonds-work-hacienda-heights",
+      "avgSimilarity": 0.101,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunahillsbailbonds/how-bail-bonds-work-laguna-hills",
+      "uniqueness": 0.094,
+      "maxSimilarity": 0.906,
+      "worstMatch": "lagunaniguelbailbonds/how-bail-bonds-work-laguna-niguel",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunaniguelbailbonds/how-bail-bonds-work-laguna-niguel",
+      "uniqueness": 0.094,
+      "maxSimilarity": 0.906,
+      "worstMatch": "lagunahillsbailbonds/how-bail-bonds-work-laguna-hills",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunahillsbailbonds/how-much-is-bail-laguna-hills",
+      "uniqueness": 0.103,
+      "maxSimilarity": 0.897,
+      "worstMatch": "lagunaniguelbailbonds/how-much-is-bail-laguna-niguel",
+      "avgSimilarity": 0.1,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunaniguelbailbonds/how-much-is-bail-laguna-niguel",
+      "uniqueness": 0.103,
+      "maxSimilarity": 0.897,
+      "worstMatch": "lagunahillsbailbonds/how-much-is-bail-laguna-hills",
+      "avgSimilarity": 0.1,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "gaybailbonds/how-much-is-bail-los-angeles",
+      "uniqueness": 0.109,
+      "maxSimilarity": 0.891,
+      "worstMatch": "bailbondsangels/how-much-is-bail-los-angeles",
+      "avgSimilarity": 0.099,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondlapalma/how-bail-bonds-work-la-palma",
+      "uniqueness": 0.11,
+      "maxSimilarity": 0.89,
+      "worstMatch": "losalamitosbailbond/how-bail-bonds-work-los-alamitos",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondshaciendaheights/how-much-is-bail-hacienda-heights",
+      "uniqueness": 0.11,
+      "maxSimilarity": 0.89,
+      "worstMatch": "bailbondsrowlandheights/how-much-is-bail-rowland-heights",
+      "avgSimilarity": 0.099,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsrowlandheights/how-much-is-bail-rowland-heights",
+      "uniqueness": 0.11,
+      "maxSimilarity": 0.89,
+      "worstMatch": "bailbondshaciendaheights/how-much-is-bail-hacienda-heights",
+      "avgSimilarity": 0.099,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "losalamitosbailbond/how-bail-bonds-work-los-alamitos",
+      "uniqueness": 0.11,
+      "maxSimilarity": 0.89,
+      "worstMatch": "bailbondlapalma/how-bail-bonds-work-la-palma",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "1800bail911/how-to-get-someone-out-of-jail-los-angeles",
+      "uniqueness": 0.113,
+      "maxSimilarity": 0.887,
+      "worstMatch": "800bail911/how-to-get-someone-out-of-jail-los-angeles",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "800bail911/how-to-get-someone-out-of-jail-los-angeles",
+      "uniqueness": 0.113,
+      "maxSimilarity": 0.887,
+      "worstMatch": "1800bail911/how-to-get-someone-out-of-jail-los-angeles",
+      "avgSimilarity": 0.107,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsangels/how-to-get-someone-out-of-jail-los-angeles",
+      "uniqueness": 0.118,
+      "maxSimilarity": 0.882,
+      "worstMatch": "1800bail911/how-to-get-someone-out-of-jail-los-angeles",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondlapalma/how-to-get-someone-out-of-jail-la-palma",
+      "uniqueness": 0.12,
+      "maxSimilarity": 0.88,
+      "worstMatch": "losalamitosbailbond/how-to-get-someone-out-of-jail-los-alamitos",
+      "avgSimilarity": 0.107,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "losalamitosbailbond/how-to-get-someone-out-of-jail-los-alamitos",
+      "uniqueness": 0.12,
+      "maxSimilarity": 0.88,
+      "worstMatch": "bailbondlapalma/how-to-get-someone-out-of-jail-la-palma",
+      "avgSimilarity": 0.109,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondlapalma/how-much-is-bail-la-palma",
+      "uniqueness": 0.123,
+      "maxSimilarity": 0.877,
+      "worstMatch": "losalamitosbailbond/how-much-is-bail-los-alamitos",
+      "avgSimilarity": 0.1,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "gardenabailbonds/how-to-get-someone-out-of-jail-gardena",
+      "uniqueness": 0.123,
+      "maxSimilarity": 0.877,
+      "worstMatch": "bailbond-agent/how-to-get-someone-out-of-jail-california",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "losalamitosbailbond/how-much-is-bail-los-alamitos",
+      "uniqueness": 0.123,
+      "maxSimilarity": 0.877,
+      "worstMatch": "bailbondlapalma/how-much-is-bail-la-palma",
+      "avgSimilarity": 0.101,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondssangabriel/how-much-is-bail-san-gabriel",
+      "uniqueness": 0.127,
+      "maxSimilarity": 0.873,
+      "worstMatch": "gardenabailbonds/how-much-is-bail-gardena",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondssangabriel/how-to-get-someone-out-of-jail-san-gabriel",
+      "uniqueness": 0.127,
+      "maxSimilarity": 0.873,
+      "worstMatch": "gardenabailbonds/how-to-get-someone-out-of-jail-gardena",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "fountainvalleybailbond/how-to-get-someone-out-of-jail-fountain-valley",
+      "uniqueness": 0.127,
+      "maxSimilarity": 0.873,
+      "worstMatch": "losalamitosbailbond/how-to-get-someone-out-of-jail-los-alamitos",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "gardenabailbonds/how-much-is-bail-gardena",
+      "uniqueness": 0.127,
+      "maxSimilarity": 0.873,
+      "worstMatch": "bailbondssangabriel/how-much-is-bail-san-gabriel",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbonds-placentia/how-to-get-someone-out-of-jail-placentia",
+      "uniqueness": 0.129,
+      "maxSimilarity": 0.871,
+      "worstMatch": "bailbondstustin/how-to-get-someone-out-of-jail-tustin",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondstustin/how-to-get-someone-out-of-jail-tustin",
+      "uniqueness": 0.129,
+      "maxSimilarity": 0.871,
+      "worstMatch": "bailbonds-placentia/how-to-get-someone-out-of-jail-placentia",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbonds-placentia/how-much-is-bail-placentia",
+      "uniqueness": 0.132,
+      "maxSimilarity": 0.868,
+      "worstMatch": "lahabrabailbonds/how-much-is-bail-la-habra",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lahabrabailbonds/how-much-is-bail-la-habra",
+      "uniqueness": 0.132,
+      "maxSimilarity": 0.868,
+      "worstMatch": "bailbonds-placentia/how-much-is-bail-placentia",
+      "avgSimilarity": 0.103,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondstustin/how-much-is-bail-tustin",
+      "uniqueness": 0.133,
+      "maxSimilarity": 0.867,
+      "worstMatch": "bailbonds-placentia/how-much-is-bail-placentia",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbond-agent/what-happens-after-arrest-california",
+      "uniqueness": 0.134,
+      "maxSimilarity": 0.866,
+      "worstMatch": "bailbond-california/what-happens-after-arrest-california",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbond-california/what-happens-after-arrest-california",
+      "uniqueness": 0.134,
+      "maxSimilarity": 0.866,
+      "worstMatch": "bailbond-agent/what-happens-after-arrest-california",
+      "avgSimilarity": 0.095,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsandimas/how-to-get-someone-out-of-jail-san-dimas",
+      "uniqueness": 0.134,
+      "maxSimilarity": 0.866,
+      "worstMatch": "bailbondshaciendaheights/how-to-get-someone-out-of-jail-hacienda-heights",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsstanton/how-much-is-bail-stanton",
+      "uniqueness": 0.136,
+      "maxSimilarity": 0.864,
+      "worstMatch": "lahabrabailbonds/how-much-is-bail-la-habra",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondwestcovina/how-to-get-someone-out-of-jail-west-covina",
+      "uniqueness": 0.136,
+      "maxSimilarity": 0.864,
+      "worstMatch": "bailbondssangabriel/how-to-get-someone-out-of-jail-san-gabriel",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "fountainvalleybailbond/how-much-is-bail-fountain-valley",
+      "uniqueness": 0.136,
+      "maxSimilarity": 0.864,
+      "worstMatch": "lahabrabailbonds/how-much-is-bail-la-habra",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lahabrabailbonds/how-to-get-someone-out-of-jail-la-habra",
+      "uniqueness": 0.136,
+      "maxSimilarity": 0.864,
+      "worstMatch": "losalamitosbailbond/how-to-get-someone-out-of-jail-los-alamitos",
+      "avgSimilarity": 0.108,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondhuntingtonbeach/how-much-is-bail-huntington-beach",
+      "uniqueness": 0.137,
+      "maxSimilarity": 0.863,
+      "worstMatch": "lagunabailbonds/how-much-is-bail-laguna-beach",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbonds-placentia/how-bail-bonds-work-placentia",
+      "uniqueness": 0.137,
+      "maxSimilarity": 0.863,
+      "worstMatch": "lahabrabailbonds/how-bail-bonds-work-la-habra",
+      "avgSimilarity": 0.105,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunabailbonds/how-much-is-bail-laguna-beach",
+      "uniqueness": 0.137,
+      "maxSimilarity": 0.863,
+      "worstMatch": "bailbondhuntingtonbeach/how-much-is-bail-huntington-beach",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lahabrabailbonds/how-bail-bonds-work-la-habra",
+      "uniqueness": 0.137,
+      "maxSimilarity": 0.863,
+      "worstMatch": "bailbonds-placentia/how-bail-bonds-work-placentia",
+      "avgSimilarity": 0.105,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondwestcovina/how-much-is-bail-west-covina",
+      "uniqueness": 0.139,
+      "maxSimilarity": 0.861,
+      "worstMatch": "bailbondssangabriel/how-much-is-bail-san-gabriel",
+      "avgSimilarity": 0.101,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunabailbonds/how-to-get-someone-out-of-jail-laguna-beach",
+      "uniqueness": 0.139,
+      "maxSimilarity": 0.861,
+      "worstMatch": "losalamitosbailbond/how-to-get-someone-out-of-jail-los-alamitos",
+      "avgSimilarity": 0.107,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsgardengrove/how-much-is-bail-garden-grove",
+      "uniqueness": 0.14,
+      "maxSimilarity": 0.86,
+      "worstMatch": "lahabrabailbonds/how-much-is-bail-la-habra",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondhuntingtonbeach/how-to-get-someone-out-of-jail-huntington-beach",
+      "uniqueness": 0.141,
+      "maxSimilarity": 0.859,
+      "worstMatch": "lagunabailbonds/how-to-get-someone-out-of-jail-laguna-beach",
+      "avgSimilarity": 0.107,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsstanton/how-to-get-someone-out-of-jail-stanton",
+      "uniqueness": 0.141,
+      "maxSimilarity": 0.859,
+      "worstMatch": "lagunahillsbailbonds/how-to-get-someone-out-of-jail-laguna-hills",
+      "avgSimilarity": 0.107,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsencinitas/how-to-get-someone-out-of-jail-encinitas",
+      "uniqueness": 0.142,
+      "maxSimilarity": 0.858,
+      "worstMatch": "bailbondsandimas/how-to-get-someone-out-of-jail-san-dimas",
+      "avgSimilarity": 0.106,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsandimas/how-much-is-bail-san-dimas",
+      "uniqueness": 0.143,
+      "maxSimilarity": 0.857,
+      "worstMatch": "gardenabailbonds/how-much-is-bail-gardena",
+      "avgSimilarity": 0.101,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "gaybailbonds/what-happens-after-arrest-lgbtq-community",
+      "uniqueness": 0.143,
+      "maxSimilarity": 0.857,
+      "worstMatch": "bailbond-california/what-happens-after-arrest-california",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsgardengrove/how-to-get-someone-out-of-jail-garden-grove",
+      "uniqueness": 0.144,
+      "maxSimilarity": 0.856,
+      "worstMatch": "bailbondhuntingtonbeach/how-to-get-someone-out-of-jail-huntington-beach",
+      "avgSimilarity": 0.107,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondstustin/how-bail-bonds-work-tustin",
+      "uniqueness": 0.145,
+      "maxSimilarity": 0.855,
+      "worstMatch": "fountainvalleybailbond/how-bail-bonds-work-fountain-valley",
+      "avgSimilarity": 0.105,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "fountainvalleybailbond/how-bail-bonds-work-fountain-valley",
+      "uniqueness": 0.145,
+      "maxSimilarity": 0.855,
+      "worstMatch": "bailbondstustin/how-bail-bonds-work-tustin",
+      "avgSimilarity": 0.105,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondhuntingtonbeach/how-bail-bonds-work-huntington-beach",
+      "uniqueness": 0.146,
+      "maxSimilarity": 0.854,
+      "worstMatch": "lagunabailbonds/how-bail-bonds-work-laguna-beach",
+      "avgSimilarity": 0.105,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunabailbonds/how-bail-bonds-work-laguna-beach",
+      "uniqueness": 0.146,
+      "maxSimilarity": 0.854,
+      "worstMatch": "bailbondhuntingtonbeach/how-bail-bonds-work-huntington-beach",
+      "avgSimilarity": 0.105,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondssangabriel/how-bail-bonds-work-san-gabriel",
+      "uniqueness": 0.149,
+      "maxSimilarity": 0.851,
+      "worstMatch": "gardenabailbonds/how-bail-bonds-work-gardena",
+      "avgSimilarity": 0.105,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "gardenabailbonds/how-bail-bonds-work-gardena",
+      "uniqueness": 0.149,
+      "maxSimilarity": 0.851,
+      "worstMatch": "bailbondssangabriel/how-bail-bonds-work-san-gabriel",
+      "avgSimilarity": 0.104,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "sanbernardinobailbond/how-to-get-someone-out-of-jail-san-bernardino",
+      "uniqueness": 0.153,
+      "maxSimilarity": 0.847,
+      "worstMatch": "bailbondsangels/how-to-get-someone-out-of-jail-los-angeles",
+      "avgSimilarity": 0.106,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsstanton/how-bail-bonds-work-stanton",
+      "uniqueness": 0.154,
+      "maxSimilarity": 0.846,
+      "worstMatch": "bailbondstustin/how-bail-bonds-work-tustin",
+      "avgSimilarity": 0.105,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbond-california/how-much-is-bail-california",
+      "uniqueness": 0.155,
+      "maxSimilarity": 0.845,
+      "worstMatch": "gaybailbonds/how-much-is-bail-los-angeles",
+      "avgSimilarity": 0.098,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondwestcovina/how-bail-bonds-work-west-covina",
+      "uniqueness": 0.157,
+      "maxSimilarity": 0.843,
+      "worstMatch": "bailbondssangabriel/how-bail-bonds-work-san-gabriel",
+      "avgSimilarity": 0.104,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsandimas/how-bail-bonds-work-san-dimas",
+      "uniqueness": 0.161,
+      "maxSimilarity": 0.839,
+      "worstMatch": "bailbondwestcovina/how-bail-bonds-work-west-covina",
+      "avgSimilarity": 0.104,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsgardengrove/how-bail-bonds-work-garden-grove",
+      "uniqueness": 0.162,
+      "maxSimilarity": 0.838,
+      "worstMatch": "bailbondstustin/how-bail-bonds-work-tustin",
+      "avgSimilarity": 0.105,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "gaybailbonds/how-bail-bonds-work-los-angeles",
+      "uniqueness": 0.165,
+      "maxSimilarity": 0.835,
+      "worstMatch": "bailbondsangels/how-bail-bonds-work-los-angeles",
+      "avgSimilarity": 0.101,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondshaciendaheights/what-happens-after-arrest-hacienda-heights",
+      "uniqueness": 0.174,
+      "maxSimilarity": 0.826,
+      "worstMatch": "bailbondsrowlandheights/what-happens-after-arrest-rowland-heights",
+      "avgSimilarity": 0.093,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsrowlandheights/what-happens-after-arrest-rowland-heights",
+      "uniqueness": 0.174,
+      "maxSimilarity": 0.826,
+      "worstMatch": "bailbondshaciendaheights/what-happens-after-arrest-hacienda-heights",
+      "avgSimilarity": 0.093,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbond-california/how-bail-bonds-work-california",
+      "uniqueness": 0.181,
+      "maxSimilarity": 0.819,
+      "worstMatch": "gaybailbonds/how-bail-bonds-work-los-angeles",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsencinitas/how-bail-bonds-work-encinitas",
+      "uniqueness": 0.198,
+      "maxSimilarity": 0.802,
+      "worstMatch": "bailbondsandimas/how-bail-bonds-work-san-dimas",
+      "avgSimilarity": 0.103,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "sanbernardinobailbond/how-bail-bonds-work-san-bernardino",
+      "uniqueness": 0.198,
+      "maxSimilarity": 0.802,
+      "worstMatch": "bailbondsangels/how-bail-bonds-work-los-angeles",
+      "avgSimilarity": 0.102,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsencinitas/how-much-is-bail-encinitas",
+      "uniqueness": 0.208,
+      "maxSimilarity": 0.792,
+      "worstMatch": "bailbondsandimas/how-much-is-bail-san-dimas",
+      "avgSimilarity": 0.098,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunahillsbailbonds/what-happens-after-arrest-laguna-hills",
+      "uniqueness": 0.215,
+      "maxSimilarity": 0.785,
+      "worstMatch": "lagunaniguelbailbonds/what-happens-after-arrest-laguna-niguel",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunaniguelbailbonds/what-happens-after-arrest-laguna-niguel",
+      "uniqueness": 0.215,
+      "maxSimilarity": 0.785,
+      "worstMatch": "lagunahillsbailbonds/what-happens-after-arrest-laguna-hills",
+      "avgSimilarity": 0.093,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "sanbernardinobailbond/how-much-is-bail-san-bernardino",
+      "uniqueness": 0.215,
+      "maxSimilarity": 0.785,
+      "worstMatch": "bailbondsencinitas/how-much-is-bail-encinitas",
+      "avgSimilarity": 0.097,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "1800bail911/what-happens-after-arrest-los-angeles",
+      "uniqueness": 0.216,
+      "maxSimilarity": 0.784,
+      "worstMatch": "800bail911/what-happens-after-arrest-los-angeles",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "800bail911/what-happens-after-arrest-los-angeles",
+      "uniqueness": 0.216,
+      "maxSimilarity": 0.784,
+      "worstMatch": "1800bail911/what-happens-after-arrest-los-angeles",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondhuntingtonbeach/what-happens-after-arrest-huntington-beach",
+      "uniqueness": 0.223,
+      "maxSimilarity": 0.777,
+      "worstMatch": "bailbondsgardengrove/what-happens-after-arrest-garden-grove",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsangels/what-happens-after-arrest-los-angeles",
+      "uniqueness": 0.223,
+      "maxSimilarity": 0.777,
+      "worstMatch": "1800bail911/what-happens-after-arrest-los-angeles",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsgardengrove/what-happens-after-arrest-garden-grove",
+      "uniqueness": 0.223,
+      "maxSimilarity": 0.777,
+      "worstMatch": "bailbondhuntingtonbeach/what-happens-after-arrest-huntington-beach",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondssangabriel/what-happens-after-arrest-san-gabriel",
+      "uniqueness": 0.227,
+      "maxSimilarity": 0.773,
+      "worstMatch": "gardenabailbonds/what-happens-after-arrest-gardena",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "gardenabailbonds/what-happens-after-arrest-gardena",
+      "uniqueness": 0.227,
+      "maxSimilarity": 0.773,
+      "worstMatch": "bailbondssangabriel/what-happens-after-arrest-san-gabriel",
+      "avgSimilarity": 0.093,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondlapalma/what-happens-after-arrest-la-palma",
+      "uniqueness": 0.232,
+      "maxSimilarity": 0.768,
+      "worstMatch": "losalamitosbailbond/what-happens-after-arrest-los-alamitos",
+      "avgSimilarity": 0.095,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondstustin/what-happens-after-arrest-tustin",
+      "uniqueness": 0.232,
+      "maxSimilarity": 0.768,
+      "worstMatch": "bailbondlapalma/what-happens-after-arrest-la-palma",
+      "avgSimilarity": 0.095,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "losalamitosbailbond/what-happens-after-arrest-los-alamitos",
+      "uniqueness": 0.232,
+      "maxSimilarity": 0.768,
+      "worstMatch": "bailbondlapalma/what-happens-after-arrest-la-palma",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbonds-placentia/what-happens-after-arrest-placentia",
+      "uniqueness": 0.24,
+      "maxSimilarity": 0.76,
+      "worstMatch": "bailbondlapalma/what-happens-after-arrest-la-palma",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "fountainvalleybailbond/what-happens-after-arrest-fountain-valley",
+      "uniqueness": 0.246,
+      "maxSimilarity": 0.754,
+      "worstMatch": "bailbondlapalma/what-happens-after-arrest-la-palma",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunabailbonds/what-happens-after-arrest-laguna-beach",
+      "uniqueness": 0.251,
+      "maxSimilarity": 0.749,
+      "worstMatch": "bailbondstustin/what-happens-after-arrest-tustin",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lahabrabailbonds/what-happens-after-arrest-la-habra",
+      "uniqueness": 0.251,
+      "maxSimilarity": 0.749,
+      "worstMatch": "bailbondlapalma/what-happens-after-arrest-la-palma",
+      "avgSimilarity": 0.093,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsandimas/what-happens-after-arrest-san-dimas",
+      "uniqueness": 0.254,
+      "maxSimilarity": 0.746,
+      "worstMatch": "bailbondshaciendaheights/what-happens-after-arrest-hacienda-heights",
+      "avgSimilarity": 0.093,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondwestcovina/what-happens-after-arrest-west-covina",
+      "uniqueness": 0.256,
+      "maxSimilarity": 0.744,
+      "worstMatch": "bailbondssangabriel/what-happens-after-arrest-san-gabriel",
+      "avgSimilarity": 0.093,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsstanton/what-happens-after-arrest-stanton",
+      "uniqueness": 0.266,
+      "maxSimilarity": 0.734,
+      "worstMatch": "bailbondstustin/what-happens-after-arrest-tustin",
+      "avgSimilarity": 0.094,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsencinitas/what-happens-after-arrest-encinitas",
+      "uniqueness": 0.298,
+      "maxSimilarity": 0.702,
+      "worstMatch": "bailbondsandimas/what-happens-after-arrest-san-dimas",
+      "avgSimilarity": 0.09,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "sanbernardinobailbond/what-happens-after-arrest-san-bernardino",
+      "uniqueness": 0.308,
+      "maxSimilarity": 0.692,
+      "worstMatch": "bailbondsangels/what-happens-after-arrest-los-angeles",
+      "avgSimilarity": 0.091,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsstanton/2026-05-06-bail-bonds-vs-loans-stanton",
+      "uniqueness": 0.398,
+      "maxSimilarity": 0.602,
+      "worstMatch": "bailbondwestcovina/2026-05-06-bail-bonds-vs-loans-west-covina",
+      "avgSimilarity": 0.021,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondwestcovina/2026-05-06-bail-bonds-vs-loans-west-covina",
+      "uniqueness": 0.398,
+      "maxSimilarity": 0.602,
+      "worstMatch": "bailbondsstanton/2026-05-06-bail-bonds-vs-loans-stanton",
+      "avgSimilarity": 0.02,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondhuntingtonbeach/2026-04-14-huntington-beach-bail-bonds",
+      "uniqueness": 0.459,
+      "maxSimilarity": 0.541,
+      "worstMatch": "lagunabailbonds/2026-04-14-laguna-beach-bail-bonds",
+      "avgSimilarity": 0.024,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lagunabailbonds/2026-04-14-laguna-beach-bail-bonds",
+      "uniqueness": 0.459,
+      "maxSimilarity": 0.541,
+      "worstMatch": "bailbondhuntingtonbeach/2026-04-14-huntington-beach-bail-bonds",
+      "avgSimilarity": 0.027,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "lahabrabailbonds/2026-04-30-felony-vs-misdemeanor-bail-la-habra",
+      "uniqueness": 0.514,
+      "maxSimilarity": 0.486,
+      "worstMatch": "losalamitosbailbond/2026-04-29-felony-vs-misdemeanor-bail-los-alamitos",
+      "avgSimilarity": 0.011,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "losalamitosbailbond/2026-04-29-felony-vs-misdemeanor-bail-los-alamitos",
+      "uniqueness": 0.514,
+      "maxSimilarity": 0.486,
+      "worstMatch": "lahabrabailbonds/2026-04-30-felony-vs-misdemeanor-bail-la-habra",
+      "avgSimilarity": 0.011,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "fountainvalleybailbond/2026-04-14-fountain-valley-bail-bonds",
+      "uniqueness": 0.522,
+      "maxSimilarity": 0.478,
+      "worstMatch": "lagunabailbonds/2026-04-14-laguna-beach-bail-bonds",
+      "avgSimilarity": 0.026,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsandimas/2026-04-30-immigration-hold-bail-san-dimas",
+      "uniqueness": 0.538,
+      "maxSimilarity": 0.462,
+      "worstMatch": "bailbondsgardengrove/2026-04-27-immigration-hold-bail-garden-grove",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsgardengrove/2026-04-27-immigration-hold-bail-garden-grove",
+      "uniqueness": 0.538,
+      "maxSimilarity": 0.462,
+      "worstMatch": "bailbondsandimas/2026-04-30-immigration-hold-bail-san-dimas",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "1800bail911/2026-04-14-1800-bail-911-emergency-bondsman",
+      "uniqueness": 0.539,
+      "maxSimilarity": 0.461,
+      "worstMatch": "800bail911/2026-04-14-800-bail-911-bondsman",
+      "avgSimilarity": 0.032,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "800bail911/2026-04-14-800-bail-911-bondsman",
+      "uniqueness": 0.539,
+      "maxSimilarity": 0.461,
+      "worstMatch": "1800bail911/2026-04-14-1800-bail-911-emergency-bondsman",
+      "avgSimilarity": 0.033,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "sanbernardinobailbond/2026-04-30-immigration-hold-bail-san-bernardino",
+      "uniqueness": 0.58,
+      "maxSimilarity": 0.42,
+      "worstMatch": "bailbondsandimas/2026-04-30-immigration-hold-bail-san-dimas",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsangels/2026-04-14-angels-bail-bonds-hub",
+      "uniqueness": 0.625,
+      "maxSimilarity": 0.375,
+      "worstMatch": "800bail911/2026-04-14-800-bail-911-bondsman",
+      "avgSimilarity": 0.033,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbonds-placentia/how-long-bail-takes-placentia",
+      "uniqueness": 0.636,
+      "maxSimilarity": 0.364,
+      "worstMatch": "bailbondsgardengrove/how-long-bail-takes-garden-grove",
+      "avgSimilarity": 0.024,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsgardengrove/how-long-bail-takes-garden-grove",
+      "uniqueness": 0.636,
+      "maxSimilarity": 0.364,
+      "worstMatch": "bailbonds-placentia/how-long-bail-takes-placentia",
+      "avgSimilarity": 0.021,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbond-agent/2026-04-14-bail-bond-agent-southern-california",
+      "uniqueness": 0.668,
+      "maxSimilarity": 0.332,
+      "worstMatch": "bailbondsangels/2026-04-14-angels-bail-bonds-hub",
+      "avgSimilarity": 0.031,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsangels/2026-04-27-felony-vs-misdemeanor-bail-los-angeles",
+      "uniqueness": 0.669,
+      "maxSimilarity": 0.331,
+      "worstMatch": "losalamitosbailbond/2026-04-29-felony-vs-misdemeanor-bail-los-alamitos",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondshaciendaheights/2026-04-14-hacienda-heights-bail-bonds",
+      "uniqueness": 0.669,
+      "maxSimilarity": 0.331,
+      "worstMatch": "bailbondsrowlandheights/2026-04-14-rowland-heights-bail-bonds-guide",
+      "avgSimilarity": 0.033,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondsrowlandheights/2026-04-14-rowland-heights-bail-bonds-guide",
+      "uniqueness": 0.669,
+      "maxSimilarity": 0.331,
+      "worstMatch": "bailbondshaciendaheights/2026-04-14-hacienda-heights-bail-bonds",
+      "avgSimilarity": 0.032,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "gaybailbonds/2026-04-14-gay-bail-bonds-lgbtq-bondsman",
+      "uniqueness": 0.684,
+      "maxSimilarity": 0.316,
+      "worstMatch": "800bail911/2026-04-14-800-bail-911-bondsman",
+      "avgSimilarity": 0.029,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbonds-picorivera/2026-05-11-domestic-violence-bail-pico-rivera",
+      "uniqueness": 0.695,
+      "maxSimilarity": 0.305,
+      "worstMatch": "fountainvalleybailbond/2026-05-08-domestic-violence-bail-fountain-valley",
+      "avgSimilarity": 0.006,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "fountainvalleybailbond/2026-05-08-domestic-violence-bail-fountain-valley",
+      "uniqueness": 0.695,
+      "maxSimilarity": 0.305,
+      "worstMatch": "bailbonds-picorivera/2026-05-11-domestic-violence-bail-pico-rivera",
+      "avgSimilarity": 0.01,
+      "comparisons": 246,
+      "passesFloor": false
+    },
+    {
+      "page": "bailbondssangabriel/2026-04-14-san-gabriel-bail-bonds",
+      "uniqueness": 0.704,
+      "maxSimilarity": 0.296,
+      "worstMatch": "gardenabailbonds/2026-04-14-gardena-bail-bonds",
+      "avgSimilarity": 0.033,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "gardenabailbonds/2026-04-14-gardena-bail-bonds",
+      "uniqueness": 0.704,
+      "maxSimilarity": 0.296,
+      "worstMatch": "bailbondssangabriel/2026-04-14-san-gabriel-bail-bonds",
+      "avgSimilarity": 0.033,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunahillsbailbonds/2026-04-14-laguna-hills-bail-bonds",
+      "uniqueness": 0.707,
+      "maxSimilarity": 0.293,
+      "worstMatch": "lagunaniguelbailbonds/2026-04-14-laguna-niguel-bail-bonds",
+      "avgSimilarity": 0.032,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunaniguelbailbonds/2026-04-14-laguna-niguel-bail-bonds",
+      "uniqueness": 0.707,
+      "maxSimilarity": 0.293,
+      "worstMatch": "lagunahillsbailbonds/2026-04-14-laguna-hills-bail-bonds",
+      "avgSimilarity": 0.032,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunaniguelbailbonds/2026-05-06-bail-bonds-vs-loans-laguna-niguel",
+      "uniqueness": 0.711,
+      "maxSimilarity": 0.289,
+      "worstMatch": "bailbondsstanton/2026-05-06-bail-bonds-vs-loans-stanton",
+      "avgSimilarity": 0.018,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsandimas/2026-04-14-san-dimas-bail-bonds",
+      "uniqueness": 0.72,
+      "maxSimilarity": 0.28,
+      "worstMatch": "bailbondssangabriel/2026-04-14-san-gabriel-bail-bonds",
+      "avgSimilarity": 0.032,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondwestcovina/2026-04-14-west-covina-bail-bonds",
+      "uniqueness": 0.721,
+      "maxSimilarity": 0.279,
+      "worstMatch": "bailbondssangabriel/2026-04-14-san-gabriel-bail-bonds",
+      "avgSimilarity": 0.032,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-california/2026-04-14-bail-bond-california",
+      "uniqueness": 0.722,
+      "maxSimilarity": 0.278,
+      "worstMatch": "800bail911/2026-04-14-800-bail-911-bondsman",
+      "avgSimilarity": 0.032,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbonds-placentia/2026-04-14-placentia-bail-bonds",
+      "uniqueness": 0.722,
+      "maxSimilarity": 0.278,
+      "worstMatch": "bailbondstustin/2026-04-14-tustin-bail-bonds",
+      "avgSimilarity": 0.034,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondstustin/2026-04-14-tustin-bail-bonds",
+      "uniqueness": 0.722,
+      "maxSimilarity": 0.278,
+      "worstMatch": "bailbonds-placentia/2026-04-14-placentia-bail-bonds",
+      "avgSimilarity": 0.033,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbonds-picorivera/2026-04-14-pico-rivera-bail-bonds",
+      "uniqueness": 0.723,
+      "maxSimilarity": 0.277,
+      "worstMatch": "bailbondsandimas/2026-04-14-san-dimas-bail-bonds",
+      "avgSimilarity": 0.031,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondhuntingtonbeach/2026-04-16-huntington-beach-bail-bonds",
+      "uniqueness": 0.724,
+      "maxSimilarity": 0.276,
+      "worstMatch": "lagunabailbonds/2026-04-16-laguna-beach-bail-bonds",
+      "avgSimilarity": 0.032,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunabailbonds/2026-04-16-laguna-beach-bail-bonds",
+      "uniqueness": 0.724,
+      "maxSimilarity": 0.276,
+      "worstMatch": "bailbondhuntingtonbeach/2026-04-16-huntington-beach-bail-bonds",
+      "avgSimilarity": 0.032,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lahabrabailbonds/2026-04-14-la-habra-bail-bonds",
+      "uniqueness": 0.724,
+      "maxSimilarity": 0.276,
+      "worstMatch": "bailbonds-placentia/2026-04-14-placentia-bail-bonds",
+      "avgSimilarity": 0.034,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondlapalma/2026-04-14-la-palma-bail-bonds",
+      "uniqueness": 0.726,
+      "maxSimilarity": 0.274,
+      "worstMatch": "lahabrabailbonds/2026-04-14-la-habra-bail-bonds",
+      "avgSimilarity": 0.034,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "losalamitosbailbond/2026-04-14-los-alamitos-bail-bonds",
+      "uniqueness": 0.732,
+      "maxSimilarity": 0.268,
+      "worstMatch": "bailbonds-placentia/2026-04-14-placentia-bail-bonds",
+      "avgSimilarity": 0.033,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsstanton/2026-04-14-stanton-bail-bonds",
+      "uniqueness": 0.734,
+      "maxSimilarity": 0.266,
+      "worstMatch": "bailbondlapalma/2026-04-14-la-palma-bail-bonds",
+      "avgSimilarity": 0.033,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "fountainvalleybailbond/2026-04-16-fountain-valley-bail-bonds",
+      "uniqueness": 0.735,
+      "maxSimilarity": 0.265,
+      "worstMatch": "bailbondhuntingtonbeach/2026-04-16-huntington-beach-bail-bonds",
+      "avgSimilarity": 0.033,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbonds-placentia/2026-05-06-bail-bonds-vs-loans-placentia",
+      "uniqueness": 0.741,
+      "maxSimilarity": 0.259,
+      "worstMatch": "bailbondsgardengrove/2026-05-06-bail-bonds-vs-loans-garden-grove",
+      "avgSimilarity": 0.018,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsgardengrove/2026-05-06-bail-bonds-vs-loans-garden-grove",
+      "uniqueness": 0.741,
+      "maxSimilarity": 0.259,
+      "worstMatch": "bailbonds-placentia/2026-05-06-bail-bonds-vs-loans-placentia",
+      "avgSimilarity": 0.018,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lakersbailbonds/2026-04-14-lakers-bail-bonds-la-county-guide",
+      "uniqueness": 0.741,
+      "maxSimilarity": 0.259,
+      "worstMatch": "bailbondssangabriel/2026-04-14-san-gabriel-bail-bonds",
+      "avgSimilarity": 0.031,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondhuntingtonbeach/how-long-bail-takes-huntington-beach",
+      "uniqueness": 0.744,
+      "maxSimilarity": 0.256,
+      "worstMatch": "bailbonds-placentia/how-long-bail-takes-placentia",
+      "avgSimilarity": 0.021,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "ocbailbondsman/2026-04-14-orange-county-bail-bondsman",
+      "uniqueness": 0.746,
+      "maxSimilarity": 0.254,
+      "worstMatch": "bailbondstustin/2026-04-14-tustin-bail-bonds",
+      "avgSimilarity": 0.034,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsencinitas/2026-04-14-encinitas-bail-bonds",
+      "uniqueness": 0.783,
+      "maxSimilarity": 0.217,
+      "worstMatch": "bailbondsandimas/2026-04-14-san-dimas-bail-bonds",
+      "avgSimilarity": 0.03,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "sanbernardinobailbond/2026-04-14-san-bernardino-bail-bonds",
+      "uniqueness": 0.785,
+      "maxSimilarity": 0.215,
+      "worstMatch": "gardenabailbonds/2026-04-14-gardena-bail-bonds",
+      "avgSimilarity": 0.03,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-california/2026-05-06-bail-bonds-vs-loans-california",
+      "uniqueness": 0.786,
+      "maxSimilarity": 0.214,
+      "worstMatch": "bailbondwestcovina/2026-05-06-bail-bonds-vs-loans-west-covina",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "ocbailbondsman/2026-05-06-bail-bonds-vs-loans-orange-county",
+      "uniqueness": 0.786,
+      "maxSimilarity": 0.214,
+      "worstMatch": "lagunaniguelbailbonds/2026-05-06-bail-bonds-vs-loans-laguna-niguel",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsencinitas/2026-05-06-bail-bonds-vs-loans-encinitas",
+      "uniqueness": 0.789,
+      "maxSimilarity": 0.211,
+      "worstMatch": "gardenabailbonds/2026-05-06-bail-bonds-vs-loans-gardena",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "gardenabailbonds/2026-05-06-bail-bonds-vs-loans-gardena",
+      "uniqueness": 0.789,
+      "maxSimilarity": 0.211,
+      "worstMatch": "bailbondsencinitas/2026-05-06-bail-bonds-vs-loans-encinitas",
+      "avgSimilarity": 0.017,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-agent/2026-04-29-choosing-bail-bondsman-california",
+      "uniqueness": 0.799,
+      "maxSimilarity": 0.201,
+      "worstMatch": "bailbondhuntingtonbeach/2026-04-27-choosing-bail-bondsman-huntington-beach",
+      "avgSimilarity": 0.007,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondhuntingtonbeach/2026-04-27-choosing-bail-bondsman-huntington-beach",
+      "uniqueness": 0.799,
+      "maxSimilarity": 0.201,
+      "worstMatch": "bailbond-agent/2026-04-29-choosing-bail-bondsman-california",
+      "avgSimilarity": 0.007,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondssangabriel/2026-05-08-how-long-does-bail-take-san-gabriel",
+      "uniqueness": 0.844,
+      "maxSimilarity": 0.156,
+      "worstMatch": "lagunahillsbailbonds/2026-05-11-ocsd-south-station-release-time",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunahillsbailbonds/2026-05-11-ocsd-south-station-release-time",
+      "uniqueness": 0.844,
+      "maxSimilarity": 0.156,
+      "worstMatch": "bailbondssangabriel/2026-05-08-how-long-does-bail-take-san-gabriel",
+      "avgSimilarity": 0.005,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-agent/2026-05-08-bail-money-loans-california-actually-a-bond",
+      "uniqueness": 0.869,
+      "maxSimilarity": 0.131,
+      "worstMatch": "bailbondsencinitas/2026-05-06-bail-bonds-vs-loans-encinitas",
+      "avgSimilarity": 0.007,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsencinitas/encinitas-bail-bonds-guide",
+      "uniqueness": 0.87,
+      "maxSimilarity": 0.13,
+      "worstMatch": "bailbondsgardengrove/garden-grove-bail-bonds-guide",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsgardengrove/garden-grove-bail-bonds-guide",
+      "uniqueness": 0.87,
+      "maxSimilarity": 0.13,
+      "worstMatch": "bailbondsencinitas/encinitas-bail-bonds-guide",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsstanton/stanton-bail-bonds-guide",
+      "uniqueness": 0.88,
+      "maxSimilarity": 0.12,
+      "worstMatch": "bailbondstustin/tustin-bail-bonds-guide",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondstustin/tustin-bail-bonds-guide",
+      "uniqueness": 0.88,
+      "maxSimilarity": 0.12,
+      "worstMatch": "bailbondsstanton/stanton-bail-bonds-guide",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "1800bail911/la-county-jail-booking-process",
+      "uniqueness": 0.881,
+      "maxSimilarity": 0.119,
+      "worstMatch": "lakersbailbonds/downtown-los-angeles-bail-bonds-guide",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lakersbailbonds/downtown-los-angeles-bail-bonds-guide",
+      "uniqueness": 0.881,
+      "maxSimilarity": 0.119,
+      "worstMatch": "1800bail911/la-county-jail-booking-process",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondshaciendaheights/hacienda-heights-bail-bonds-guide",
+      "uniqueness": 0.883,
+      "maxSimilarity": 0.117,
+      "worstMatch": "bailbondssangabriel/san-gabriel-bail-bonds-guide",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondssangabriel/san-gabriel-bail-bonds-guide",
+      "uniqueness": 0.883,
+      "maxSimilarity": 0.117,
+      "worstMatch": "bailbondshaciendaheights/hacienda-heights-bail-bonds-guide",
+      "avgSimilarity": 0.014,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunabailbonds/bail-bonds-laguna-beach",
+      "uniqueness": 0.887,
+      "maxSimilarity": 0.113,
+      "worstMatch": "lagunabailbonds/2026-04-14-laguna-beach-bail-bonds",
+      "avgSimilarity": 0.017,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsangels/los-angeles-bail-bonds-guide",
+      "uniqueness": 0.891,
+      "maxSimilarity": 0.109,
+      "worstMatch": "1800bail911/la-county-jail-booking-process",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbonds-picorivera/pico-rivera-bail-bonds-guide",
+      "uniqueness": 0.895,
+      "maxSimilarity": 0.105,
+      "worstMatch": "bailbondsandimas/san-dimas-bail-bonds-guide",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsandimas/san-dimas-bail-bonds-guide",
+      "uniqueness": 0.895,
+      "maxSimilarity": 0.105,
+      "worstMatch": "bailbonds-picorivera/pico-rivera-bail-bonds-guide",
+      "avgSimilarity": 0.014,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunaniguelbailbonds/laguna-niguel-domestic-violence-bail-bonds",
+      "uniqueness": 0.897,
+      "maxSimilarity": 0.103,
+      "worstMatch": "sanbernardinobailbond/san-bernardino-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "sanbernardinobailbond/san-bernardino-domestic-violence-bail-bonds",
+      "uniqueness": 0.897,
+      "maxSimilarity": 0.103,
+      "worstMatch": "lagunaniguelbailbonds/laguna-niguel-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondwestcovina/west-covina-bail-bonds-guide",
+      "uniqueness": 0.898,
+      "maxSimilarity": 0.102,
+      "worstMatch": "bailbondsstanton/stanton-bail-bonds-guide",
+      "avgSimilarity": 0.014,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondhuntingtonbeach/huntington-beach-domestic-violence-bail-bonds",
+      "uniqueness": 0.906,
+      "maxSimilarity": 0.094,
+      "worstMatch": "bailbondsstanton/stanton-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.013,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsstanton/stanton-domestic-violence-bail-bonds",
+      "uniqueness": 0.906,
+      "maxSimilarity": 0.094,
+      "worstMatch": "bailbondhuntingtonbeach/huntington-beach-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondssangabriel/2026-05-06-bail-bonds-vs-loans-san-gabriel",
+      "uniqueness": 0.907,
+      "maxSimilarity": 0.093,
+      "worstMatch": "gardenabailbonds/2026-05-06-bail-bonds-vs-loans-gardena",
+      "avgSimilarity": 0.013,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsgardengrove/2026-04-14-24-hour-bail-bonds-garden-grove",
+      "uniqueness": 0.908,
+      "maxSimilarity": 0.092,
+      "worstMatch": "bailbondsgardengrove/garden-grove-bail-bonds-guide",
+      "avgSimilarity": 0.013,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbonds-placentia/placentia-domestic-violence-bail-bonds",
+      "uniqueness": 0.911,
+      "maxSimilarity": 0.089,
+      "worstMatch": "lahabrabailbonds/la-habra-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lahabrabailbonds/la-habra-domestic-violence-bail-bonds",
+      "uniqueness": 0.911,
+      "maxSimilarity": 0.089,
+      "worstMatch": "bailbonds-placentia/placentia-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.013,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsangels/angeles-domestic-violence-bail-bonds",
+      "uniqueness": 0.912,
+      "maxSimilarity": 0.088,
+      "worstMatch": "gardenabailbonds/gardena-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "gardenabailbonds/gardena-domestic-violence-bail-bonds",
+      "uniqueness": 0.912,
+      "maxSimilarity": 0.088,
+      "worstMatch": "bailbondsangels/angeles-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lahabrabailbonds/la-habra-bail-bonds-guide",
+      "uniqueness": 0.912,
+      "maxSimilarity": 0.088,
+      "worstMatch": "lakersbailbonds/downtown-los-angeles-bail-bonds-guide",
+      "avgSimilarity": 0.017,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbonds-placentia/placentia-bail-bonds-guide",
+      "uniqueness": 0.913,
+      "maxSimilarity": 0.087,
+      "worstMatch": "bailbondsandimas/san-dimas-bail-bonds-guide",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "fountainvalleybailbond/bail-bonds-fountain-valley-guide",
+      "uniqueness": 0.914,
+      "maxSimilarity": 0.086,
+      "worstMatch": "gardenabailbonds/bail-bonds-gardena-guide",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "gardenabailbonds/bail-bonds-gardena-guide",
+      "uniqueness": 0.914,
+      "maxSimilarity": 0.086,
+      "worstMatch": "fountainvalleybailbond/bail-bonds-fountain-valley-guide",
+      "avgSimilarity": 0.014,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsgardengrove/garden-grove-domestic-violence-bail-bonds",
+      "uniqueness": 0.915,
+      "maxSimilarity": 0.085,
+      "worstMatch": "bailbondsrowlandheights/rowland-heights-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsrowlandheights/rowland-heights-domestic-violence-bail-bonds",
+      "uniqueness": 0.915,
+      "maxSimilarity": 0.085,
+      "worstMatch": "bailbondsgardengrove/garden-grove-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.018,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondssangabriel/san-gabriel-domestic-violence-bail-bonds",
+      "uniqueness": 0.915,
+      "maxSimilarity": 0.085,
+      "worstMatch": "bailbondsrowlandheights/rowland-heights-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsrowlandheights/2026-04-27-bench-warrant-rowland-heights",
+      "uniqueness": 0.916,
+      "maxSimilarity": 0.084,
+      "worstMatch": "fountainvalleybailbond/2026-04-29-warrant-bail-bonds-fountain-valley",
+      "avgSimilarity": 0.006,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "fountainvalleybailbond/2026-04-29-warrant-bail-bonds-fountain-valley",
+      "uniqueness": 0.916,
+      "maxSimilarity": 0.084,
+      "worstMatch": "bailbondsrowlandheights/2026-04-27-bench-warrant-rowland-heights",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbonds-picorivera/2026-05-05-how-long-does-bail-take-pico-rivera",
+      "uniqueness": 0.919,
+      "maxSimilarity": 0.081,
+      "worstMatch": "bailbonds-picorivera/2026-04-14-pico-rivera-bail-bonds",
+      "avgSimilarity": 0.014,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "1800bail911/2026-04-30-theft-bail-bonds-los-angeles",
+      "uniqueness": 0.922,
+      "maxSimilarity": 0.078,
+      "worstMatch": "lahabrabailbonds/2026-04-30-felony-vs-misdemeanor-bail-la-habra",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunabailbonds/laguna-beach-domestic-violence-bail-bonds",
+      "uniqueness": 0.922,
+      "maxSimilarity": 0.078,
+      "worstMatch": "bailbondssangabriel/san-gabriel-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.015,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunahillsbailbonds/2026-05-06-bail-bonds-vs-loans-laguna-hills",
+      "uniqueness": 0.923,
+      "maxSimilarity": 0.077,
+      "worstMatch": "gardenabailbonds/2026-05-06-bail-bonds-vs-loans-gardena",
+      "avgSimilarity": 0.014,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondlapalma/la-palma-domestic-violence-bail-bonds",
+      "uniqueness": 0.924,
+      "maxSimilarity": 0.076,
+      "worstMatch": "bailbondstustin/tustin-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondstustin/tustin-domestic-violence-bail-bonds",
+      "uniqueness": 0.924,
+      "maxSimilarity": 0.076,
+      "worstMatch": "bailbondlapalma/la-palma-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "fountainvalleybailbond/2026-05-05-bail-bond-cost-breakdown-fountain-valley",
+      "uniqueness": 0.926,
+      "maxSimilarity": 0.074,
+      "worstMatch": "fountainvalleybailbond/2026-04-16-fountain-valley-bail-bonds",
+      "avgSimilarity": 0.016,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondssangabriel/2026-05-05-domestic-violence-bail-san-gabriel",
+      "uniqueness": 0.927,
+      "maxSimilarity": 0.073,
+      "worstMatch": "bailbondssangabriel/2026-04-14-san-gabriel-bail-bonds",
+      "avgSimilarity": 0.014,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsencinitas/encinitas-domestic-violence-bail-bonds",
+      "uniqueness": 0.934,
+      "maxSimilarity": 0.066,
+      "worstMatch": "bailbondstustin/tustin-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "losalamitosbailbond/2026-05-05-first-time-dui-bail-los-alamitos",
+      "uniqueness": 0.934,
+      "maxSimilarity": 0.066,
+      "worstMatch": "losalamitosbailbond/2026-04-14-los-alamitos-bail-bonds",
+      "avgSimilarity": 0.012,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "fountainvalleybailbond/fountain-valley-domestic-violence-bail-bonds",
+      "uniqueness": 0.935,
+      "maxSimilarity": 0.065,
+      "worstMatch": "lagunahillsbailbonds/laguna-hills-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunahillsbailbonds/laguna-hills-domestic-violence-bail-bonds",
+      "uniqueness": 0.935,
+      "maxSimilarity": 0.065,
+      "worstMatch": "fountainvalleybailbond/fountain-valley-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "losalamitosbailbond/los-alamitos-domestic-violence-bail-bonds",
+      "uniqueness": 0.936,
+      "maxSimilarity": 0.064,
+      "worstMatch": "fountainvalleybailbond/fountain-valley-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunahillsbailbonds/2026-05-05-probation-violation-bail-laguna-hills",
+      "uniqueness": 0.937,
+      "maxSimilarity": 0.063,
+      "worstMatch": "losalamitosbailbond/2026-05-05-first-time-dui-bail-los-alamitos",
+      "avgSimilarity": 0.011,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondhuntingtonbeach/2026-05-12-hbpd-to-oc-jail-transfer-walkthrough",
+      "uniqueness": 0.938,
+      "maxSimilarity": 0.062,
+      "worstMatch": "bailbondsencinitas/2026-05-14-sdsd-encinitas-station-booking-walkthrough",
+      "avgSimilarity": 0.006,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsencinitas/2026-05-14-sdsd-encinitas-station-booking-walkthrough",
+      "uniqueness": 0.938,
+      "maxSimilarity": 0.062,
+      "worstMatch": "bailbondhuntingtonbeach/2026-05-12-hbpd-to-oc-jail-transfer-walkthrough",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondshaciendaheights/hacienda-heights-domestic-violence-bail-bonds",
+      "uniqueness": 0.938,
+      "maxSimilarity": 0.062,
+      "worstMatch": "bailbondwestcovina/west-covina-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsrowlandheights/2026-04-14-bail-bonds-vs-loans-rowland-heights",
+      "uniqueness": 0.938,
+      "maxSimilarity": 0.062,
+      "worstMatch": "bailbondsrowlandheights/how-bail-bonds-work-rowland-heights",
+      "avgSimilarity": 0.02,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondwestcovina/west-covina-domestic-violence-bail-bonds",
+      "uniqueness": 0.938,
+      "maxSimilarity": 0.062,
+      "worstMatch": "bailbondshaciendaheights/hacienda-heights-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "losalamitosbailbond/2026-05-11-los-alamitos-pd-jail-booking-release-walkthrough",
+      "uniqueness": 0.938,
+      "maxSimilarity": 0.062,
+      "worstMatch": "lagunahillsbailbonds/2026-05-11-ocsd-south-station-release-time",
+      "avgSimilarity": 0.004,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondshaciendaheights/2026-04-30-bail-bond-cost-hacienda-heights",
+      "uniqueness": 0.941,
+      "maxSimilarity": 0.059,
+      "worstMatch": "lagunahillsbailbonds/2026-04-29-bail-bond-cosigner-laguna-hills",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunahillsbailbonds/2026-04-29-bail-bond-cosigner-laguna-hills",
+      "uniqueness": 0.941,
+      "maxSimilarity": 0.059,
+      "worstMatch": "bailbondshaciendaheights/2026-04-30-bail-bond-cost-hacienda-heights",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsandimas/2026-05-12-san-dimas-lasd-station-booking-walkthrough",
+      "uniqueness": 0.944,
+      "maxSimilarity": 0.056,
+      "worstMatch": "bailbondsencinitas/2026-05-14-sdsd-encinitas-station-booking-walkthrough",
+      "avgSimilarity": 0.007,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "1800bail911/domestic-violence-bail-bonds-los-angeles",
+      "uniqueness": 0.946,
+      "maxSimilarity": 0.054,
+      "worstMatch": "800bail911/domestic-violence-bail-bonds-800bail911",
+      "avgSimilarity": 0.011,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "800bail911/domestic-violence-bail-bonds-800bail911",
+      "uniqueness": 0.946,
+      "maxSimilarity": 0.054,
+      "worstMatch": "1800bail911/domestic-violence-bail-bonds-los-angeles",
+      "avgSimilarity": 0.012,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondssangabriel/2026-04-29-bail-bond-payment-plan-san-gabriel",
+      "uniqueness": 0.946,
+      "maxSimilarity": 0.054,
+      "worstMatch": "bailbondshaciendaheights/2026-04-30-bail-bond-cost-hacienda-heights",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-california/california-domestic-violence-bail-bonds",
+      "uniqueness": 0.947,
+      "maxSimilarity": 0.053,
+      "worstMatch": "800bail911/domestic-violence-bail-bonds-800bail911",
+      "avgSimilarity": 0.011,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondlapalma/la-palma-bail-bonds-guide",
+      "uniqueness": 0.949,
+      "maxSimilarity": 0.051,
+      "worstMatch": "bailbondsstanton/stanton-bail-bonds-guide",
+      "avgSimilarity": 0.012,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-agent/how-bail-bond-agents-work-california",
+      "uniqueness": 0.95,
+      "maxSimilarity": 0.05,
+      "worstMatch": "bailbond-agent/how-to-choose-licensed-bail-bond-agent-california",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-agent/how-to-choose-licensed-bail-bond-agent-california",
+      "uniqueness": 0.95,
+      "maxSimilarity": 0.05,
+      "worstMatch": "bailbond-agent/how-bail-bond-agents-work-california",
+      "avgSimilarity": 0.006,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondhuntingtonbeach/huntington-beach-jail-booking-process",
+      "uniqueness": 0.952,
+      "maxSimilarity": 0.048,
+      "worstMatch": "bailbondhuntingtonbeach/orange-county-bail-bonds-guide",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondhuntingtonbeach/orange-county-bail-bonds-guide",
+      "uniqueness": 0.952,
+      "maxSimilarity": 0.048,
+      "worstMatch": "bailbondhuntingtonbeach/huntington-beach-jail-booking-process",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "800bail911/surety-bond-bail-california",
+      "uniqueness": 0.955,
+      "maxSimilarity": 0.045,
+      "worstMatch": "800bail911/what-is-bail-california-guide",
+      "avgSimilarity": 0.011,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "800bail911/what-is-bail-california-guide",
+      "uniqueness": 0.955,
+      "maxSimilarity": 0.045,
+      "worstMatch": "800bail911/surety-bond-bail-california",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsandimas/san-dimas-domestic-violence-bail-bonds",
+      "uniqueness": 0.955,
+      "maxSimilarity": 0.045,
+      "worstMatch": "bailbondsrowlandheights/rowland-heights-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.014,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "sandimasbailbond/san-dimas-dv-bail-bonds",
+      "uniqueness": 0.956,
+      "maxSimilarity": 0.044,
+      "worstMatch": "bailbondshaciendaheights/hacienda-heights-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "gaybailbonds/lgbtq-domestic-violence-bail-bonds-california",
+      "uniqueness": 0.957,
+      "maxSimilarity": 0.043,
+      "worstMatch": "bailbondshaciendaheights/hacienda-heights-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.007,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lakersbailbonds/los-angeles-domestic-violence-bail-bonds-lakers",
+      "uniqueness": 0.958,
+      "maxSimilarity": 0.042,
+      "worstMatch": "gaybailbonds/lgbtq-domestic-violence-bail-bonds-california",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-california/california-bail-bond-cost",
+      "uniqueness": 0.959,
+      "maxSimilarity": 0.041,
+      "worstMatch": "bailbond-california/california-bail-laws-2026",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-california/california-bail-laws-2026",
+      "uniqueness": 0.959,
+      "maxSimilarity": 0.041,
+      "worstMatch": "bailbond-california/california-bail-bond-cost",
+      "avgSimilarity": 0.008,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondshaciendaheights/2026-05-12-bail-money-hacienda-heights-bonds-not-loans",
+      "uniqueness": 0.959,
+      "maxSimilarity": 0.041,
+      "worstMatch": "bailbondsencinitas/2026-05-14-sdsd-encinitas-station-booking-walkthrough",
+      "avgSimilarity": 0.007,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "ocbailbondsman/orange-county-domestic-violence-bail-bonds",
+      "uniqueness": 0.96,
+      "maxSimilarity": 0.04,
+      "worstMatch": "bailbondlapalma/la-palma-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.007,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "gaybailbonds/lgbtq-friendly-bail-bonds-guide",
+      "uniqueness": 0.961,
+      "maxSimilarity": 0.039,
+      "worstMatch": "fountainvalleybailbond/bail-bonds-fountain-valley-guide",
+      "avgSimilarity": 0.01,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "gaybailbonds/2026-04-30-theft-bail-bonds-lgbtq-community",
+      "uniqueness": 0.962,
+      "maxSimilarity": 0.038,
+      "worstMatch": "1800bail911/2026-04-30-theft-bail-bonds-los-angeles",
+      "avgSimilarity": 0.005,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "veteranbailbonds/veteran-domestic-violence-bail-bonds-california",
+      "uniqueness": 0.962,
+      "maxSimilarity": 0.038,
+      "worstMatch": "gaybailbonds/lgbtq-domestic-violence-bail-bonds-california",
+      "avgSimilarity": 0.006,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-agent/bail-bond-agent-domestic-violence-california",
+      "uniqueness": 0.964,
+      "maxSimilarity": 0.036,
+      "worstMatch": "bailbond-california/california-domestic-violence-bail-bonds",
+      "avgSimilarity": 0.011,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbonds-placentia/2026-04-27-bail-bond-conditions-placentia",
+      "uniqueness": 0.966,
+      "maxSimilarity": 0.034,
+      "worstMatch": "lagunahillsbailbonds/2026-04-29-bail-bond-cosigner-laguna-hills",
+      "avgSimilarity": 0.006,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lagunabailbonds/2026-04-27-assault-bail-bonds-laguna-beach",
+      "uniqueness": 0.967,
+      "maxSimilarity": 0.033,
+      "worstMatch": "bailbonds-placentia/2026-04-27-bail-bond-conditions-placentia",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondstustin/2026-04-30-what-to-expect-arraignment-tustin",
+      "uniqueness": 0.969,
+      "maxSimilarity": 0.031,
+      "worstMatch": "lagunahillsbailbonds/2026-04-29-bail-bond-cosigner-laguna-hills",
+      "avgSimilarity": 0.009,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondhuntingtonbeach/2026-04-30-first-offense-bail-huntington-beach",
+      "uniqueness": 0.97,
+      "maxSimilarity": 0.03,
+      "worstMatch": "lahabrabailbonds/2026-04-30-felony-vs-misdemeanor-bail-la-habra",
+      "avgSimilarity": 0.007,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsencinitas/2026-05-11-zero-down-bail-bonds-encinitas-installments",
+      "uniqueness": 0.97,
+      "maxSimilarity": 0.03,
+      "worstMatch": "bailbondssangabriel/2026-05-08-how-long-does-bail-take-san-gabriel",
+      "avgSimilarity": 0.002,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "fountainvalleybailbond/2026-05-14-fountain-valley-domestic-violence-bail-no-72hour-myth",
+      "uniqueness": 0.972,
+      "maxSimilarity": 0.028,
+      "worstMatch": "bailbondsencinitas/2026-05-14-sdsd-encinitas-station-booking-walkthrough",
+      "avgSimilarity": 0.007,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbondsencinitas/2026-04-29-probation-violation-bail-encinitas",
+      "uniqueness": 0.973,
+      "maxSimilarity": 0.027,
+      "worstMatch": "1800bail911/2026-04-30-theft-bail-bonds-los-angeles",
+      "avgSimilarity": 0.006,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "veteranbailbonds/2026-05-08-va-disability-pay-bail-bonds",
+      "uniqueness": 0.973,
+      "maxSimilarity": 0.027,
+      "worstMatch": "bailbondssangabriel/2026-05-08-how-long-does-bail-take-san-gabriel",
+      "avgSimilarity": 0.005,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "lahabrabailbonds/2026-05-12-la-habra-misdemeanor-bail-schedule-six-charges",
+      "uniqueness": 0.976,
+      "maxSimilarity": 0.024,
+      "worstMatch": "bailbondhuntingtonbeach/2026-05-12-hbpd-to-oc-jail-transfer-walkthrough",
+      "avgSimilarity": 0.004,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-agent/how-bail-bonds-work-california",
+      "uniqueness": 0.98,
+      "maxSimilarity": 0.02,
+      "worstMatch": "bailbond-agent/how-much-is-bail-california",
+      "avgSimilarity": 0.004,
+      "comparisons": 246,
+      "passesFloor": true
+    },
+    {
+      "page": "bailbond-agent/how-much-is-bail-california",
+      "uniqueness": 0.98,
+      "maxSimilarity": 0.02,
+      "worstMatch": "bailbond-agent/how-bail-bonds-work-california",
+      "avgSimilarity": 0.005,
+      "comparisons": 246,
+      "passesFloor": true
+    }
+  ]
+}

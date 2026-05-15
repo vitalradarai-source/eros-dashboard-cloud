@@ -1,0 +1,154 @@
+{
+  "skill": {
+    "short": "A set of instructions Claude follows when you type `/<name>`.",
+    "long": "A skill is a markdown file at ~/.claude/commands/<name>.md. When you type the slash command, Claude reads the file and follows the steps. Skills can be edited like any text file — change the .md, and Claude's behavior changes immediately."
+  },
+  "phase": {
+    "short": "One numbered chunk of work inside a skill.",
+    "long": "A phase is a top-level section (## Phase N) inside a skill file. Phases run in order. Phase 0 verifies the setup; Phase 1 gathers data; Phase 4 publishes content; Phase 8 wraps up the session. Each phase has its own scripts, outputs, and skip conditions."
+  },
+  "data sink": {
+    "short": "A file, sheet, or link a phase produces or reads.",
+    "long": "Think of a phase like a factory station — the data sink is what comes off the conveyor. Examples: a Google Sheet of keywords, a JSON cache, a Google Doc report, a ClickUp task. The dashboard shows freshness dots: green = under 24h old, yellow = within a week, red = over a week."
+  },
+  "live reload": {
+    "short": "When you edit a file, the browser refreshes that part of the page automatically.",
+    "long": "No need to hit refresh. The server watches files via chokidar and pushes events via SSE (Server-Sent Events). When a file changes, only the affected pane re-renders. The green dot in the top-left ('Live reload connected') confirms it's working."
+  },
+  "sse": {
+    "short": "Server-Sent Events — server pushes updates to your browser.",
+    "long": "An HTTP feature where the server keeps a connection open and pushes 'hey, this changed' events. Simpler than WebSockets for one-way data. The dashboard uses SSE so you don't have to refresh."
+  },
+  "chokidar": {
+    "short": "The Node.js library that watches files on disk for changes.",
+    "long": "Like a security camera for your file system. When a .md skill file or daily JSON output changes, chokidar fires an event, the server catches it, and SSE pushes it to the browser. Cross-platform, reliable."
+  },
+  "markdown": {
+    "short": "A simple way to write formatted text (bold, headers, lists) using plain text.",
+    "long": "Markdown (.md) is the format every skill file uses. Headers start with #, lists with - or 1., bold with **, code with backticks. The dashboard renders it as HTML so it looks pretty, but the source is just text you can edit anywhere."
+  },
+  "tree view": {
+    "short": "Instructions as expandable cards. Easy to read top-to-bottom.",
+    "long": "The default view in the dashboard. Each phase is a card you can collapse or expand. Inside each card: the verbatim instructions, plus auto-extracted scripts, file paths, and links. This is the view you want 90% of the time."
+  },
+  "flow view": {
+    "short": "Phases drawn as a diagram with arrows.",
+    "long": "Mermaid diagram showing how phases connect. Solid arrows = sequential (Phase 1 → Phase 2). Dotted yellow boxes = data sinks. Dashed border boxes = cross-skill references (this skill calls another skill). Switch to Flow when you want the big picture."
+  },
+  "source view": {
+    "short": "The raw .md file, exactly as it lives on disk.",
+    "long": "For when you want to see the literal text Claude reads. Useful for spotting typos, copying snippets, or understanding why something rendered a certain way. Not the easiest to read — Tree is usually better."
+  },
+  "gsc": {
+    "short": "Google Search Console — shows which Google searches brought visitors to your sites.",
+    "long": "Google's free tool that reports impressions (how many people saw your site in results), clicks, CTR, and average position for every search query. The /eros-day Phase 1 pulls GSC data for all 35 active sites every session. Source of truth for blog topic selection."
+  },
+  "ga4": {
+    "short": "Google Analytics 4 — tracks how people use your sites (sessions, conversions).",
+    "long": "Different from GSC: GSC shows what they searched BEFORE landing on your site; GA4 shows what they did AFTER. Sessions = visits. Conversions = the actions you care about (calls, form submits). Phase 1 pulls GA4 daily."
+  },
+  "ctr": {
+    "short": "Click-through rate — % of people who clicked after seeing your link.",
+    "long": "If 1,000 people saw your site in Google results and 10 clicked, CTR = 1%. Low CTR + high impressions = your meta description isn't compelling. Fix the meta, traffic jumps without writing new content."
+  },
+  "ctr-fix": {
+    "short": "A page that ranks well but doesn't get clicks. Usually a meta description issue.",
+    "long": "When a page has lots of impressions but few clicks (low CTR), the fix is rewriting the page title + meta description with an urgency-first pattern. Same content, better SERP snippet. /eros-day flags these as CTR-FIX in the keyword priorities table."
+  },
+  "tier": {
+    "short": "A grade for each site: S, A, B, C, or D — based on score.",
+    "long": "S = winning (60+), A = CTR fix wins (45-59), B = blog rotation default (25-44), C = infra fix needed (10-24), D = re-activate decision (<10). Scored by 11 signals (GBP, HTTP probe, GSC clicks, impressions, blog count, schema, etc). Drives Phase 3 triage."
+  },
+  "tier-driven triage": {
+    "short": "Today's actions chosen by what tier each site is in.",
+    "long": "A-tier → meta-title rewrite (CTR upside on existing rankings beats new content). B-tier → blog content. C-tier → open ClickUp infra task (GBP/schema/redirect). D-tier → defer. Skip blog work on tiers where content isn't the lever."
+  },
+  "cloudflare pages": {
+    "short": "Free web hosting. Used for the 31 microsite domains.",
+    "long": "Cloudflare's static site host. The 31 microsites (like bailbondsandimas.com) all live here. Deployments via `wrangler pages deploy <folder> --project-name <name>`. Free tier handles thousands of pages with no cost."
+  },
+  "lovable": {
+    "short": "The platform hosting the 4 main sites. Architecture issue with Google.",
+    "long": "Lovable builds Single-Page Apps (SPA). Googlebot sees an empty shell unless prerender is in place. The 4 Lovable sites (BailbondsDV, VitalRadar, Boundless Global, Bullion Dealer) currently ship empty shells — the 'Lovable SPA Path A/B/C decision' is the standing reminder to fix this."
+  },
+  "spa": {
+    "short": "Single-Page Application — sites that load content via JavaScript.",
+    "long": "Modern web apps that load one HTML page and use JavaScript to render content. Great for users; bad for Googlebot unless you prerender. If a site ships `<div id=\"root\"></div>` to Googlebot, the bot indexes nothing. /eros-day Phase 0 checks for this."
+  },
+  "prerender": {
+    "short": "Generating static HTML for each page so Google sees content immediately.",
+    "long": "Build-time rendering that turns a SPA into static HTML files Googlebot can read. Three paths considered: LovableHTML ($76/mo), Cloudflare Pages migration ($0, 8-16h work), or DIY Worker + Rendertron. Standing reminder until Angelo picks one."
+  },
+  "microsite": {
+    "short": "A small focused site for one city. Sean has 31.",
+    "long": "Static HTML site targeting one city (bailbondsandimas.com, lahabrabailbonds.com, etc). Each has its own GitHub repo, GBP, and city-specific content. Deployed via wrangler to Cloudflare Pages. The bread and butter of the network."
+  },
+  "bondsman": {
+    "short": "Sean's business. NOT a lender. He guarantees court appearance.",
+    "long": "A licensed bail bondsman posts a surety bond with the court guaranteeing the defendant will appear. The 10% premium is a statutory fee (CA Insurance Code §1800.4), NOT a loan. The 'no loans' rule is zero-tolerance on service surfaces."
+  },
+  "surety bond": {
+    "short": "Sean's product. A guarantee posted with the court.",
+    "long": "Three parties: defendant, court, bondsman. The bondsman guarantees the defendant will show up to court. If the defendant skips, the bondsman pays the full bail. The premium (10%) buys this guarantee — no money is given to anyone, no loan is involved."
+  },
+  "premium": {
+    "short": "The 10% statutory fee Sean charges. Not refundable.",
+    "long": "California Insurance Code §1800.4 caps the premium at 10% of the bail amount. So $50,000 bail = $5,000 premium. The fee is fully earned the moment the bond is filed — non-refundable even if charges drop."
+  },
+  "path c rotation": {
+    "short": "A schedule that cycles 35 sites across 4 weekdays.",
+    "long": "Each weekday fires ~8-9 sites. Each site gets a blog every 3-4 weekdays. Decided 2026-04-29 as the realistic pace given fact-check + E-E-A-T + uniqueness requirements. See `rotation-calendar.mjs --today` for today's bucket."
+  },
+  "e-e-a-t": {
+    "short": "Google's quality standard: Experience, Expertise, Authoritativeness, Trustworthiness.",
+    "long": "Google's framework for evaluating content quality, especially YMYL (Your Money or Your Life) topics like bail bonds. Required on every blog: licensed bondsman perspective, CA Penal Code citations, county jail info, author bio, 'not legal advice' disclaimer."
+  },
+  "ymyl": {
+    "short": "Your Money or Your Life — Google's high-stakes content category.",
+    "long": "Legal, medical, financial topics where bad info can hurt people. Google holds YMYL content to higher standards — fact-checked, expert-authored, well-cited. Bail bonds are YMYL. Mandatory: WebSearch primary keyword + verify all stats/laws BEFORE writing."
+  },
+  "no-loans rule": {
+    "short": "Service pages cannot mention 'loan', 'lend', 'borrow', 'credit', etc.",
+    "long": "Service surfaces (homepage, services, about, contact) have zero tolerance. Comparison content (blog posts comparing bonds vs loans) is allowed AND encouraged to rank for high-volume keywords. Pre-publish gate: `grep -iE \"\\b(loan|lend|borrow|financ|credit)\\b\"` must return 0 on service files."
+  },
+  "gbp": {
+    "short": "Google Business Profile — your free Google Maps / local listing.",
+    "long": "The card that shows up when someone searches your business by name in Google. Photos, hours, posts, reviews. Each microsite has its own GBP. Renaming a GBP triggers suspension — never rename. Use parentOrganization schema instead."
+  },
+  "semrush": {
+    "short": "An SEO research tool. Sean has a downloaded XLSX as reference.",
+    "long": "Paid platform for keyword research (Volume, Difficulty, CPC, SERP features). Sean's subscription ran out, so the local XLSX at ~/Workspaces/bailbondsdomesticviolence/seo/keywords/ is the canonical reference. compute-semrush-lhf.py uses it for low-hanging-fruit ranking."
+  },
+  "kd": {
+    "short": "Keyword Difficulty — 0-100 score, how hard it is to rank for a keyword.",
+    "long": "Semrush's measure of competition. KD < 20 = easy; KD 20-40 = medium; KD > 60 = hard. Combined with Volume, you get the LHF score: Volume × (1 − KD/100). High volume + low difficulty = the prize."
+  },
+  "lhf": {
+    "short": "Low-Hanging Fruit — keywords worth pursuing first.",
+    "long": "Phase 1 step 5 computes LHF: keywords with KD ≤ 35 + Volume ≥ 100 + Commercial/Transactional intent. These are the searches you can rank for without years of effort. Cross-referenced with GSC to flag NET-NEW vs STRIKING-DISTANCE vs ALREADY-RANKING."
+  },
+  "clickup": {
+    "short": "Task-tracking app where every EROS task gets logged.",
+    "long": "Mandatory tracking for all EROS work. Statuses: to do → in progress → blocked/pending-review → complete. Every task assigned to Angelo (ID 88483014). Phase 7 syncs with ClickUp every session — closes dupes, posts comments, updates statuses."
+  },
+  "phase 0 verify": {
+    "short": "Health check at the start of every /eros-day session.",
+    "long": "Reads todo files, learning log, git status; runs rendering gate on Lovable sites; checks Lovable publish drift; reads standing reminders; checks /bail-reports data freshness; runs no-loans service-surface audit. Surfaces a status block in 10 lines."
+  },
+  "rendering gate": {
+    "short": "Phase 0 check: does Googlebot see content on the 4 Lovable sites?",
+    "long": "Two signals required for OK: (a) no empty `<div id=\"root\"></div>` shell, AND (b) at least one `<h1>` tag in the HTML returned to Googlebot. Otherwise FROZEN — the site is SEO-invisible until prerender ships."
+  },
+  "freshness badge": {
+    "short": "Green/yellow/red dot showing how old a data file is.",
+    "long": "Green = ≤24 hours (fresh, what you want). Yellow = within a week. Red = over a week — probably stale, consider refreshing. Shown on every local data sink so you know at a glance whether the file behind a sink is current."
+  },
+  "preview pane": {
+    "short": "The right-side panel that shows file contents when you click a data sink.",
+    "long": "Click any local file in a phase's data sinks → contents render here. JSON shows as a tree; markdown shows as formatted text; everything else shows as plain text. Up to 5 MB for JSON, 200 KB for everything else."
+  },
+  "operator note": {
+    "short": "An improvement idea you file from the dashboard for the next /eros-day to handle.",
+    "long": "Click '+ note' on any phase → write what's wrong or what could be better → saves to `~/Workspaces/eros-dashboard/operator-notes/<date>.md`. Next /eros-day Phase 0 step 10 reads it and surfaces it for action. Closes the loop between observation and improvement."
+  }
+}

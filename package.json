@@ -1,0 +1,10 @@
+{
+  "name": "eros-dashboard-cloud",
+  "version": "1.0.0",
+  "description": "EROS Dashboard — cloud version deployed to Cloudflare Pages. SPA + Pages Functions + GitHub-backed data. Login-gated.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "publish": "node scripts/publish-dashboard.mjs"
+  }
+}

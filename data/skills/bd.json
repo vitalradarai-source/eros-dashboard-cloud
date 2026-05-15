@@ -1,0 +1,61 @@
+{
+  "name": "bd",
+  "title": "/bd — Update BirdsEye View",
+  "filePath": "/Users/emmanuelpableo/.claude/commands/bd.md",
+  "mtime": "2026-05-13T02:46:21.783Z",
+  "sizeBytes": 2370,
+  "preamble": "When Angelo says `/bd` or \"update bd\", he means: update the Angels Bail Bonds pipeline data in BirdsEye View.",
+  "sections": [
+    {
+      "heading": "What to do",
+      "depth": 2,
+      "startLine": 5,
+      "body": "\nAngelo will provide one or more site slugs and a status update. Apply the following:\n\n### Common status updates:\n\n**\"DNS in GoDaddy\" / \"DNS elsewhere\"**\n- Set `dns: \"godaddy\"` on the site in `angels-bail-bonds-sites.json`\n- Set `active_site: \"[domain]\"` if an active competing site exists at a similar domain\n- Recalculate `summary.dns_godaddy` count\n- Update `cloudflare-deploy-results.json` with same `dns` and `active_site` fields\n\n**\"Removed from Cloudflare\"**\n- Set `deploy_status: \"removed\"` or note it in CF results\n- Keep the site in BirdsEye — never delete, just update status\n\n**\"GSC connected\"**\n- Set `gsc_connected: true` on the site\n- Recalculate `summary.gsc_connected` count\n\n**\"GA4 connected\"**\n- Set `ga4_connected: true` on the site\n- Recalculate `summary.ga4_connected` count\n\n**\"Custom domain live\"**\n- Set `custom_domain_live: true`, `custom_domain: \"https://[domain]\"`, `dns: \"cloudflare\"`\n- Recalculate `summary.custom_domain_live` and `summary.pages_dev_only`\n- **AUTO-ONBOARDING TRIGGER:** Create a ClickUp task in Angels Bail Bonds Website/SEO list (901414136549):\n  - Title: `Write DV blog post for [slug] — [domain]`\n  - Status: `to do`\n  - Priority: `high`\n  - Description: `New site went live. Write a domestic violence bail bonds blog post for /blog/[city]-domestic-violence-bail-bonds.html. Follow the standard DV blog format: city jail + courthouse, PC § 273.5 / 243(e)(1) / 422 bail amounts, no false 72-hour hold, EPO contact-restriction only, 10% premium.`\n- Also check if a local `blog/` dir exists for the slug — if not, note it as an action item\n\n**\"SEO audit active\"**\n- Set `seo_audit_active: true`\n- Recalculate `summary.seo_audit_active`\n\n",
+      "subsections": [
+        {
+          "heading": "Common status updates:",
+          "startLine": 9
+        }
+      ],
+      "scripts": [],
+      "files": [],
+      "urls": [
+        "https://[domain"
+      ],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Files to update",
+      "depth": 2,
+      "startLine": 43,
+      "body": "\n1. `/Users/emmanuelpableo/Workspaces/birdseye-view/src/data/angels-bail-bonds-sites.json`\n2. `/Users/emmanuelpableo/Workspaces/sean-projects/microsites/cloudflare-deploy-results.json` (if deploy status changed)\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [
+        "/Users/emmanuelpableo/Workspaces/birdseye-view/src/data/angels-bail-bonds-sites.json",
+        "/Users/emmanuelpableo/Workspaces/sean-projects/microsites/cloudflare-deploy-results.json"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "After updating",
+      "depth": 2,
+      "startLine": 48,
+      "body": "\nAlways:\n1. Recalculate all affected summary counts\n2. `npm run build` in `/Users/emmanuelpableo/Workspaces/birdseye-view` to verify no errors\n3. Commit + push both repos (birdseye-view + sean-projects)\n\nCommit message format:\n```\nbd update: [slug] — [what changed]\n```\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [
+        "/Users/emmanuelpableo/Workspaces/birdseye-view"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    }
+  ],
+  "rawLength": 2359,
+  "sectionCount": 3,
+  "phaseCount": 0
+}

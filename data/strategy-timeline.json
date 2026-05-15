@@ -1,0 +1,203 @@
+{
+  "generatedAt": "2026-05-14T23:05:46.192Z",
+  "date": "2026-05-14",
+  "timelines": [
+    {
+      "id": "ctr-meta-rewrite-rowlandheights",
+      "title": "Rowland Heights — CTR meta rewrite on bail-money-loans keyword",
+      "status": "active",
+      "source": "Today's A-tier triage decision (2026-05-12)",
+      "startDate": "2026-05-12",
+      "endDate": "2026-06-09",
+      "daysSinceStart": 2,
+      "windowDays": 28,
+      "daysRemaining": 26,
+      "progressPct": 7,
+      "progressBar": "[██░░░░░░░░░░░░░░░░░░░░░░] 7%",
+      "currentTrend": "FLAT",
+      "currentMetrics": {
+        "netClicks": 0,
+        "netImps": 0,
+        "netPos": null,
+        "netCtr": 0
+      },
+      "nextMilestone": {
+        "day": 7,
+        "date": "2026-05-19",
+        "daysAway": 5
+      },
+      "history": [
+        {
+          "date": "2026-05-13",
+          "daysSinceStart": 1,
+          "verdict": "IN_PROGRESS",
+          "netClicks": 0,
+          "netImps": 0,
+          "netPos": null,
+          "netCtr": 0,
+          "hitCheckIn": null
+        },
+        {
+          "date": "2026-05-14",
+          "daysSinceStart": 2,
+          "verdict": "IN_PROGRESS",
+          "netClicks": 0,
+          "netImps": 0,
+          "netPos": null,
+          "netCtr": 0,
+          "hitCheckIn": null
+        }
+      ],
+      "treatmentCount": 1,
+      "controlCount": 0
+    },
+    {
+      "id": "answer-blocks-aeo",
+      "title": "AEO Answer Blocks — 40-60 word direct-answer post-H1",
+      "status": "active",
+      "source": "data/research/2026-05-12/findings.md (AEO 2026 section)",
+      "startDate": "2026-05-14",
+      "endDate": "2026-06-11",
+      "daysSinceStart": 0,
+      "windowDays": 28,
+      "daysRemaining": 28,
+      "progressPct": 0,
+      "progressBar": "[░░░░░░░░░░░░░░░░░░░░░░░░] 0%",
+      "currentTrend": "BASELINE",
+      "currentMetrics": {
+        "netClicks": 0,
+        "netImps": 0,
+        "netPos": null,
+        "netCtr": 0
+      },
+      "nextMilestone": {
+        "day": 7,
+        "date": "2026-05-21",
+        "daysAway": 7
+      },
+      "history": [
+        {
+          "date": "2026-05-14",
+          "daysSinceStart": 0,
+          "verdict": "IN_PROGRESS",
+          "netClicks": 0,
+          "netImps": 0,
+          "netPos": null,
+          "netCtr": 0,
+          "hitCheckIn": null
+        }
+      ],
+      "treatmentCount": 8,
+      "controlCount": 4
+    },
+    {
+      "id": "local-landmarks-section",
+      "title": "Hyperlocal Local Landmarks on microsite homepages",
+      "status": "active",
+      "source": "data/research/2026-05-12/findings.md (Hyperlocal SEO section)",
+      "startDate": "2026-05-14",
+      "endDate": "2026-06-11",
+      "daysSinceStart": 0,
+      "windowDays": 28,
+      "daysRemaining": 28,
+      "progressPct": 0,
+      "progressBar": "[░░░░░░░░░░░░░░░░░░░░░░░░] 0%",
+      "currentTrend": "BASELINE",
+      "currentMetrics": {
+        "netClicks": 0,
+        "netImps": 0,
+        "netPos": 0,
+        "netCtr": 0
+      },
+      "nextMilestone": {
+        "day": 14,
+        "date": "2026-05-28",
+        "daysAway": 14
+      },
+      "history": [
+        {
+          "date": "2026-05-14",
+          "daysSinceStart": 0,
+          "verdict": "IN_PROGRESS",
+          "netClicks": 0,
+          "netImps": 0,
+          "netPos": 0,
+          "netCtr": 0,
+          "hitCheckIn": null
+        }
+      ],
+      "treatmentCount": 1,
+      "controlCount": 2
+    },
+    {
+      "id": "compact-keywords-short-page",
+      "title": "Edward Sturm — 400-500 word compact-keyword test",
+      "status": "planned",
+      "source": "data/research/2026-05-12/findings.md (Edward Sturm 2026 Playbook)",
+      "startDate": null,
+      "endDate": null,
+      "daysSinceStart": 0,
+      "windowDays": 28,
+      "daysRemaining": 28,
+      "progressPct": 0,
+      "progressBar": "[░░░░░░░░░░░░░░░░░░░░░░░░] 0%",
+      "currentTrend": "NO_DATA",
+      "currentMetrics": null,
+      "nextMilestone": null,
+      "history": [],
+      "treatmentCount": 0,
+      "controlCount": 0
+    },
+    {
+      "id": "solution-based-content-arc",
+      "title": "Matt Diamante — solution-based content arc audit",
+      "status": "planned",
+      "source": "data/research/2026-05-12/findings.md (Matt Diamante HeyTony section)",
+      "startDate": null,
+      "endDate": null,
+      "daysSinceStart": 0,
+      "windowDays": 28,
+      "daysRemaining": 28,
+      "progressPct": 0,
+      "progressBar": "[░░░░░░░░░░░░░░░░░░░░░░░░] 0%",
+      "currentTrend": "NO_DATA",
+      "currentMetrics": null,
+      "nextMilestone": null,
+      "history": [],
+      "treatmentCount": 0,
+      "controlCount": 0
+    },
+    {
+      "id": "decision-intent-faq-blogs",
+      "title": "AEO Decision-intent content — 'should I' / 'is it worth' / 'when to'",
+      "status": "planned",
+      "source": "data/research/2026-05-12/findings.md (AEO content-by-intent)",
+      "startDate": null,
+      "endDate": null,
+      "daysSinceStart": 0,
+      "windowDays": 28,
+      "daysRemaining": 28,
+      "progressPct": 0,
+      "progressBar": "[░░░░░░░░░░░░░░░░░░░░░░░░] 0%",
+      "currentTrend": "NO_DATA",
+      "currentMetrics": null,
+      "nextMilestone": null,
+      "history": [],
+      "treatmentCount": 0,
+      "controlCount": 0
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "active": 3,
+    "planned": 3,
+    "completed": 0,
+    "progressing": 0,
+    "regressing": 0,
+    "flat": 1,
+    "baseline": 2,
+    "keep": 0,
+    "kill": 0,
+    "neutral": 0
+  }
+}
