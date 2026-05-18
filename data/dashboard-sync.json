@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-15T23:38:11.917Z",
+  "generatedAt": "2026-05-15T23:39:28.441Z",
   "date": "2026-05-15",
   "verdict": "BROKEN",
-  "driftScore": 75,
+  "driftScore": 81,
   "summary": {
-    "pass": 5,
-    "warn": 2,
+    "pass": 6,
+    "warn": 1,
     "fail": 1,
     "total": 8
   },
@@ -37,8 +37,8 @@
     },
     {
       "name": "Skill-audit covers every skill",
-      "status": "warn",
-      "details": "1 skills without audit entry: progress-report"
+      "status": "pass",
+      "details": "10/10 skills rated"
     },
     {
       "name": "Strategies registry populated",
