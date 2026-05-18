@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-14T22:34:59.773Z",
-  "date": "2026-05-14",
+  "generatedAt": "2026-05-18T20:14:29.758Z",
+  "date": "2026-05-18",
   "summary": {
     "total": 6,
     "active": 3,
@@ -106,7 +106,7 @@
       ],
       "decision": null,
       "notes": "Activated 2026-05-14. 8 treatment pages now have the 40-60 word Answer Block right after H1 (today's 4 + yesterday's 4 + the bailbond-agent rewrites). Control = same-site blogs from 2026-04-30 without the pattern. Check-in 2026-05-21 (day 7), 2026-05-28 (day 14), 2026-06-11 (day 28 verdict).",
-      "daysSinceStart": 0,
+      "daysSinceStart": 4,
       "verdict": "IN_PROGRESS"
     },
     {
@@ -184,7 +184,7 @@
       ],
       "decision": null,
       "notes": "Baseline (pre-rewrite): pos 5, 15,415 imps, 1 click, CTR ~0.006%. Expected +647 monthly clicks per priorities calc. First check-in 2026-05-19.",
-      "daysSinceStart": 2,
+      "daysSinceStart": 6,
       "verdict": "IN_PROGRESS"
     },
     {
@@ -215,17 +215,17 @@
             "pageHits": 948
           },
           "post": {
-            "clicks": 181,
-            "impressions": 24808,
-            "avgPosition": 45.02,
-            "ctr": 0.73,
-            "pageHits": 948
+            "clicks": 175,
+            "impressions": 22805,
+            "avgPosition": 31.7,
+            "ctr": 0.767,
+            "pageHits": 769
           },
           "delta": {
-            "clicks": 0,
-            "impressions": 0,
-            "avgPosition": 0,
-            "ctr": 0
+            "clicks": -3.3,
+            "impressions": -8.1,
+            "avgPosition": 13.32,
+            "ctr": 0.03700000000000003
           }
         },
         "control": {
@@ -237,24 +237,24 @@
             "pageHits": 948
           },
           "post": {
-            "clicks": 181,
-            "impressions": 24808,
-            "avgPosition": 45.02,
-            "ctr": 0.73,
-            "pageHits": 948
+            "clicks": 175,
+            "impressions": 22805,
+            "avgPosition": 31.7,
+            "ctr": 0.767,
+            "pageHits": 769
           },
           "delta": {
-            "clicks": 0,
-            "impressions": 0,
-            "avgPosition": 0,
-            "ctr": 0
+            "clicks": -3.3,
+            "impressions": -8.1,
+            "avgPosition": 13.32,
+            "ctr": 0.03700000000000003
           }
         },
         "net": {
           "clicks": 0,
           "impressions": 0,
-          "avgPosition": 0,
-          "ctr": 0
+          "avgPosition": 13.32,
+          "ctr": 0.037
         }
       },
       "checkInDays": [
@@ -263,7 +263,7 @@
       ],
       "decision": null,
       "notes": "Activated 2026-05-14. Treatment: bailbondsrowlandheights.com homepage gets a 'Local Landmarks & Service Area' section (LASD Industry Station address, Cal Poly Pomona, City of Industry, Walnut, Diamond Bar, Hacienda Heights neighborhoods, 60/57/210 freeway exits). Control: bailbondsandimas + bailbondshaciendaheights — same San Gabriel Valley peer group, no landmarks section. Check-in day 14 (2026-05-28), verdict day 28 (2026-06-11). If KEEP, roll out to 30 more microsites.",
-      "daysSinceStart": 0,
+      "daysSinceStart": 4,
       "verdict": "IN_PROGRESS"
     },
     {

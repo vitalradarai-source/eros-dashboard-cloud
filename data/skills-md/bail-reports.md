@@ -67,9 +67,19 @@ node scripts/phase4-action-plan.mjs
 
 # 4. Build this week's report (always comprehensive)
 node scripts/bail-reports-weekly.mjs
+
+# 5. Sync EROS Dashboard (added 2026-05-15 — MANDATORY)
+node ~/Workspaces/eros-workspace/scripts/refresh-bail-tabs-cache.mjs
+node ~/Workspaces/eros-dashboard-cloud/scripts/publish-dashboard.mjs
+cd ~/Workspaces/eros-dashboard-cloud && git add data && \
+  (git diff --staged --quiet || git commit -m "publish: /bail-reports W$(date +%V) refresh" && git push)
+cd ~/Workspaces/eros-dashboard && git add bail-tabs-cache.json && \
+  (git diff --staged --quiet || git commit -m "cache: refresh bail-tabs after /bail-reports" && git push)
 ```
 
-For routine weekly runs (data already refreshed today/yesterday), just run step 4. Once-a-month, run all four steps for the full refresh.
+For routine weekly runs (data already refreshed today/yesterday), just run steps 4 + 5. Once-a-month, run all five steps for the full refresh.
+
+**Why step 5 is mandatory (added 2026-05-15):** before this fix, `/bail-reports` created the new weekly sheet tab but the EROS Dashboard's tab list was sourced from a stale local cache (`bail-tabs-cache.json`) that was never refreshed automatically. Result: the dashboard kept showing last week's tab as "latest" even after the new one shipped. Step 5 refreshes the cache directly from the Sheets API, then republishes the cloud dashboard data, then commits both repos so CF Pages auto-deploys. Without this step, the dashboard silently lags behind by one week. The refresh script is idempotent — safe to re-run.
 
 ## No arguments — comprehensive every time
 

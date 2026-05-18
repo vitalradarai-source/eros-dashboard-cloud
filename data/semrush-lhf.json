@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-15T16:16:56.946425",
-  "date": "2026-05-15",
+  "generatedAt": "2026-05-18T13:05:34.896358",
+  "date": "2026-05-18",
   "filter": {
     "maxKd": 35.0,
     "minVolume": 100,
@@ -12,7 +12,7 @@
   "totals": {
     "semrush_keywords": 62572,
     "candidates_after_filter": 379,
-    "returned": 20
+    "returned": 25
   },
   "candidates": [
     {

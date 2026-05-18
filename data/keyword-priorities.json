@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T23:16:53.181Z",
+  "generatedAt": "2026-05-18T20:05:31.301Z",
   "total": 18,
   "opportunities": [
     {
@@ -34,6 +34,17 @@
       "expectedCtr": 1.7,
       "monthlyClicksUpside": 1.7,
       "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "360 dna test",
+      "position": 1,
+      "impressions": 4,
+      "currentCtr": 0,
+      "expectedCtr": 39.8,
+      "monthlyClicksUpside": 1.6,
+      "action": "CTR-FIX (rewrite meta)"
     },
     {
       "site": "gardenabailbonds",
@@ -105,98 +116,87 @@
       "site": "ReEnergized",
       "kind": "main",
       "keyword": "aduro red light mask",
-      "position": 5,
-      "impressions": 10,
-      "currentCtr": 0,
-      "expectedCtr": 5.2,
-      "monthlyClicksUpside": 0.5,
-      "action": "CTR-FIX (rewrite meta)"
-    },
-    {
-      "site": "ReEnergized",
-      "kind": "main",
-      "keyword": "360 dna test",
-      "position": 2.6,
+      "position": 4.4,
       "impressions": 5,
       "currentCtr": 0,
-      "expectedCtr": 10.3,
-      "monthlyClicksUpside": 0.5,
-      "action": "CTR-FIX (rewrite meta)"
-    },
-    {
-      "site": "ReEnergized",
-      "kind": "main",
-      "keyword": "aduro face mask",
-      "position": 6.8,
-      "impressions": 9,
-      "currentCtr": 0,
-      "expectedCtr": 3.2,
-      "monthlyClicksUpside": 0.3,
+      "expectedCtr": 7.2,
+      "monthlyClicksUpside": 0.4,
       "action": "CTR-FIX (rewrite meta)"
     },
     {
       "site": "ReEnergized",
       "kind": "main",
       "keyword": "aduro led mask",
-      "position": 12.5,
-      "impressions": 13,
+      "position": 13,
+      "impressions": 22,
       "currentCtr": 0,
       "expectedCtr": 1.5,
-      "monthlyClicksUpside": 0.2,
+      "monthlyClicksUpside": 0.3,
+      "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro face mask",
+      "position": 7.9,
+      "impressions": 10,
+      "currentCtr": 0,
+      "expectedCtr": 2.6,
+      "monthlyClicksUpside": 0.3,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro mask",
+      "position": 16,
+      "impressions": 6,
+      "currentCtr": 0,
+      "expectedCtr": 1.2,
+      "monthlyClicksUpside": 0.1,
+      "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro led face mask",
+      "position": 12.6,
+      "impressions": 5,
+      "currentCtr": 0,
+      "expectedCtr": 1.5,
+      "monthlyClicksUpside": 0.1,
       "action": "CONTENT-PUSH (add depth/links)"
     },
     {
       "site": "ReEnergized",
       "kind": "main",
       "keyword": "\"brainwave entrainment\" headset visor earphones led",
-      "position": 9.3,
-      "impressions": 7,
-      "currentCtr": 0,
-      "expectedCtr": 2.2,
-      "monthlyClicksUpside": 0.2,
-      "action": "CTR-FIX (rewrite meta)"
-    },
-    {
-      "site": "ReEnergized",
-      "kind": "main",
-      "keyword": "aduro led face mask at-home light therapy",
-      "position": 14.8,
-      "impressions": 5,
-      "currentCtr": 0,
-      "expectedCtr": 1.3,
-      "monthlyClicksUpside": 0.1,
-      "action": "CONTENT-PUSH (add depth/links)"
-    },
-    {
-      "site": "ReEnergized",
-      "kind": "main",
-      "keyword": "aduro led",
-      "position": 10.8,
+      "position": 8.5,
       "impressions": 4,
       "currentCtr": 0,
-      "expectedCtr": 1.8,
+      "expectedCtr": 2.2,
       "monthlyClicksUpside": 0.1,
-      "action": "CONTENT-PUSH (add depth/links)"
+      "action": "CTR-FIX (rewrite meta)"
     },
     {
       "site": "ReEnergized",
       "kind": "main",
       "keyword": "360 dna",
-      "position": 7.3,
+      "position": 8,
       "impressions": 3,
       "currentCtr": 0,
-      "expectedCtr": 3.2,
+      "expectedCtr": 2.6,
       "monthlyClicksUpside": 0.1,
       "action": "CTR-FIX (rewrite meta)"
     },
     {
       "site": "ReEnergized",
       "kind": "main",
-      "keyword": "aduro facial mask",
-      "position": 14,
-      "impressions": 3,
+      "keyword": "algae bits",
+      "position": 23.5,
+      "impressions": 4,
       "currentCtr": 0,
-      "expectedCtr": 1.4,
+      "expectedCtr": 1,
       "monthlyClicksUpside": 0,
       "action": "CONTENT-PUSH (add depth/links)"
     }

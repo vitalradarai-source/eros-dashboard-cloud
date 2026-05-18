@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-15T23:15:43.908Z",
-  "date": "2026-05-15",
+  "generatedAt": "2026-05-18T20:14:29.590Z",
+  "date": "2026-05-18",
   "totalSites": 35,
   "touchedSites": 10,
   "sites": {
@@ -19,13 +19,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-15-stalking-bail-california-pc-646-9.html"
+        "blog/2026-05-18-corporal-injury-spouse-bail-california-pc-273-5.html"
       ],
       "commits": [
         {
-          "sha": "56279252",
-          "time": "2026-05-15 16:12:07 -0700",
-          "subject": "blog(2026-05-15): Stalking Bail in California - PC 646.9 Defense Guide (deferred-value)",
+          "sha": "45ba29c5",
+          "time": "2026-05-18 13:13:48 -0700",
+          "subject": "blog(2026-05-18): PC 273.5 Corporal Injury Bail California (deferred-value)",
           "type": "content",
           "fileCount": 1
         }
@@ -46,13 +46,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-15-ab-109-realignment-bail-california.html"
+        "blog/2026-05-18-sb-10-bail-reform-california-history.html"
       ],
       "commits": [
         {
-          "sha": "90bd9c2b",
-          "time": "2026-05-15 16:15:24 -0700",
-          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "sha": "45c1e32b",
+          "time": "2026-05-18 13:14:08 -0700",
+          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
           "type": "content",
           "fileCount": 1
         }
@@ -73,13 +73,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-15-weekend-bail-placentia-after-hours.html"
+        "blog/2026-05-18-traffic-warrant-bail-placentia-vc-40508.html"
       ],
       "commits": [
         {
-          "sha": "837fab9c",
-          "time": "2026-05-15 16:15:26 -0700",
-          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "sha": "356f48d4",
+          "time": "2026-05-18 13:14:10 -0700",
+          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
           "type": "content",
           "fileCount": 1
         }
@@ -100,13 +100,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-15-twin-towers-correctional-facility-bail-los-angeles.html"
+        "blog/2026-05-18-mens-central-jail-bail-los-angeles.html"
       ],
       "commits": [
         {
-          "sha": "27ea7060",
-          "time": "2026-05-15 16:15:38 -0700",
-          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "sha": "4adb501d",
+          "time": "2026-05-18 13:14:24 -0700",
+          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
           "type": "content",
           "fileCount": 1
         }
@@ -127,13 +127,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-15-dui-bail-garden-grove-vc-23152.html"
+        "blog/2026-05-18-robbery-bail-garden-grove-pc-211.html"
       ],
       "commits": [
         {
-          "sha": "ea3e45af",
-          "time": "2026-05-15 16:15:28 -0700",
-          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "sha": "792494aa",
+          "time": "2026-05-18 13:14:13 -0700",
+          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
           "type": "content",
           "fileCount": 1
         }
@@ -154,13 +154,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-15-drug-possession-bail-rowland-heights-hs-11377.html"
+        "blog/2026-05-18-felony-dui-bail-rowland-heights-vc-23153.html"
       ],
       "commits": [
         {
-          "sha": "60f56bc6",
-          "time": "2026-05-15 16:15:40 -0700",
-          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "sha": "9d9d2d94",
+          "time": "2026-05-18 13:14:26 -0700",
+          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
           "type": "content",
           "fileCount": 1
         }
@@ -181,13 +181,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-15-theft-bail-stanton-pc-484-487.html"
+        "blog/2026-05-18-dui-bail-stanton-vc-23152.html"
       ],
       "commits": [
         {
-          "sha": "2bf733e3",
-          "time": "2026-05-15 16:15:30 -0700",
-          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "sha": "525e2981",
+          "time": "2026-05-18 13:14:15 -0700",
+          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
           "type": "content",
           "fileCount": 1
         }
@@ -208,13 +208,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-15-probation-violation-bail-gardena-pc-1203.html"
+        "blog/2026-05-18-weapons-charge-bail-gardena-pc-29800.html"
       ],
       "commits": [
         {
-          "sha": "1d9ecb7f",
-          "time": "2026-05-15 16:15:32 -0700",
-          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "sha": "427a1150",
+          "time": "2026-05-18 13:14:17 -0700",
+          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
           "type": "content",
           "fileCount": 1
         }
@@ -235,13 +235,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-15-domestic-battery-bail-laguna-niguel-pc-243.html"
+        "blog/2026-05-18-sex-offense-bail-laguna-niguel-pc-290.html"
       ],
       "commits": [
         {
-          "sha": "a77ec92d",
-          "time": "2026-05-15 16:15:34 -0700",
-          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "sha": "ffac0536",
+          "time": "2026-05-18 13:14:20 -0700",
+          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
           "type": "content",
           "fileCount": 1
         }
@@ -262,13 +262,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-15-theo-lacy-facility-bail-orange-county.html"
+        "blog/2026-05-18-oc-central-mens-jail-bail-santa-ana.html"
       ],
       "commits": [
         {
-          "sha": "83e2d5e1",
-          "time": "2026-05-15 16:15:36 -0700",
-          "subject": "session(2026-05-15): /eros-day batch — 10-blog floor met (uniqueness gap documented)",
+          "sha": "da25e7df",
+          "time": "2026-05-18 13:14:22 -0700",
+          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
           "type": "content",
           "fileCount": 1
         }

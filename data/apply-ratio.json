@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-15T23:15:43.976Z",
-  "date": "2026-05-15",
-  "priorDate": "2026-05-14",
+  "generatedAt": "2026-05-18T20:14:29.667Z",
+  "date": "2026-05-18",
+  "priorDate": "2026-05-15",
   "findings": {
-    "uniquenessFailing": 0,
+    "uniquenessFailing": 133,
     "factcheckHard": 0,
     "factcheckWarn": 0
   },
   "applied": {
     "uniquenessFixed": 0,
     "factcheckHardFixed": 0,
-    "factcheckWarnFixed": 52
+    "factcheckWarnFixed": 0
   },
   "quotas": {
     "uniqueness": 2,
@@ -21,11 +21,11 @@
   "passed": {
     "uniqueness": false,
     "factcheckHard": true,
-    "factcheckWarn": true,
+    "factcheckWarn": false,
     "researchApply": false
   },
-  "applyRatioPct": 50,
-  "verdict": "NEEDS ATTENTION",
+  "applyRatioPct": 25,
+  "verdict": "RED — APPLY LOOP BROKEN",
   "details": {
     "blogsAdded": 10,
     "blogsModified": 0,
