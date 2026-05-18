@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-18T13:05:34.896358",
+  "generatedAt": "2026-05-18T13:15:11.023354",
   "date": "2026-05-18",
   "filter": {
     "maxKd": 35.0,
@@ -12,7 +12,7 @@
   "totals": {
     "semrush_keywords": 62572,
     "candidates_after_filter": 379,
-    "returned": 25
+    "returned": 20
   },
   "candidates": [
     {
@@ -203,7 +203,7 @@
       "gsc_match": {
         "site": "bailbondsrowlandheights",
         "position": 5.1,
-        "impressions": 13857,
+        "impressions": 12302,
         "clicks": 1
       }
     },
@@ -339,8 +339,8 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "sanbernardinobailbond",
-        "position": 82.7,
-        "impressions": 3,
+        "position": 90.0,
+        "impressions": 2,
         "clicks": 0
       }
     },
@@ -2027,14 +2027,9 @@
       "kd": 0,
       "topic_tab": "bail bond",
       "score": 140.0,
-      "classification": "DEEP-RESULTS",
+      "classification": "NET-NEW",
       "market": "NATIONAL",
-      "gsc_match": {
-        "site": "bailbondssangabriel",
-        "position": 83.0,
-        "impressions": 1,
-        "clicks": 0
-      }
+      "gsc_match": null
     },
     {
       "keyword": "bail bonds berkeley",
@@ -2960,7 +2955,7 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "lahabrabailbonds",
-        "position": 25.9,
+        "position": 27.0,
         "impressions": 8,
         "clicks": 0
       }
@@ -3108,7 +3103,7 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "lagunaniguelbailbonds",
-        "position": 19.3,
+        "position": 14.5,
         "impressions": 4,
         "clicks": 0
       }
@@ -3146,8 +3141,8 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "bailbondsandimas",
-        "position": 25.0,
-        "impressions": 5,
+        "position": 24.0,
+        "impressions": 4,
         "clicks": 0
       }
     },
@@ -3503,8 +3498,8 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "bailbondhuntingtonbeach",
-        "position": 73.0,
-        "impressions": 1,
+        "position": 72.0,
+        "impressions": 3,
         "clicks": 0
       }
     },
