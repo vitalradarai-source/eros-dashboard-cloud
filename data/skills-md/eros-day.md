@@ -191,19 +191,36 @@ Before output, read these files to identify the SPECIFIC items to fix this sessi
 4. **Next research-apply**: `data/research/<latest>/findings.md` → scan for `🔴 ADD` lines. Pick the topmost unprocessed one (cross-reference against `data/daily/<dates>/site-changelog.json` to check if already applied). Also cross-reference `~/Workspaces/eros-dashboard/strategies.json` — if the research item is the source of a `status: 'planned'` strategy, flip that strategy to `active` in the same commit (auto-activation rule, see below).
 5. **Active strategy check-ins**: `data/daily/<date>/strategy-results.json` → `results[]` filtered to `hitCheckIn != null`. If any strategy hit a check-in day today, surface verdict + decision required.
 
-### Strategy auto-activation rule *(added 2026-05-14)*
+### Strategy approval lanes *(LOCKED 2026-05-19)*
 
-Every 🔴 ADD research item in `findings.md` should map to a strategy in `~/Workspaces/eros-dashboard/strategies.json`. The mapping:
+Strategies route through one of FOUR approval lanes based on what activating them requires from Angelo or Sean. The lane is auto-classified by `surface-pending-strategies.mjs` based on keywords in the suggested test design + research body.
 
-- **Apply the research → set the strategy to `active`** in the same session, with:
-  - `startDate: <today>`
-  - `endDate: <today + windowDays>`
-  - `treatmentPages: [list of pages that received the research apply]`
-  - `controlPages: [list of comparable pages without the apply]`
-- **Existing strategies** (e.g., `answer-blocks-aeo`, `local-landmarks-section`): when Phase 4 ships an instance of that pattern, ADD the page to `treatmentPages[]` for that strategy. Never create a duplicate strategy for the same pattern.
-- **Track research → strategy linkage** in `strategies.json` via the `source` field (already in place, e.g., `"source": "data/research/2026-05-12/findings.md (AEO 2026 section)"`).
+| Lane | Requires | Activation |
+|---|---|---|
+| **🟢 AUTO-APPROVE** | Nothing — pure EROS-internal SEO tactic. No budget, no Sean/Angelo input, no legal disclosure. Examples: schema markup experiments, content-frame rotation, on-page meta rewrites, internal-linking tests, FAQ-block additions | EROS activates IMMEDIATELY without waiting for explicit YES. Adds entry to strategies.json with `approvedBy:'auto'`, `status:'active'`, startDate=today. Surfaced in daily email as a heads-up callout (no decision required). |
+| **🟡 BUDGET-REQUIRED** | Cash commitment (Bing Ads, paid tools, contractor services) | Surfaced in focused decision email. Strategy stays `status:'planned'` until Angelo replies YES with budget amount. |
+| **🟡 ACCESS-REQUIRED** | Sean's input (bio, headshot, license verification, time to record videos) OR third-party account access (Lawyers.com login, customer-data export) | Surfaced in decision email. Strategy stays `planned` until Angelo confirms he can provide the required input. |
+| **🔴 COMPLIANCE-REQUIRED** | Legal/consent risk (TCPA for SMS, customer-data privacy, professional-licensing rules) | Surfaced in decision email with risk disclosure. Strategy stays `planned` until Angelo explicitly confirms the legal precondition has been met (e.g., "intake paperwork has TCPA consent line"). |
 
-This rule eliminates the "researched but never tested" failure mode. Every research finding that gets applied automatically becomes a measurable test.
+🚨 **EROS NEVER auto-activates a BUDGET / ACCESS / COMPLIANCE strategy.** Auto-approval is reserved for low-risk EROS-internal experiments where there is no plausible objection. The classifier defaults to the most restrictive lane on any ambiguity.
+
+**Why these lanes exist:** Angelo flagged 2026-05-19 that strategies were lining up for testing without his explicit YES, but ALSO that approval-fatigue on every minor on-page experiment would create unnecessary friction. The 4-lane system gives EROS automatic permission for low-stakes tactics while keeping the human in the loop on cost, access, and compliance.
+
+**The new workflow:**
+
+1. Phase 9 research produces 🔴 ADD findings in `data/research/<date>/findings.md`.
+2. Phase 8.5 runs `surface-pending-strategies.mjs` which extracts those findings into `data/daily/<date>/pending-strategies.json` with auto-suggested test design.
+3. Phase 8.6 runs `send-strategy-decision-email.mjs` which builds a focused, requirements-rich email to 4434lifeline@gmail.com with: EROS recommendation, full per-strategy requirements table (what Angelo must provide), risk disclosures, and reply format. Email subject: `STRATEGY DECISIONS -- N pending tests awaiting your YES/NO/LATER`.
+4. Email fires EVERY /eros-day session as long as `pending-strategies.json count > 0`. It does not stop until every pending finding has been answered.
+5. Angelo replies YES / NO / LATER per strategy.
+6. Next /eros-day session: EROS reads Angelo's reply (manually parsed from email body for now; future: automated inbox scan), updates `strategies.json` — for each YES: appends entry with `status:'active'`, `approvedBy:'angelo'`, `approvedOn:<date>`, `startDate:<today>`, `endDate:<today + windowDays>`, `treatmentPages:[...]`, `controlPages:[...]`. For NO: appends with `status:'rejected'`, `rejectionReason:<Angelo's note>`. For LATER: appends with `status:'deferred'`, `revisitOn:<today + 30>`.
+7. **`approvedBy` field is mandatory** for `status:'active'`. `measure-strategy-results.mjs` ignores any strategy with `status:'active'` AND `approvedBy:null` (treats as configuration bug, logs a warning to surface in Phase 0 next session).
+
+**Existing strategies** (e.g., `answer-blocks-aeo`, `local-landmarks-section`): when Phase 4 ships a NEW instance of that pattern on a new page, ADD the page to `treatmentPages[]`. This does NOT require a fresh approval — the strategy itself was already approved.
+
+**Track research → strategy linkage** in `strategies.json` via the `source` field, e.g., `"source": "data/research/2026-05-12/findings.md (AEO 2026 section)"`.
+
+This rule preserves the spirit of "every research finding becomes a measurable test" while keeping Angelo in the loop on cost + legal + scope decisions.
 
 These picks go INTO the plan output. No more "we should apply research" abstractions — Phase 3 names the exact pages and exact tactic before Phase 4 starts writing.
 

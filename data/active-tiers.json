@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T20:45:34.896Z",
+  "generatedAt": "2026-05-19T22:31:55.196Z",
   "date": "2026-05-19",
-  "totalSites": 35,
+  "totalSites": 37,
   "distribution": {
     "S": 0,
     "A": 2,
-    "B": 27,
+    "B": 29,
     "C": 5,
     "D": 1
   },
@@ -84,6 +84,36 @@
         "schema": 5
       },
       "next_action": "SPA prerender (Path A/B/C) — see standing reminder"
+    },
+    {
+      "workspace": "city-of-industry-bail-bonds",
+      "domain": "bailbonds-cityofindustry.com",
+      "display": "City of Industry Bail Bonds",
+      "kind": "microsite",
+      "inBailMaster": true,
+      "score": 29.8,
+      "bucket": "B",
+      "source": "bail-master",
+      "next_action": "",
+      "gsc_clicks_90d": 3,
+      "gsc_impressions_90d": 9576,
+      "gsc_avg_pos_90d": 19.5,
+      "active_status": "✅ live"
+    },
+    {
+      "workspace": "hermosa-beach-bail-bonds",
+      "domain": "bailbonds-hermosabeach.com",
+      "display": "Hermosa Beach Bail Bonds",
+      "kind": "microsite",
+      "inBailMaster": true,
+      "score": 27.4,
+      "bucket": "B",
+      "source": "bail-master",
+      "next_action": "",
+      "gsc_clicks_90d": 19,
+      "gsc_impressions_90d": 6015,
+      "gsc_avg_pos_90d": 21.6,
+      "active_status": "✅ live"
     },
     {
       "workspace": "1800bail911",

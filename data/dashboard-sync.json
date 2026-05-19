@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T21:07:11.541Z",
+  "generatedAt": "2026-05-19T21:40:28.639Z",
   "date": "2026-05-19",
   "verdict": "BROKEN",
   "driftScore": 81,
@@ -33,7 +33,7 @@
     {
       "name": "Glossary covers acronyms",
       "status": "warn",
-      "details": "59 acronyms not in glossary: floor, and, below, blog, two, frozen, head, drift"
+      "details": "60 acronyms not in glossary: floor, and, below, blog, two, frozen, head, drift"
     },
     {
       "name": "Skill-audit covers every skill",
@@ -48,7 +48,7 @@
     {
       "name": "Referenced scripts exist on disk",
       "status": "pass",
-      "details": "All 23 referenced scripts present"
+      "details": "All 25 referenced scripts present"
     }
   ],
   "remediation": {
