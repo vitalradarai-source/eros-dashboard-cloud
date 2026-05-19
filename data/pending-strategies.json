@@ -1,0 +1,106 @@
+{
+  "surfacedOn": "2026-05-19",
+  "count": 5,
+  "pending": [
+    {
+      "id": "pending-2026-05-12--add-",
+      "source": "data/research/2026-05-12/findings.md (# EROS Research Findings — 2026-05-12)",
+      "sourceDate": "2026-05-12",
+      "sectionTitle": "# EROS Research Findings — 2026-05-12",
+      "title": "**🔴 ADD**.",
+      "detail": "**🔴 ADD**.",
+      "recommendation": null,
+      "suggestedTestDesign": {
+        "windowDays": 28,
+        "treatmentScope": "top 2 A-tier sites",
+        "controlScope": "2 sister B-tier sites (matched on traffic volume)",
+        "signal": "GSC clicks + impressions delta",
+        "estimatedCost": "$0",
+        "successCriteria": "Score ≥75 of 100 at test-window end (KEEP_SUCCESS)",
+        "killCriteria": "Score ≤40 of 100 at test-window end (KILL_FAIL)"
+      },
+      "status": "awaiting-angelo-decision",
+      "surfacedFirstOn": "2026-05-19"
+    },
+    {
+      "id": "pending-2026-05-18-systematic-gbp-review-request-workflow",
+      "source": "data/research/2026-05-18/findings.md (Matt Diamante (HeyTony) — 2026 Local SEO Best Practices)",
+      "sourceDate": "2026-05-18",
+      "sectionTitle": "Matt Diamante (HeyTony) — 2026 Local SEO Best Practices",
+      "title": "Systematic GBP review-request workflow",
+      "detail": "Systematic GBP review-request workflow. Sean's network has 30+ GBPs with low review counts. A monthly automated \"review request\" email/SMS to served customers (released defendants + their indemnitors, with permission) would compound review volume across the network. Matt Diamante's data point: reviews are the strongest local-rank correlation factor for service businesses. Currently we have zero EROS automation for this.",
+      "recommendation": null,
+      "suggestedTestDesign": {
+        "windowDays": 60,
+        "treatmentScope": "top 2 A-tier sites",
+        "controlScope": "2 sister B-tier sites (matched on traffic volume)",
+        "signal": "GBP review count + map-pack appearance",
+        "estimatedCost": "$0 (in-house automation)",
+        "successCriteria": "Score ≥75 of 100 at test-window end (KEEP_SUCCESS)",
+        "killCriteria": "Score ≤40 of 100 at test-window end (KILL_FAIL)"
+      },
+      "status": "awaiting-angelo-decision",
+      "surfacedFirstOn": "2026-05-19"
+    },
+    {
+      "id": "pending-2026-05-18-bing-ads-testing-for-bail-bonds",
+      "source": "data/research/2026-05-18/findings.md (Hyperlocal SEO for Bail Bonds — Post-2018 Google Ads Ban)",
+      "sourceDate": "2026-05-18",
+      "sectionTitle": "Hyperlocal SEO for Bail Bonds — Post-2018 Google Ads Ban",
+      "title": "Bing Ads testing for bail bonds",
+      "detail": "Bing Ads testing for bail bonds. Bing's policies allow bail-bond advertising (Google bans, Bing doesn't). Even at 8-10% search market share, a $200-500/mo Bing Ads test against the 2 A-tier sites could produce measurable lift since competition is artificially low. Worth a strategy test under the existing Strategy Timeline framework — 28-day window, treatment vs control.",
+      "recommendation": null,
+      "suggestedTestDesign": {
+        "windowDays": 28,
+        "treatmentScope": "2 A-tier sites",
+        "controlScope": "2 sister B-tier sites (matched on traffic volume)",
+        "signal": "GSC clicks + impressions delta",
+        "estimatedCost": "$200-500/mo per site",
+        "successCriteria": "Score ≥75 of 100 at test-window end (KEEP_SUCCESS)",
+        "killCriteria": "Score ≤40 of 100 at test-window end (KILL_FAIL)"
+      },
+      "status": "awaiting-angelo-decision",
+      "surfacedFirstOn": "2026-05-19"
+    },
+    {
+      "id": "pending-2026-05-18-directory-submission-sprint",
+      "source": "data/research/2026-05-18/findings.md (Hyperlocal SEO for Bail Bonds — Post-2018 Google Ads Ban)",
+      "sourceDate": "2026-05-18",
+      "sectionTitle": "Hyperlocal SEO for Bail Bonds — Post-2018 Google Ads Ban",
+      "title": "Directory submission sprint",
+      "detail": "Directory submission sprint. The 25% \"secondary channel\" allocation that GetMoreBonds recommends is something we have not systematically done. Lawyers.com, Avvo.com, Justia, BBB, FindLaw, Yelp, Yellow Pages — each requires unique content per listing. Auto-deferral risk because it's tedious work, but the citation signal is documented to feed local map pack rankings.",
+      "recommendation": null,
+      "suggestedTestDesign": {
+        "windowDays": 60,
+        "treatmentScope": "top 2 A-tier sites",
+        "controlScope": "2 sister B-tier sites (matched on traffic volume)",
+        "signal": "map-pack rank + citation count delta",
+        "estimatedCost": "$0 manual",
+        "successCriteria": "Score ≥75 of 100 at test-window end (KEEP_SUCCESS)",
+        "killCriteria": "Score ≤40 of 100 at test-window end (KILL_FAIL)"
+      },
+      "status": "awaiting-angelo-decision",
+      "surfacedFirstOn": "2026-05-19"
+    },
+    {
+      "id": "pending-2026-05-18-youtube-has-been-on-the-deferred-video-c",
+      "source": "data/research/2026-05-18/findings.md (YouTube SEO 2026 — Small Business Video Strategy)",
+      "sourceDate": "2026-05-18",
+      "sectionTitle": "YouTube SEO 2026 — Small Business Video Strategy",
+      "title": "YouTube has been on the \"deferred video coverage strategy\" list since spring 2026",
+      "detail": "YouTube has been on the \"deferred video coverage strategy\" list since spring 2026. Three options for next quarter:",
+      "recommendation": null,
+      "suggestedTestDesign": {
+        "windowDays": 60,
+        "treatmentScope": "top 2 A-tier sites",
+        "controlScope": "2 sister B-tier sites (matched on traffic volume)",
+        "signal": "organic video search + referral traffic to site",
+        "estimatedCost": "$0-1500/quarter",
+        "successCriteria": "Score ≥75 of 100 at test-window end (KEEP_SUCCESS)",
+        "killCriteria": "Score ≤40 of 100 at test-window end (KILL_FAIL)"
+      },
+      "status": "awaiting-angelo-decision",
+      "surfacedFirstOn": "2026-05-19"
+    }
+  ]
+}
