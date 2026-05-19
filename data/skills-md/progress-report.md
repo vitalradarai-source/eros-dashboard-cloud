@@ -93,11 +93,11 @@ Claude Progress Report — <Month DD, YYYY>
 Summary
 <2–3 sentence overview in plain English of what today was about.>
 
-============================================================
-COMPLETED
-============================================================
 
-<Group by project. Each group: project name in bold, then bullets.>
+COMPLETED
+
+
+<Group by project. Each group: project name on its own line, then bullets.>
 
 ReEnergized
 * Built X — why it matters: <one line>
@@ -109,27 +109,29 @@ EROS Infrastructure
 Bail-Bond Microsites
 * ...
 
-============================================================
+
 IN PROGRESS
-============================================================
+
 
 * <Item> — currently <what stage>, expected <when>
 * ...
 
-============================================================
+
 BLOCKAGE
-============================================================
+
 
 * <Blocked item> — waiting on <Angelo / Lovable / WordPress / etc.>
   To unblock: <one action>
 * ...
 
-============================================================
+
 NEXT SESSION
-============================================================
+
 
 * <Top 1–3 items queued for next /eros-day or next manual session>
 ```
+
+**No separator lines.** Section headers stand alone on their own line. Use two blank lines above and below each section header for visual breathing room — the Google Docs renderer treats them as paragraph breaks. Never use `---`, `===`, or other horizontal rule characters in the body — they render literally in Docs and add noise without structure.
 
 ---
 
@@ -170,6 +172,7 @@ Do NOT email it. Angelo opens the doc directly.
 
 - **No code blocks, no commit hashes, no file paths in the doc body** (unless Angelo asked specifically). The doc is for humans, not for me.
 - **Three sections always:** Completed / In Progress / Blockage. If empty, say "Nothing today."
+- **No separator lines.** Never use `---`, `===`, or any other horizontal rule characters. Section headers stand alone with blank lines above and below. Set 2026-05-18 after Angelo flagged separators as visual noise.
 - **24-hour window** — older work belongs in the daily Claude Progress doc, not here.
 - **Never send via email** — global rule says emails go only to 4434lifeline@gmail.com via /eros-day Phase 6. /progress-report is a Drive doc only.
 - **One report per day** — re-running updates the existing doc, never creates duplicates.

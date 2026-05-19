@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-18T20:14:29.667Z",
-  "date": "2026-05-18",
-  "priorDate": "2026-05-15",
+  "generatedAt": "2026-05-19T20:51:59.473Z",
+  "date": "2026-05-19",
+  "priorDate": "2026-05-18",
   "findings": {
-    "uniquenessFailing": 133,
+    "uniquenessFailing": 0,
     "factcheckHard": 0,
     "factcheckWarn": 0
   },

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-18T20:14:29.590Z",
-  "date": "2026-05-18",
+  "generatedAt": "2026-05-19T20:51:59.408Z",
+  "date": "2026-05-19",
   "totalSites": 35,
   "touchedSites": 10,
   "sites": {
@@ -13,27 +13,27 @@
         "blogsModified": 0,
         "servicePages": 0,
         "schemaChanges": 0,
-        "fixes": 0,
+        "fixes": 1,
         "deploys": 0,
         "sessionCommits": 0,
         "other": 0
       },
       "files": [
-        "blog/2026-05-18-corporal-injury-spouse-bail-california-pc-273-5.html"
+        "blog/2026-05-19-restraining-order-violation-bail-california-pc-273-6.html"
       ],
       "commits": [
         {
-          "sha": "45ba29c5",
-          "time": "2026-05-18 13:13:48 -0700",
-          "subject": "blog(2026-05-18): PC 273.5 Corporal Injury Bail California (deferred-value)",
-          "type": "content",
+          "sha": "2a719e2e",
+          "time": "2026-05-19 13:51:19 -0700",
+          "subject": "blog(2026-05-19): PC 273.6 Restraining Order Violation (deferred-value)",
+          "type": "fix",
           "fileCount": 1
         }
       ]
     },
-    "bailbond-california": {
-      "site": "bailbond-california",
-      "domain": "bailbond-california.com",
+    "1800bail911": {
+      "site": "1800bail911",
+      "domain": "1800bail911.com",
       "commitCount": 1,
       "counts": {
         "blogsAdded": 1,
@@ -46,21 +46,21 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-18-sb-10-bail-reform-california-history.html"
+        "blog/2026-05-19-how-to-bail-someone-out-2am-los-angeles.html"
       ],
       "commits": [
         {
-          "sha": "45c1e32b",
-          "time": "2026-05-18 13:14:08 -0700",
-          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
+          "sha": "278fdbeb",
+          "time": "2026-05-19 13:51:38 -0700",
+          "subject": "session(2026-05-19): Tuesday batch — 10 blogs · bucket 0 fresh angles",
           "type": "content",
           "fileCount": 1
         }
       ]
     },
-    "bailbonds-placentia": {
-      "site": "bailbonds-placentia",
-      "domain": "bailbonds-placentia.com",
+    "bailbondhuntingtonbeach": {
+      "site": "bailbondhuntingtonbeach",
+      "domain": "bailbondhuntingtonbeach.com",
       "commitCount": 1,
       "counts": {
         "blogsAdded": 1,
@@ -73,13 +73,40 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-18-traffic-warrant-bail-placentia-vc-40508.html"
+        "blog/2026-05-19-public-intoxication-bail-huntington-beach-pc-647.html"
       ],
       "commits": [
         {
-          "sha": "356f48d4",
-          "time": "2026-05-18 13:14:10 -0700",
-          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
+          "sha": "609d97ac",
+          "time": "2026-05-19 13:51:40 -0700",
+          "subject": "session(2026-05-19): Tuesday batch — 10 blogs · bucket 0 fresh angles",
+          "type": "content",
+          "fileCount": 1
+        }
+      ]
+    },
+    "bailbondsandimas": {
+      "site": "bailbondsandimas",
+      "domain": "bailbondsandimas.com",
+      "commitCount": 1,
+      "counts": {
+        "blogsAdded": 1,
+        "blogsModified": 0,
+        "servicePages": 0,
+        "schemaChanges": 0,
+        "fixes": 0,
+        "deploys": 0,
+        "sessionCommits": 0,
+        "other": 0
+      },
+      "files": [
+        "blog/2026-05-19-hit-and-run-bail-san-dimas-vc-20002.html"
+      ],
+      "commits": [
+        {
+          "sha": "e1b86bab",
+          "time": "2026-05-19 13:51:43 -0700",
+          "subject": "session(2026-05-19): Tuesday batch — 10 blogs · bucket 0 fresh angles",
           "type": "content",
           "fileCount": 1
         }
@@ -100,21 +127,21 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-18-mens-central-jail-bail-los-angeles.html"
+        "blog/2026-05-19-weekend-bail-bonds-los-angeles-county-courts.html"
       ],
       "commits": [
         {
-          "sha": "4adb501d",
-          "time": "2026-05-18 13:14:24 -0700",
-          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
+          "sha": "6248b33c",
+          "time": "2026-05-19 13:51:56 -0700",
+          "subject": "session(2026-05-19): Tuesday batch — 10 blogs · bucket 0 fresh angles",
           "type": "content",
           "fileCount": 1
         }
       ]
     },
-    "bailbondsgardengrove": {
-      "site": "bailbondsgardengrove",
-      "domain": "bailbondsgardengrove.com",
+    "bailbondshaciendaheights": {
+      "site": "bailbondshaciendaheights",
+      "domain": "bailbondshaciendaheights.com",
       "commitCount": 1,
       "counts": {
         "blogsAdded": 1,
@@ -127,21 +154,21 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-18-robbery-bail-garden-grove-pc-211.html"
+        "blog/2026-05-19-vandalism-bail-hacienda-heights-pc-594.html"
       ],
       "commits": [
         {
-          "sha": "792494aa",
-          "time": "2026-05-18 13:14:13 -0700",
-          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
+          "sha": "ff696e23",
+          "time": "2026-05-19 13:51:45 -0700",
+          "subject": "session(2026-05-19): Tuesday batch — 10 blogs · bucket 0 fresh angles",
           "type": "content",
           "fileCount": 1
         }
       ]
     },
-    "bailbondsrowlandheights": {
-      "site": "bailbondsrowlandheights",
-      "domain": "bailbondsrowlandheights.com",
+    "bailbondstustin": {
+      "site": "bailbondstustin",
+      "domain": "bailbondstustin.com",
       "commitCount": 1,
       "counts": {
         "blogsAdded": 1,
@@ -154,21 +181,21 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-18-felony-dui-bail-rowland-heights-vc-23153.html"
+        "blog/2026-05-19-disturbing-peace-bail-tustin-pc-415.html"
       ],
       "commits": [
         {
-          "sha": "9d9d2d94",
-          "time": "2026-05-18 13:14:26 -0700",
-          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
+          "sha": "54787619",
+          "time": "2026-05-19 13:51:47 -0700",
+          "subject": "session(2026-05-19): Tuesday batch — 10 blogs · bucket 0 fresh angles",
           "type": "content",
           "fileCount": 1
         }
       ]
     },
-    "bailbondsstanton": {
-      "site": "bailbondsstanton",
-      "domain": "bailbondsstanton.com",
+    "gaybailbonds": {
+      "site": "gaybailbonds",
+      "domain": "gaybailbonds.com",
       "commitCount": 1,
       "counts": {
         "blogsAdded": 1,
@@ -181,21 +208,21 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-18-dui-bail-stanton-vc-23152.html"
+        "blog/2026-05-19-lgbtq-bail-bonds-los-angeles-allyship-process.html"
       ],
       "commits": [
         {
-          "sha": "525e2981",
-          "time": "2026-05-18 13:14:15 -0700",
-          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
+          "sha": "8d20f42b",
+          "time": "2026-05-19 13:51:50 -0700",
+          "subject": "session(2026-05-19): Tuesday batch — 10 blogs · bucket 0 fresh angles",
           "type": "content",
           "fileCount": 1
         }
       ]
     },
-    "gardenabailbonds": {
-      "site": "gardenabailbonds",
-      "domain": "gardenabailbonds.com",
+    "lahabrabailbonds": {
+      "site": "lahabrabailbonds",
+      "domain": "lahabrabailbonds.com",
       "commitCount": 1,
       "counts": {
         "blogsAdded": 1,
@@ -208,21 +235,21 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-18-weapons-charge-bail-gardena-pc-29800.html"
+        "blog/2026-05-19-resisting-arrest-bail-la-habra-pc-148.html"
       ],
       "commits": [
         {
-          "sha": "427a1150",
-          "time": "2026-05-18 13:14:17 -0700",
-          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
+          "sha": "8ffa5d67",
+          "time": "2026-05-19 13:51:52 -0700",
+          "subject": "session(2026-05-19): Tuesday batch — 10 blogs · bucket 0 fresh angles",
           "type": "content",
           "fileCount": 1
         }
       ]
     },
-    "lagunaniguelbailbonds": {
-      "site": "lagunaniguelbailbonds",
-      "domain": "lagunaniguelbailbonds.com",
+    "sanbernardinobailbond": {
+      "site": "sanbernardinobailbond",
+      "domain": "sanbernardinobailbond.com",
       "commitCount": 1,
       "counts": {
         "blogsAdded": 1,
@@ -235,40 +262,13 @@
         "other": 0
       },
       "files": [
-        "blog/2026-05-18-sex-offense-bail-laguna-niguel-pc-290.html"
+        "blog/2026-05-19-san-bernardino-county-jail-bail-process.html"
       ],
       "commits": [
         {
-          "sha": "ffac0536",
-          "time": "2026-05-18 13:14:20 -0700",
-          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
-          "type": "content",
-          "fileCount": 1
-        }
-      ]
-    },
-    "ocbailbondsman": {
-      "site": "ocbailbondsman",
-      "domain": "ocbailbondsman.com",
-      "commitCount": 1,
-      "counts": {
-        "blogsAdded": 1,
-        "blogsModified": 0,
-        "servicePages": 0,
-        "schemaChanges": 0,
-        "fixes": 0,
-        "deploys": 0,
-        "sessionCommits": 0,
-        "other": 0
-      },
-      "files": [
-        "blog/2026-05-18-oc-central-mens-jail-bail-santa-ana.html"
-      ],
-      "commits": [
-        {
-          "sha": "da25e7df",
-          "time": "2026-05-18 13:14:22 -0700",
-          "subject": "session(2026-05-18): Monday batch — 10 blogs · floor met · fresh PC/HS/VC angles",
+          "sha": "e35401af",
+          "time": "2026-05-19 13:51:54 -0700",
+          "subject": "session(2026-05-19): Tuesday batch — 10 blogs · bucket 0 fresh angles",
           "type": "content",
           "fileCount": 1
         }
