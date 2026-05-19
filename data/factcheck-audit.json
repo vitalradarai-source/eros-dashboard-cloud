@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-14T21:50:15.029Z",
-  "date": "2026-05-14",
-  "recentDays": 30,
+  "generatedAt": "2026-05-19T21:03:36.987Z",
+  "date": "2026-05-19",
+  "recentDays": 2,
   "summary": {
-    "blogsScanned": 235,
-    "blogsWithIssues": 50,
+    "blogsScanned": 202,
+    "blogsWithIssues": 42,
     "hardErrors": 0,
-    "warnings": 52
+    "warnings": 43
   },
   "results": [
     {
@@ -25,27 +25,6 @@
           "rule": "PC §1305 cited but context does not include any canonical keywords",
           "sample": "s the bail forfeited on the record. the court clerk mails a notice of forfeiture to the bail agent. ",
           "fix": "Add context describing: bond exoneration / surrender procedure"
-        }
-      ],
-      "hardCount": 0,
-      "warnCount": 2
-    },
-    {
-      "site": "fountainvalleybailbond",
-      "file": "2026-04-16-fountain-valley-bail-bonds.html",
-      "slug": "2026-04-16-fountain-valley-bail-bonds",
-      "issues": [
-        {
-          "severity": "WARN",
-          "rule": "PC §273.5 cited but context does not include any canonical keywords",
-          "sample": "esponds, booking at 10200 slater. first-offense vc 23152 at $15,000 bail. post at fvpd for the faste",
-          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
-        },
-        {
-          "severity": "WARN",
-          "rule": "PC §459 cited but context does not include any canonical keywords",
-          "sample": "c irc within 4–6 hours if no bond posted first.</p><p>a shoplifting or organized retail theft call f",
-          "fix": "Add context describing: burglary (first-degree residential or second-degree)"
         }
       ],
       "hardCount": 0,
@@ -128,36 +107,6 @@
     },
     {
       "site": "bailbondhuntingtonbeach",
-      "file": "2026-04-16-huntington-beach-bail-bonds.html",
-      "slug": "2026-04-16-huntington-beach-bail-bonds",
-      "issues": [
-        {
-          "severity": "WARN",
-          "rule": "PC §273.5 cited but context does not include any canonical keywords",
-          "sample": "d at $30,000. hbpd processes these on-site; weekend volume can slow booking but bonds still move qui",
-          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
-        }
-      ],
-      "hardCount": 0,
-      "warnCount": 1
-    },
-    {
-      "site": "bailbondhuntingtonbeach",
-      "file": "2026-04-27-choosing-bail-bondsman-huntington-beach.html",
-      "slug": "2026-04-27-choosing-bail-bondsman-huntington-beach",
-      "issues": [
-        {
-          "severity": "WARN",
-          "rule": "PC §273.5 cited but context does not include any canonical keywords",
-          "sample": "ta ana)</strong> — 700 civic center dr w — handles oc felonies</li> <li><strong>oc bail schedule</st",
-          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
-        }
-      ],
-      "hardCount": 0,
-      "warnCount": 1
-    },
-    {
-      "site": "bailbondhuntingtonbeach",
       "file": "how-bail-bonds-work-huntington-beach.html",
       "slug": "how-bail-bonds-work-huntington-beach",
       "issues": [
@@ -226,21 +175,6 @@
           "rule": "PC §136.2 cited but context does not include any canonical keywords",
           "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
           "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
-        }
-      ],
-      "hardCount": 0,
-      "warnCount": 1
-    },
-    {
-      "site": "bailbonds-picorivera",
-      "file": "2026-05-11-domestic-violence-bail-pico-rivera.html",
-      "slug": "2026-05-11-domestic-violence-bail-pico-rivera",
-      "issues": [
-        {
-          "severity": "WARN",
-          "rule": "PC §273.5 cited but context does not include any canonical keywords",
-          "sample": ".png\"}}, \"mainentityofpage\":{\"@type\":\"webpage\",\"@id\":\"https://bailbonds-picorivera.com/blog/2026-05-",
-          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
         }
       ],
       "hardCount": 0,
@@ -368,21 +302,6 @@
     },
     {
       "site": "bailbondsrowlandheights",
-      "file": "2026-04-27-bench-warrant-rowland-heights.html",
-      "slug": "2026-04-27-bench-warrant-rowland-heights",
-      "issues": [
-        {
-          "severity": "WARN",
-          "rule": "unknown phone number(s) in blog body",
-          "sample": "9096203120",
-          "fix": "Expected (626) 478-1062. Verify the other number(s) are legit (station, legal aid, etc) or replace."
-        }
-      ],
-      "hardCount": 0,
-      "warnCount": 1
-    },
-    {
-      "site": "bailbondsrowlandheights",
       "file": "how-bail-bonds-work-rowland-heights.html",
       "slug": "how-bail-bonds-work-rowland-heights",
       "issues": [
@@ -391,21 +310,6 @@
           "rule": "PC §136.2 cited but context does not include any canonical keywords",
           "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
           "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
-        }
-      ],
-      "hardCount": 0,
-      "warnCount": 1
-    },
-    {
-      "site": "bailbondssangabriel",
-      "file": "2026-05-05-domestic-violence-bail-san-gabriel.html",
-      "slug": "2026-05-05-domestic-violence-bail-san-gabriel",
-      "issues": [
-        {
-          "severity": "WARN",
-          "rule": "PC §273.5 cited but context does not include any canonical keywords",
-          "sample": "<!doctype html> <html lang=\"en\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=",
-          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
         }
       ],
       "hardCount": 0,
@@ -488,21 +392,6 @@
     },
     {
       "site": "fountainvalleybailbond",
-      "file": "2026-05-08-domestic-violence-bail-fountain-valley.html",
-      "slug": "2026-05-08-domestic-violence-bail-fountain-valley",
-      "issues": [
-        {
-          "severity": "WARN",
-          "rule": "PC §273.5 cited but context does not include any canonical keywords",
-          "sample": " \"mainentityofpage\":{\"@type\":\"webpage\",\"@id\":\"https://fountainvalleybailbond.com/blog/2026-05-08-dom",
-          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
-        }
-      ],
-      "hardCount": 0,
-      "warnCount": 1
-    },
-    {
-      "site": "fountainvalleybailbond",
       "file": "how-bail-bonds-work-fountain-valley.html",
       "slug": "how-bail-bonds-work-fountain-valley",
       "issues": [
@@ -556,21 +445,6 @@
           "rule": "PC §136.2 cited but context does not include any canonical keywords",
           "sample": " penal code 1320</strong>.</li> <li><strong>follow all bail conditions:</strong> the court may impos",
           "fix": "Add context describing: Criminal Protective Orders — NOT a bail hold"
-        }
-      ],
-      "hardCount": 0,
-      "warnCount": 1
-    },
-    {
-      "site": "lagunabailbonds",
-      "file": "2026-04-16-laguna-beach-bail-bonds.html",
-      "slug": "2026-04-16-laguna-beach-bail-bonds",
-      "issues": [
-        {
-          "severity": "WARN",
-          "rule": "PC §273.5 cited but context does not include any canonical keywords",
-          "sample": "u call (626) 478-1062. we confirm the bail amount from the orange county bail schedule — laguna beac",
-          "fix": "Add context describing: corporal injury on a spouse / cohabitant (felony)"
         }
       ],
       "hardCount": 0,

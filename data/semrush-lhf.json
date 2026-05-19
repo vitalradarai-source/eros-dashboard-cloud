@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-18T13:15:11.023354",
-  "date": "2026-05-18",
+  "generatedAt": "2026-05-19T14:08:45.545624",
+  "date": "2026-05-19",
   "filter": {
     "maxKd": 35.0,
     "minVolume": 100,
@@ -203,7 +203,7 @@
       "gsc_match": {
         "site": "bailbondsrowlandheights",
         "position": 5.1,
-        "impressions": 12302,
+        "impressions": 11426,
         "clicks": 1
       }
     },
@@ -432,8 +432,8 @@
       "market": "NATIONAL",
       "gsc_match": {
         "site": "bailbond-california",
-        "position": 21.2,
-        "impressions": 13,
+        "position": 21.8,
+        "impressions": 14,
         "clicks": 0
       }
     },
@@ -1575,8 +1575,8 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "gardenabailbonds",
-        "position": 54.0,
-        "impressions": 1,
+        "position": 52.5,
+        "impressions": 2,
         "clicks": 0
       }
     },
@@ -3498,7 +3498,7 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "bailbondhuntingtonbeach",
-        "position": 72.0,
+        "position": 69.3,
         "impressions": 3,
         "clicks": 0
       }
