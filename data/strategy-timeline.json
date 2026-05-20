@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-19T21:07:11.370Z",
-  "date": "2026-05-19",
+  "generatedAt": "2026-05-20T14:07:24.668Z",
+  "date": "2026-05-20",
   "timelines": [
     {
       "id": "ctr-meta-rewrite-rowlandheights",
@@ -9,11 +9,11 @@
       "source": "Today's A-tier triage decision (2026-05-12)",
       "startDate": "2026-05-12",
       "endDate": "2026-06-09",
-      "daysSinceStart": 7,
+      "daysSinceStart": 8,
       "windowDays": 28,
-      "daysRemaining": 21,
-      "progressPct": 25,
-      "progressBar": "[██████░░░░░░░░░░░░░░░░░░] 25%",
+      "daysRemaining": 20,
+      "progressPct": 29,
+      "progressBar": "[███████░░░░░░░░░░░░░░░░░] 29%",
       "currentTrend": "FLAT",
       "currentMetrics": {
         "netClicks": 0,
@@ -24,7 +24,7 @@
       "nextMilestone": {
         "day": 14,
         "date": "2026-05-26",
-        "daysAway": 7
+        "daysAway": 6
       },
       "history": [
         {
@@ -66,6 +66,16 @@
           "netPos": null,
           "netCtr": 0,
           "hitCheckIn": 7
+        },
+        {
+          "date": "2026-05-20",
+          "daysSinceStart": 8,
+          "verdict": "IN_PROGRESS",
+          "netClicks": 0,
+          "netImps": 0,
+          "netPos": null,
+          "netCtr": 0,
+          "hitCheckIn": null
         }
       ],
       "treatmentCount": 1,
@@ -78,11 +88,11 @@
       "source": "data/research/2026-05-12/findings.md (AEO 2026 section)",
       "startDate": "2026-05-14",
       "endDate": "2026-06-11",
-      "daysSinceStart": 5,
+      "daysSinceStart": 6,
       "windowDays": 28,
-      "daysRemaining": 23,
-      "progressPct": 18,
-      "progressBar": "[████░░░░░░░░░░░░░░░░░░░░] 18%",
+      "daysRemaining": 22,
+      "progressPct": 21,
+      "progressBar": "[█████░░░░░░░░░░░░░░░░░░░] 21%",
       "currentTrend": "FLAT",
       "currentMetrics": {
         "netClicks": 0,
@@ -93,7 +103,7 @@
       "nextMilestone": {
         "day": 7,
         "date": "2026-05-21",
-        "daysAway": 2
+        "daysAway": 1
       },
       "history": [
         {
@@ -125,6 +135,16 @@
           "netPos": null,
           "netCtr": 0,
           "hitCheckIn": null
+        },
+        {
+          "date": "2026-05-20",
+          "daysSinceStart": 6,
+          "verdict": "IN_PROGRESS",
+          "netClicks": 0,
+          "netImps": 0,
+          "netPos": null,
+          "netCtr": 0,
+          "hitCheckIn": null
         }
       ],
       "treatmentCount": 8,
@@ -137,22 +157,22 @@
       "source": "data/research/2026-05-12/findings.md (Hyperlocal SEO section)",
       "startDate": "2026-05-14",
       "endDate": "2026-06-11",
-      "daysSinceStart": 5,
+      "daysSinceStart": 6,
       "windowDays": 28,
-      "daysRemaining": 23,
-      "progressPct": 18,
-      "progressBar": "[████░░░░░░░░░░░░░░░░░░░░] 18%",
+      "daysRemaining": 22,
+      "progressPct": 21,
+      "progressBar": "[█████░░░░░░░░░░░░░░░░░░░] 21%",
       "currentTrend": "FLAT",
       "currentMetrics": {
         "netClicks": 0,
         "netImps": 0,
-        "netPos": 14.4,
-        "netCtr": 0.061
+        "netPos": 16.25,
+        "netCtr": 0.088
       },
       "nextMilestone": {
         "day": 14,
         "date": "2026-05-28",
-        "daysAway": 9
+        "daysAway": 8
       },
       "history": [
         {
@@ -183,6 +203,16 @@
           "netImps": 0,
           "netPos": 14.4,
           "netCtr": 0.061,
+          "hitCheckIn": null
+        },
+        {
+          "date": "2026-05-20",
+          "daysSinceStart": 6,
+          "verdict": "IN_PROGRESS",
+          "netClicks": 0,
+          "netImps": 0,
+          "netPos": 16.25,
+          "netCtr": 0.088,
           "hitCheckIn": null
         }
       ],

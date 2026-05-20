@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-19T15:33:08.764069",
-  "date": "2026-05-19",
+  "generatedAt": "2026-05-20T06:57:19.215466",
+  "date": "2026-05-20",
   "filter": {
     "maxKd": 35.0,
     "minVolume": 100,
@@ -12,7 +12,7 @@
   "totals": {
     "semrush_keywords": 62572,
     "candidates_after_filter": 379,
-    "returned": 20
+    "returned": 25
   },
   "candidates": [
     {
@@ -202,8 +202,8 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "bailbondsrowlandheights",
-        "position": 5.1,
-        "impressions": 11426,
+        "position": 5.2,
+        "impressions": 10630,
         "clicks": 1
       }
     },
@@ -339,8 +339,8 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "sanbernardinobailbond",
-        "position": 90.0,
-        "impressions": 2,
+        "position": 87.0,
+        "impressions": 3,
         "clicks": 0
       }
     },
@@ -432,8 +432,8 @@
       "market": "NATIONAL",
       "gsc_match": {
         "site": "bailbond-california",
-        "position": 21.8,
-        "impressions": 14,
+        "position": 18.9,
+        "impressions": 21,
         "clicks": 0
       }
     },
@@ -1350,8 +1350,8 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "sanbernardinobailbond",
-        "position": 65.5,
-        "impressions": 2,
+        "position": 70.0,
+        "impressions": 3,
         "clicks": 0
       }
     },
@@ -2841,9 +2841,14 @@
       "kd": 0,
       "topic_tab": "bail bond",
       "score": 110.0,
-      "classification": "NET-NEW",
+      "classification": "DEEP-RESULTS",
       "market": "SOCAL",
-      "gsc_match": null
+      "gsc_match": {
+        "site": "lagunabailbonds",
+        "position": 38.0,
+        "impressions": 1,
+        "clicks": 0
+      }
     },
     {
       "keyword": "bail bond lawyers",
@@ -2955,8 +2960,8 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "lahabrabailbonds",
-        "position": 27.0,
-        "impressions": 8,
+        "position": 26.7,
+        "impressions": 7,
         "clicks": 0
       }
     },
@@ -3137,12 +3142,12 @@
       "kd": 2,
       "topic_tab": "bail bond",
       "score": 107.8,
-      "classification": "STRIKING-DISTANCE",
+      "classification": "DEEP-RESULTS",
       "market": "SOCAL",
       "gsc_match": {
         "site": "bailbondsandimas",
-        "position": 24.0,
-        "impressions": 4,
+        "position": 27.4,
+        "impressions": 5,
         "clicks": 0
       }
     },

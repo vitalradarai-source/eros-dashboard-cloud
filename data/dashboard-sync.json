@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-19T21:40:28.639Z",
-  "date": "2026-05-19",
+  "generatedAt": "2026-05-20T14:07:24.866Z",
+  "date": "2026-05-20",
   "verdict": "BROKEN",
   "driftScore": 81,
   "summary": {
@@ -33,7 +33,7 @@
     {
       "name": "Glossary covers acronyms",
       "status": "warn",
-      "details": "60 acronyms not in glossary: floor, and, below, blog, two, frozen, head, drift"
+      "details": "66 acronyms not in glossary: floor, and, below, blog, two, frozen, head, drift"
     },
     {
       "name": "Skill-audit covers every skill",

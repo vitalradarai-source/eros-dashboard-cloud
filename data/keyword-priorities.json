@@ -1,28 +1,39 @@
 {
-  "generatedAt": "2026-05-19T22:33:04.185Z",
-  "total": 9,
+  "generatedAt": "2026-05-20T13:57:15.128Z",
+  "total": 19,
   "opportunities": [
     {
       "site": "bailbondsrowlandheights",
       "kind": "microsite",
       "keyword": "bail money loans rowland heights ca",
-      "position": 5.1,
-      "impressions": 11426,
+      "position": 5.2,
+      "impressions": 10630,
       "currentCtr": 1,
       "expectedCtr": 5.2,
-      "monthlyClicksUpside": 479.9,
+      "monthlyClicksUpside": 446.5,
       "action": "CTR-FIX (rewrite meta)"
     },
     {
       "site": "bailbondshaciendaheights",
       "kind": "microsite",
       "keyword": "bail money loans rowland heights ca",
-      "position": 11.9,
-      "impressions": 118,
+      "position": 12.2,
+      "impressions": 138,
       "currentCtr": 0,
       "expectedCtr": 1.7,
-      "monthlyClicksUpside": 2,
+      "monthlyClicksUpside": 2.3,
       "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "are there combination devices for red light and other wellness modalities?",
+      "position": 2,
+      "impressions": 7,
+      "currentCtr": 0,
+      "expectedCtr": 18.7,
+      "monthlyClicksUpside": 1.3,
+      "action": "CTR-FIX (rewrite meta)"
     },
     {
       "site": "gardenabailbonds",
@@ -58,14 +69,25 @@
       "action": "CTR-FIX (rewrite meta)"
     },
     {
-      "site": "gardenabailbonds",
-      "kind": "microsite",
-      "keyword": "bail bonds gardena",
-      "position": 1.8,
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "\"viome precision health\"",
+      "position": 2,
       "impressions": 4,
       "currentCtr": 0,
       "expectedCtr": 18.7,
       "monthlyClicksUpside": 0.7,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "gardenabailbonds",
+      "kind": "microsite",
+      "keyword": "bail bonds gardena",
+      "position": 2,
+      "impressions": 3,
+      "currentCtr": 0,
+      "expectedCtr": 18.7,
+      "monthlyClicksUpside": 0.6,
       "action": "CTR-FIX (rewrite meta)"
     },
     {
@@ -77,6 +99,17 @@
       "currentCtr": 0,
       "expectedCtr": 10.3,
       "monthlyClicksUpside": 0.6,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "gardenabailbonds",
+      "kind": "microsite",
+      "keyword": "$0 down bail bonds gardena ca",
+      "position": 5.3,
+      "impressions": 10,
+      "currentCtr": 0,
+      "expectedCtr": 5.2,
+      "monthlyClicksUpside": 0.5,
       "action": "CTR-FIX (rewrite meta)"
     },
     {
@@ -100,6 +133,83 @@
       "expectedCtr": 10.3,
       "monthlyClicksUpside": 0.5,
       "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro led mask",
+      "position": 10.7,
+      "impressions": 20,
+      "currentCtr": 0,
+      "expectedCtr": 1.8,
+      "monthlyClicksUpside": 0.4,
+      "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro face mask",
+      "position": 6.9,
+      "impressions": 7,
+      "currentCtr": 0,
+      "expectedCtr": 3.2,
+      "monthlyClicksUpside": 0.2,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "360 dna",
+      "position": 10,
+      "impressions": 6,
+      "currentCtr": 0,
+      "expectedCtr": 1.9,
+      "monthlyClicksUpside": 0.1,
+      "action": "CTR-FIX (rewrite meta)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro led",
+      "position": 21.4,
+      "impressions": 5,
+      "currentCtr": 0,
+      "expectedCtr": 1,
+      "monthlyClicksUpside": 0.1,
+      "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro led face mask",
+      "position": 10.4,
+      "impressions": 5,
+      "currentCtr": 0,
+      "expectedCtr": 1.9,
+      "monthlyClicksUpside": 0.1,
+      "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro mask",
+      "position": 13,
+      "impressions": 5,
+      "currentCtr": 0,
+      "expectedCtr": 1.5,
+      "monthlyClicksUpside": 0.1,
+      "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "algae bits",
+      "position": 23,
+      "impressions": 5,
+      "currentCtr": 0,
+      "expectedCtr": 1,
+      "monthlyClicksUpside": 0.1,
+      "action": "CONTENT-PUSH (add depth/links)"
     }
   ]
 }

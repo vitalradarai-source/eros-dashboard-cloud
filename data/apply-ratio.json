@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T20:51:59.473Z",
-  "date": "2026-05-19",
-  "priorDate": "2026-05-18",
+  "generatedAt": "2026-05-20T14:07:24.512Z",
+  "date": "2026-05-20",
+  "priorDate": "2026-05-19",
   "findings": {
-    "uniquenessFailing": 0,
+    "uniquenessFailing": 151,
     "factcheckHard": 0,
-    "factcheckWarn": 0
+    "factcheckWarn": 43
   },
   "applied": {
     "uniquenessFixed": 0,
@@ -22,16 +22,27 @@
     "uniqueness": false,
     "factcheckHard": true,
     "factcheckWarn": false,
-    "researchApply": false
+    "researchApply": true
   },
-  "applyRatioPct": 25,
-  "verdict": "RED — APPLY LOOP BROKEN",
+  "applyRatioPct": 50,
+  "verdict": "NEEDS ATTENTION",
   "details": {
-    "blogsAdded": 10,
-    "blogsModified": 0,
-    "servicePages": 0,
-    "schemaChanges": 0,
-    "researchApplied": 0,
-    "researchEvidence": []
+    "blogsAdded": 9,
+    "blogsModified": 2,
+    "servicePages": 1,
+    "schemaChanges": 1,
+    "researchApplied": 10,
+    "researchEvidence": [
+      "vital-radar-ai/blog/2026-05-20-hbot-mitochondrial-health-protocol-2026.html: Person schema (author authority)",
+      "800bail911/blog/2026-05-20-arraignment-timeline-los-angeles-pc-825.html: Person schema (author authority)",
+      "bailbondlapalma/blog/2026-05-20-la-palma-bail-bonds-oc-process.html: Person schema (author authority)",
+      "bailbondsangels/blog/2026-05-20-century-regional-womens-jail-bail-los-angeles.html: Person schema (author authority)",
+      "bailbondsangels/blog/2026-05-20-felony-bail-process-los-angeles-county.html: Person schema (author authority)",
+      "bailbondsrowlandheights/blog/2026-05-20-gang-enhancement-bail-rowland-heights-pc-186.html: Person schema (author authority)",
+      "bailbondwestcovina/blog/2026-05-20-criminal-threats-bail-west-covina-pc-422.html: Person schema (author authority)",
+      "lagunabailbonds/blog/2026-05-20-trespassing-bail-laguna-beach-pc-602.html: Person schema (author authority)",
+      "lakersbailbonds/blog/2026-05-20-crypto-com-arena-bail-los-angeles-events.html: Person schema (author authority)",
+      "sandimasbailbond/blog/2026-05-20-bench-warrant-bail-san-dimas-vc-40508.html: Person schema (author authority)"
+    ]
   }
 }
