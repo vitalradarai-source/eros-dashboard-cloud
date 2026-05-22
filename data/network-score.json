@@ -4,48 +4,25 @@
   "sites": [
     {
       "name": "ReEnergized",
-      "score": 63,
-      "avgPos": 15,
-      "impressions": 9041,
-      "clicks": 166,
-      "ctr": 1.84,
-      "strikingCount": 23,
+      "score": 64,
+      "avgPos": 15.3,
+      "impressions": 9288,
+      "clicks": 170,
+      "ctr": 1.83,
+      "strikingCount": 22,
       "rows": 500,
-      "ga4Sessions": 1824,
+      "ga4Sessions": 1832,
       "ga4EngageRate": 42,
-      "daysSinceCommit": 21,
-      "imprDelta": -6.2,
+      "daysSinceCommit": 22,
+      "imprDelta": -3.6,
       "components": {
-        "imprDelta": 35,
-        "ctr": 28,
+        "imprDelta": 41,
+        "ctr": 27,
         "striking": 100,
         "ga4": 42,
         "index": 100,
         "blog": 20,
         "vol": 99
-      }
-    },
-    {
-      "name": "gardenabailbonds",
-      "score": 45,
-      "avgPos": 19.1,
-      "impressions": 143,
-      "clicks": 0,
-      "ctr": 0,
-      "strikingCount": 0,
-      "rows": 54,
-      "ga4Sessions": 28,
-      "ga4EngageRate": 11,
-      "daysSinceCommit": 3,
-      "imprDelta": 43,
-      "components": {
-        "imprDelta": 100,
-        "ctr": 0,
-        "striking": 0,
-        "ga4": 11,
-        "index": 100,
-        "blog": 100,
-        "vol": 54
       }
     },
     {
@@ -59,7 +36,7 @@
       "rows": 40,
       "ga4Sessions": 10,
       "ga4EngageRate": 20,
-      "daysSinceCommit": 1,
+      "daysSinceCommit": 2,
       "imprDelta": 24.3,
       "components": {
         "imprDelta": 100,
@@ -69,6 +46,29 @@
         "index": 80,
         "blog": 100,
         "vol": 49
+      }
+    },
+    {
+      "name": "gardenabailbonds",
+      "score": 43,
+      "avgPos": 19.2,
+      "impressions": 144,
+      "clicks": 0,
+      "ctr": 0,
+      "strikingCount": 0,
+      "rows": 55,
+      "ga4Sessions": 27,
+      "ga4EngageRate": 11,
+      "daysSinceCommit": 4,
+      "imprDelta": 44,
+      "components": {
+        "imprDelta": 100,
+        "ctr": 0,
+        "striking": 0,
+        "ga4": 11,
+        "index": 100,
+        "blog": 70,
+        "vol": 54
       }
     },
     {
@@ -82,7 +82,7 @@
       "rows": 2,
       "ga4Sessions": 9,
       "ga4EngageRate": 22,
-      "daysSinceCommit": 2,
+      "daysSinceCommit": 1,
       "imprDelta": 41,
       "components": {
         "imprDelta": 100,
@@ -105,7 +105,7 @@
       "rows": 6,
       "ga4Sessions": 10,
       "ga4EngageRate": 30,
-      "daysSinceCommit": 2,
+      "daysSinceCommit": 1,
       "imprDelta": 28.6,
       "components": {
         "imprDelta": 100,
@@ -120,24 +120,24 @@
     {
       "name": "bailbondhuntingtonbeach",
       "score": 33,
-      "avgPos": 72.1,
-      "impressions": 76,
+      "avgPos": 71.6,
+      "impressions": 80,
       "clicks": 0,
       "ctr": 0,
       "strikingCount": 0,
-      "rows": 4,
-      "ga4Sessions": 8,
+      "rows": 5,
+      "ga4Sessions": 5,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 2,
-      "imprDelta": 46.2,
+      "daysSinceCommit": 1,
+      "imprDelta": 53.8,
       "components": {
         "imprDelta": 100,
         "ctr": 0,
         "striking": 0,
         "ga4": 0,
-        "index": 8,
+        "index": 10,
         "blog": 100,
-        "vol": 47
+        "vol": 48
       }
     },
     {
@@ -151,7 +151,7 @@
       "rows": 3,
       "ga4Sessions": 8,
       "ga4EngageRate": 25,
-      "daysSinceCommit": 1,
+      "daysSinceCommit": 2,
       "imprDelta": 100,
       "components": {
         "imprDelta": 100,
@@ -172,9 +172,9 @@
       "ctr": 0,
       "strikingCount": 1,
       "rows": 2,
-      "ga4Sessions": 7,
+      "ga4Sessions": 4,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 3,
+      "daysSinceCommit": 1,
       "imprDelta": 76.9,
       "components": {
         "imprDelta": 100,
@@ -188,7 +188,7 @@
     },
     {
       "name": "bailbonds-placentia",
-      "score": 31,
+      "score": 29,
       "avgPos": 59.8,
       "impressions": 12,
       "clicks": 0,
@@ -197,7 +197,7 @@
       "rows": 8,
       "ga4Sessions": 16,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 3,
+      "daysSinceCommit": 4,
       "imprDelta": 20,
       "components": {
         "imprDelta": 100,
@@ -205,13 +205,13 @@
         "striking": 0,
         "ga4": 0,
         "index": 16,
-        "blog": 100,
+        "blog": 70,
         "vol": 27
       }
     },
     {
       "name": "fountainvalleybailbond",
-      "score": 30,
+      "score": 29,
       "avgPos": 39.1,
       "impressions": 23,
       "clicks": 0,
@@ -220,7 +220,7 @@
       "rows": 9,
       "ga4Sessions": 5,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 7,
+      "daysSinceCommit": 8,
       "imprDelta": 27.8,
       "components": {
         "imprDelta": 100,
@@ -228,13 +228,13 @@
         "striking": 0,
         "ga4": 0,
         "index": 18,
-        "blog": 70,
+        "blog": 40,
         "vol": 34
       }
     },
     {
       "name": "lagunaniguelbailbonds",
-      "score": 30,
+      "score": 29,
       "avgPos": 32.2,
       "impressions": 13,
       "clicks": 0,
@@ -243,7 +243,7 @@
       "rows": 6,
       "ga4Sessions": 6,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 3,
+      "daysSinceCommit": 4,
       "imprDelta": 85.7,
       "components": {
         "imprDelta": 100,
@@ -251,7 +251,7 @@
         "striking": 0,
         "ga4": 0,
         "index": 12,
-        "blog": 100,
+        "blog": 70,
         "vol": 28
       }
     },
@@ -264,15 +264,15 @@
       "ctr": 0.01,
       "strikingCount": 0,
       "rows": 6,
-      "ga4Sessions": 16,
-      "ga4EngageRate": 44,
-      "daysSinceCommit": 1,
+      "ga4Sessions": 15,
+      "ga4EngageRate": 47,
+      "daysSinceCommit": 2,
       "imprDelta": -34.9,
       "components": {
         "imprDelta": 0,
         "ctr": 0,
         "striking": 0,
-        "ga4": 44,
+        "ga4": 47,
         "index": 12,
         "blog": 100,
         "vol": 99
@@ -289,7 +289,7 @@
       "rows": 6,
       "ga4Sessions": 20,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 13,
+      "daysSinceCommit": 14,
       "imprDelta": 63.6,
       "components": {
         "imprDelta": 100,
@@ -304,47 +304,47 @@
     {
       "name": "lagunabailbonds",
       "score": 28,
-      "avgPos": 22.1,
-      "impressions": 85,
+      "avgPos": 22.7,
+      "impressions": 88,
       "clicks": 0,
       "ctr": 0,
-      "strikingCount": 1,
+      "strikingCount": 0,
       "rows": 10,
       "ga4Sessions": 8,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 1,
-      "imprDelta": 3.7,
+      "daysSinceCommit": 2,
+      "imprDelta": 7.3,
       "components": {
-        "imprDelta": 59,
+        "imprDelta": 68,
         "ctr": 0,
-        "striking": 8,
+        "striking": 0,
         "ga4": 0,
         "index": 20,
         "blog": 100,
-        "vol": 48
+        "vol": 49
       }
     },
     {
       "name": "lagunahillsbailbonds",
-      "score": 26,
-      "avgPos": 38.1,
-      "impressions": 8,
+      "score": 27,
+      "avgPos": 38.9,
+      "impressions": 9,
       "clicks": 0,
       "ctr": 0,
       "strikingCount": 0,
-      "rows": 4,
+      "rows": 5,
       "ga4Sessions": 9,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 10,
-      "imprDelta": 60,
+      "daysSinceCommit": 11,
+      "imprDelta": 80,
       "components": {
         "imprDelta": 100,
         "ctr": 0,
         "striking": 0,
         "ga4": 0,
-        "index": 8,
+        "index": 10,
         "blog": 40,
-        "vol": 23
+        "vol": 24
       }
     },
     {
@@ -356,41 +356,41 @@
       "ctr": 0,
       "strikingCount": 0,
       "rows": 8,
-      "ga4Sessions": 16,
-      "ga4EngageRate": 6,
-      "daysSinceCommit": 10,
+      "ga4Sessions": 13,
+      "ga4EngageRate": 8,
+      "daysSinceCommit": 11,
       "imprDelta": 14.3,
       "components": {
         "imprDelta": 86,
         "ctr": 0,
         "striking": 0,
-        "ga4": 6,
+        "ga4": 8,
         "index": 16,
         "blog": 40,
         "vol": 23
       }
     },
     {
-      "name": "bailbondsgardengrove",
+      "name": "VitalRadar",
       "score": 24,
-      "avgPos": 43,
-      "impressions": 16,
+      "avgPos": 58.2,
+      "impressions": 234,
       "clicks": 0,
       "ctr": 0,
       "strikingCount": 0,
-      "rows": 6,
-      "ga4Sessions": 6,
+      "rows": 64,
+      "ga4Sessions": 0,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 3,
-      "imprDelta": 6.7,
+      "daysSinceCommit": 2,
+      "imprDelta": -58.5,
       "components": {
-        "imprDelta": 67,
+        "imprDelta": 0,
         "ctr": 0,
         "striking": 0,
         "ga4": 0,
-        "index": 12,
+        "index": 100,
         "blog": 100,
-        "vol": 30
+        "vol": 59
       }
     },
     {
@@ -402,9 +402,9 @@
       "ctr": 0,
       "strikingCount": 0,
       "rows": 27,
-      "ga4Sessions": 431,
+      "ga4Sessions": 446,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 24,
+      "daysSinceCommit": 25,
       "imprDelta": 0,
       "components": {
         "imprDelta": 50,
@@ -414,6 +414,29 @@
         "index": 54,
         "blog": 20,
         "vol": 44
+      }
+    },
+    {
+      "name": "bailbondsgardengrove",
+      "score": 23,
+      "avgPos": 43,
+      "impressions": 16,
+      "clicks": 0,
+      "ctr": 0,
+      "strikingCount": 0,
+      "rows": 6,
+      "ga4Sessions": 6,
+      "ga4EngageRate": 0,
+      "daysSinceCommit": 4,
+      "imprDelta": 6.7,
+      "components": {
+        "imprDelta": 67,
+        "ctr": 0,
+        "striking": 0,
+        "ga4": 0,
+        "index": 12,
+        "blog": 70,
+        "vol": 30
       }
     },
     {
@@ -427,7 +450,7 @@
       "rows": 5,
       "ga4Sessions": 18,
       "ga4EngageRate": 11,
-      "daysSinceCommit": 2,
+      "daysSinceCommit": 1,
       "imprDelta": 0,
       "components": {
         "imprDelta": 50,
@@ -440,26 +463,26 @@
       }
     },
     {
-      "name": "VitalRadar",
-      "score": 19,
-      "avgPos": 53.1,
-      "impressions": 173,
+      "name": "bailbond-agent",
+      "score": 17,
+      "avgPos": 49,
+      "impressions": 1,
       "clicks": 0,
       "ctr": 0,
       "strikingCount": 0,
-      "rows": 30,
-      "ga4Sessions": 0,
-      "ga4EngageRate": 0,
+      "rows": 1,
+      "ga4Sessions": 11,
+      "ga4EngageRate": 9,
       "daysSinceCommit": 1,
-      "imprDelta": -69.3,
+      "imprDelta": 0,
       "components": {
-        "imprDelta": 0,
+        "imprDelta": 50,
         "ctr": 0,
         "striking": 0,
-        "ga4": 0,
-        "index": 60,
+        "ga4": 9,
+        "index": 2,
         "blog": 100,
-        "vol": 56
+        "vol": 0
       }
     },
     {
@@ -473,7 +496,7 @@
       "rows": 8,
       "ga4Sessions": 8,
       "ga4EngageRate": 13,
-      "daysSinceCommit": 2,
+      "daysSinceCommit": 1,
       "imprDelta": -13.9,
       "components": {
         "imprDelta": 15,
@@ -486,26 +509,26 @@
       }
     },
     {
-      "name": "bailbond-agent",
-      "score": 15,
-      "avgPos": 49,
-      "impressions": 1,
+      "name": "Boundless Global",
+      "score": 13,
+      "avgPos": 9,
+      "impressions": 87,
       "clicks": 0,
       "ctr": 0,
       "strikingCount": 0,
-      "rows": 1,
-      "ga4Sessions": 11,
-      "ga4EngageRate": 9,
-      "daysSinceCommit": 7,
-      "imprDelta": 0,
+      "rows": 16,
+      "ga4Sessions": 0,
+      "ga4EngageRate": 0,
+      "daysSinceCommit": 16,
+      "imprDelta": -17.1,
       "components": {
-        "imprDelta": 50,
+        "imprDelta": 7,
         "ctr": 0,
         "striking": 0,
-        "ga4": 9,
-        "index": 2,
-        "blog": 70,
-        "vol": 0
+        "ga4": 0,
+        "index": 32,
+        "blog": 20,
+        "vol": 48
       }
     },
     {
@@ -519,7 +542,7 @@
       "rows": 1,
       "ga4Sessions": 7,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 13,
+      "daysSinceCommit": 14,
       "imprDelta": 0,
       "components": {
         "imprDelta": 50,
@@ -542,7 +565,7 @@
       "rows": 1,
       "ga4Sessions": 0,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 16,
+      "daysSinceCommit": 17,
       "imprDelta": 0,
       "components": {
         "imprDelta": 50,
@@ -552,29 +575,6 @@
         "index": 2,
         "blog": 20,
         "vol": 0
-      }
-    },
-    {
-      "name": "Boundless Global",
-      "score": 11,
-      "avgPos": 7.9,
-      "impressions": 79,
-      "clicks": 0,
-      "ctr": 0,
-      "strikingCount": 0,
-      "rows": 15,
-      "ga4Sessions": 0,
-      "ga4EngageRate": 0,
-      "daysSinceCommit": 15,
-      "imprDelta": -24.8,
-      "components": {
-        "imprDelta": 0,
-        "ctr": 0,
-        "striking": 0,
-        "ga4": 0,
-        "index": 30,
-        "blog": 20,
-        "vol": 47
       }
     },
     {
@@ -588,7 +588,7 @@
       "rows": 6,
       "ga4Sessions": 8,
       "ga4EngageRate": 0,
-      "daysSinceCommit": 10,
+      "daysSinceCommit": 11,
       "imprDelta": -30,
       "components": {
         "imprDelta": 0,
@@ -598,29 +598,6 @@
         "index": 12,
         "blog": 40,
         "vol": 29
-      }
-    },
-    {
-      "name": "bailbondsstanton",
-      "score": 6,
-      "avgPos": 10,
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0,
-      "strikingCount": 0,
-      "rows": 1,
-      "ga4Sessions": 7,
-      "ga4EngageRate": 0,
-      "daysSinceCommit": 3,
-      "imprDelta": -33.3,
-      "components": {
-        "imprDelta": 0,
-        "ctr": 0,
-        "striking": 0,
-        "ga4": 0,
-        "index": 2,
-        "blog": 100,
-        "vol": 8
       }
     },
     {
@@ -644,6 +621,29 @@
         "index": 2,
         "blog": 100,
         "vol": 0
+      }
+    },
+    {
+      "name": "bailbondsstanton",
+      "score": 5,
+      "avgPos": 10,
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "strikingCount": 0,
+      "rows": 1,
+      "ga4Sessions": 7,
+      "ga4EngageRate": 0,
+      "daysSinceCommit": 4,
+      "imprDelta": -33.3,
+      "components": {
+        "imprDelta": 0,
+        "ctr": 0,
+        "striking": 0,
+        "ga4": 0,
+        "index": 2,
+        "blog": 70,
+        "vol": 8
       }
     }
   ]

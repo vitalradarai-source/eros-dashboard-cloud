@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T01:06:25.780Z",
+  "generatedAt": "2026-05-22T19:17:55.672Z",
   "date": "2026-05-22",
   "summary": {
     "total": 6,
@@ -215,17 +215,17 @@
             "pageHits": 948
           },
           "post": {
-            "clicks": 167,
-            "impressions": 19111,
-            "avgPosition": 29.11,
-            "ctr": 0.874,
-            "pageHits": 770
+            "clicks": 171,
+            "impressions": 19436,
+            "avgPosition": 31.22,
+            "ctr": 0.88,
+            "pageHits": 808
           },
           "delta": {
-            "clicks": -7.7,
-            "impressions": -23,
-            "avgPosition": 15.91,
-            "ctr": 0.14400000000000002
+            "clicks": -5.5,
+            "impressions": -21.7,
+            "avgPosition": 13.8,
+            "ctr": 0.15000000000000002
           }
         },
         "control": {
@@ -237,24 +237,24 @@
             "pageHits": 948
           },
           "post": {
-            "clicks": 167,
-            "impressions": 19111,
-            "avgPosition": 29.11,
-            "ctr": 0.874,
-            "pageHits": 770
+            "clicks": 171,
+            "impressions": 19436,
+            "avgPosition": 31.22,
+            "ctr": 0.88,
+            "pageHits": 808
           },
           "delta": {
-            "clicks": -7.7,
-            "impressions": -23,
-            "avgPosition": 15.91,
-            "ctr": 0.14400000000000002
+            "clicks": -5.5,
+            "impressions": -21.7,
+            "avgPosition": 13.8,
+            "ctr": 0.15000000000000002
           }
         },
         "net": {
           "clicks": 0,
           "impressions": 0,
-          "avgPosition": 15.91,
-          "ctr": 0.144
+          "avgPosition": 13.8,
+          "ctr": 0.15
         }
       },
       "checkInDays": [

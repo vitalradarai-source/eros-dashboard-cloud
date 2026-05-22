@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-20T06:57:19.215466",
-  "date": "2026-05-20",
+  "generatedAt": "2026-05-22T12:14:20.159750",
+  "date": "2026-05-22",
   "filter": {
     "maxKd": 35.0,
     "minVolume": 100,
@@ -203,7 +203,7 @@
       "gsc_match": {
         "site": "bailbondsrowlandheights",
         "position": 5.2,
-        "impressions": 10630,
+        "impressions": 9013,
         "clicks": 1
       }
     },
@@ -1350,8 +1350,8 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "sanbernardinobailbond",
-        "position": 70.0,
-        "impressions": 3,
+        "position": 62.5,
+        "impressions": 2,
         "clicks": 0
       }
     },
@@ -3146,8 +3146,8 @@
       "market": "SOCAL",
       "gsc_match": {
         "site": "bailbondsandimas",
-        "position": 27.4,
-        "impressions": 5,
+        "position": 28.8,
+        "impressions": 4,
         "clicks": 0
       }
     },

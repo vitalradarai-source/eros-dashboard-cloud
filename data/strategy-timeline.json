@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T01:06:25.850Z",
+  "generatedAt": "2026-05-22T19:17:55.744Z",
   "date": "2026-05-22",
   "timelines": [
     {
@@ -186,8 +186,8 @@
       "currentMetrics": {
         "netClicks": 0,
         "netImps": 0,
-        "netPos": 15.91,
-        "netCtr": 0.144
+        "netPos": 13.8,
+        "netCtr": 0.15
       },
       "nextMilestone": {
         "day": 14,
@@ -241,8 +241,8 @@
           "verdict": "IN_PROGRESS",
           "netClicks": 0,
           "netImps": 0,
-          "netPos": 15.91,
-          "netCtr": 0.144,
+          "netPos": 13.8,
+          "netCtr": 0.15,
           "hitCheckIn": null
         }
       ],
