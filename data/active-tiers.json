@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-20T13:57:57.174Z",
-  "date": "2026-05-20",
+  "generatedAt": "2026-05-22T00:56:33.298Z",
+  "date": "2026-05-22",
   "totalSites": 37,
   "distribution": {
     "S": 0,
     "A": 2,
     "B": 29,
-    "C": 5,
-    "D": 1
+    "C": 6,
+    "D": 0
   },
   "sites": [
     {
@@ -31,13 +31,13 @@
       "display": "VitalRadar",
       "kind": "lovable",
       "inBailMaster": false,
-      "score": 5,
-      "bucket": "D",
+      "score": 15,
+      "bucket": "C",
       "source": "non-bail-fallback",
       "signals": {
         "live": 5,
         "gsc_access": 5,
-        "has_blogs": 0,
+        "has_blogs": 10,
         "age": 5,
         "spa_penalty": -15,
         "cf_pages": 0,

@@ -1,5 +1,5 @@
 {
-  "surfacedOn": "2026-05-20",
+  "surfacedOn": "2026-05-22",
   "count": 5,
   "autoApproveCount": 2,
   "needsApprovalCount": 3,
@@ -24,7 +24,7 @@
       "approvalLane": "AUTO-APPROVE",
       "approvalReason": "EROS-internal SEO tactic (schema / content / on-page). No budget, no external access, no legal disclosure. EROS activates without waiting for explicit YES.",
       "status": "auto-approve-eligible",
-      "surfacedFirstOn": "2026-05-20"
+      "surfacedFirstOn": "2026-05-22"
     },
     {
       "id": "pending-2026-05-18-systematic-gbp-review-request-workflow",
@@ -46,7 +46,7 @@
       "approvalLane": "COMPLIANCE-REQUIRED",
       "approvalReason": "Legal/consent risk requires explicit Angelo approval.",
       "status": "awaiting-angelo-decision",
-      "surfacedFirstOn": "2026-05-20"
+      "surfacedFirstOn": "2026-05-22"
     },
     {
       "id": "pending-2026-05-18-bing-ads-testing-for-bail-bonds",
@@ -68,7 +68,7 @@
       "approvalLane": "BUDGET-REQUIRED",
       "approvalReason": "Requires cash budget ($200-500/mo per site). Angelo approval mandatory.",
       "status": "awaiting-angelo-decision",
-      "surfacedFirstOn": "2026-05-20"
+      "surfacedFirstOn": "2026-05-22"
     },
     {
       "id": "pending-2026-05-18-directory-submission-sprint",
@@ -90,7 +90,7 @@
       "approvalLane": "ACCESS-REQUIRED",
       "approvalReason": "Needs Sean/Angelo-controlled input (bio, license, account, time). Angelo approval mandatory.",
       "status": "awaiting-angelo-decision",
-      "surfacedFirstOn": "2026-05-20"
+      "surfacedFirstOn": "2026-05-22"
     },
     {
       "id": "pending-2026-05-18-youtube-has-been-on-the-deferred-video-c",
@@ -112,7 +112,7 @@
       "approvalLane": "AUTO-APPROVE",
       "approvalReason": "EROS-internal SEO tactic (schema / content / on-page). No budget, no external access, no legal disclosure. EROS activates without waiting for explicit YES.",
       "status": "auto-approve-eligible",
-      "surfacedFirstOn": "2026-05-20"
+      "surfacedFirstOn": "2026-05-22"
     }
   ],
   "autoApprove": [
@@ -136,7 +136,7 @@
       "approvalLane": "AUTO-APPROVE",
       "approvalReason": "EROS-internal SEO tactic (schema / content / on-page). No budget, no external access, no legal disclosure. EROS activates without waiting for explicit YES.",
       "status": "auto-approve-eligible",
-      "surfacedFirstOn": "2026-05-20"
+      "surfacedFirstOn": "2026-05-22"
     },
     {
       "id": "pending-2026-05-18-youtube-has-been-on-the-deferred-video-c",
@@ -158,7 +158,7 @@
       "approvalLane": "AUTO-APPROVE",
       "approvalReason": "EROS-internal SEO tactic (schema / content / on-page). No budget, no external access, no legal disclosure. EROS activates without waiting for explicit YES.",
       "status": "auto-approve-eligible",
-      "surfacedFirstOn": "2026-05-20"
+      "surfacedFirstOn": "2026-05-22"
     }
   ],
   "needsApproval": [
@@ -182,7 +182,7 @@
       "approvalLane": "COMPLIANCE-REQUIRED",
       "approvalReason": "Legal/consent risk requires explicit Angelo approval.",
       "status": "awaiting-angelo-decision",
-      "surfacedFirstOn": "2026-05-20"
+      "surfacedFirstOn": "2026-05-22"
     },
     {
       "id": "pending-2026-05-18-bing-ads-testing-for-bail-bonds",
@@ -204,7 +204,7 @@
       "approvalLane": "BUDGET-REQUIRED",
       "approvalReason": "Requires cash budget ($200-500/mo per site). Angelo approval mandatory.",
       "status": "awaiting-angelo-decision",
-      "surfacedFirstOn": "2026-05-20"
+      "surfacedFirstOn": "2026-05-22"
     },
     {
       "id": "pending-2026-05-18-directory-submission-sprint",
@@ -226,7 +226,7 @@
       "approvalLane": "ACCESS-REQUIRED",
       "approvalReason": "Needs Sean/Angelo-controlled input (bio, license, account, time). Angelo approval mandatory.",
       "status": "awaiting-angelo-decision",
-      "surfacedFirstOn": "2026-05-20"
+      "surfacedFirstOn": "2026-05-22"
     }
   ]
 }

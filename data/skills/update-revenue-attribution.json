@@ -1,0 +1,186 @@
+{
+  "name": "update-revenue-attribution",
+  "title": "/update-revenue-attribution — Weekly Revenue by Attribution Refresh",
+  "filePath": "/Users/emmanuelpableo/.claude/commands/update-revenue-attribution.md",
+  "mtime": "2026-05-21T09:42:02.110Z",
+  "sizeBytes": 11171,
+  "preamble": "Single entry point for refreshing the \"Weekly Revenue by Attribution\" workbook. Built 2026-05-21.\n\n**Sheet:** https://docs.google.com/spreadsheets/d/1Dsu4eyLIfIr7YGrDK5DxbRGeX4r5R8y3k3XxTrWwqIY\n**Folder:** https://drive.google.com/drive/folders/1nZVPf5CWvL24ZbtXDVeI6uYrP0by1t09 (\"Weekly Revenue by Attribution\", sibling of \"ReEnergized — April 2026 Tasks\")\n**Auth:** 4434lifeline@gmail.com via `GOOGLE_CLIENT_ID/SECRET/REFRESH_TOKEN` in `~/Workspaces/reenergized/.env`\n**Working dir:** `~/Workspaces/reenergized/weekly-revenue-by-attribution`\n\n---",
+  "sections": [
+    {
+      "heading": "Required input files in ~/Downloads/",
+      "depth": 2,
+      "startLine": 16,
+      "body": "\n| Role | Filename pattern | Source | Refresh cadence |\n|---|---|---|---|\n| Payments (money truth) | `Payment Transactions 14389 - 1-1-2024 - <today>.csv` | ClubReady → Reports → Payment Transactions (FULL RANGE from 1/1/2024) | Weekly |\n| Prospects (attribution truth) | `<MM_DD_YY> LeadsExport.xlsm - Prospect List (N).csv` | ClubReady → Reports → Prospects → save .xlsm Prospect List tab as CSV | Weekly |\n| Referrals report (optional cross-check) | `Referrals 14389 - <start> - <end>.csv` | ClubReady → Reports → Referrals (any range) | Optional |\n| KPI Score Card (layout reference, no refresh needed) | `KPI's - Score Cards - Weekly KPIs.csv` | — | One-time |\n\n**CRITICAL — Payments file:** must be FULL RANGE (1/1/2024 → today). Partial exports lose history.\n\n**Prospect List:** the LeadsExport `.xlsm` has a \"Prospect List\" tab containing Angelo's manually-edited Referral Type column. Always re-export this when running the refresh — otherwise newly-added leads have no attribution and pile up in the \"Unattributed (Pre-Tracking)\" bucket.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Usage",
+      "depth": 2,
+      "startLine": 31,
+      "body": "\n### Default (auto-detect newest)\nUser: `/update-revenue-attribution`\n\nEROS:\n1. `ls -t ~/Downloads/` to find newest file matching each pattern.\n2. Print the chosen filenames + ask Angelo to confirm.\n3. Wait for \"go\" before running.\n\n### With explicit filenames\nUser: `/update-revenue-attribution payments=Payment Transactions 14389 - 1-1-2024 - 5-21-2026.csv prospects=02_20_26 LeadsExport.xlsm - Prospect List (2).csv`\n\n---\n\n",
+      "subsections": [
+        {
+          "heading": "Default (auto-detect newest)",
+          "startLine": 33
+        },
+        {
+          "heading": "With explicit filenames",
+          "startLine": 41
+        }
+      ],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Phase 0 — Pre-flight",
+      "depth": 2,
+      "startLine": 46,
+      "body": "\n1. `cd ~/Workspaces/reenergized/weekly-revenue-by-attribution`\n2. Verify env keys: `grep -E \"^GOOGLE_\" ~/Workspaces/reenergized/.env | sed 's/=.*/=SET/'`\n3. Verify both input files exist:\n   ```bash\n   ls ~/Downloads/ | grep -E \"Payment Transactions 14389|LeadsExport.*Prospect List\"\n   ```\n4. If filenames differ from the previous run, update the `PAYMENTS_CSV` / `PROSPECTS_CSV` constants at the top of `build-weekly-revenue.py` (lines ~22-24).\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [
+        "~/Workspaces/reenergized/weekly-revenue-by-attribution",
+        "~/Workspaces/reenergized/.env"
+      ],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "0"
+    },
+    {
+      "heading": "Phase 1 — Local ETL (1,264+ rows → JSON snapshots)",
+      "depth": 2,
+      "startLine": 58,
+      "body": "\n```bash\npython3 build-weekly-revenue.py\n```\n\nWhat it does:\n- Parses payments, classifies each row as `Member` or `Non-Member` from `InvoiceDescription` (rules in script header).\n- Parses prospects, normalizes 16 raw referral values into canonical buckets (`Google`, `Google Organic`, `Google Ads`, `GBP`, `Friend or Family`, `Yelp`, `ReEnergized Employee`, `ClassPass`, `Noticed The Club`, `Social — Instagram/Facebook/TikTok/YouTube/LinkedIn`, `Conference`, `Groupon`, `Dr Referral`, `Direct Mail`, `Stress Relief Gift Card`, **`Unknown API`** = the Website/Phone funnel via CTM + PerformanceIQ Book Now).\n- Left-joins payments → prospect attribution by full name. Unmatched rows get **`Unattributed (Pre-Tracking)`**.\n- Persists `data/raw_payments.json`, `data/raw_prospects.json`, `data/attribution_map.json`, `data/tables.json`.\n\n**Phase 1 gate (HALTS if fails):**\n- ✅ Row count = expected (currently 1,264 — will grow each week).\n- ✅ Total $ = expected (currently $235,757.54 — will grow).\n- ✅ Member + Non-Member = 100% (zero `Unknown` revenue_type — every InvoiceDescription must classify).\n\nIf the gate fails with new `Unknown` InvoiceDescription values, add a pattern to `MEMBER_PATTERNS` or `NONMEMBER_PATTERNS` (top of script) and re-run.\n\n**Phase 2 gate (also runs inside the same script):**\n- ✅ Every pivot sum ties to raw total (12 pivots: weekly/monthly/quarterly/YTD × all/member/non_member).\n- ✅ `weekly_member[w] + weekly_non_member[w] = weekly_all[w]` for every week.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "python3 build-weekly-revenue.py"
+      ],
+      "files": [],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "1"
+    },
+    {
+      "heading": "Phase 3 — Drive folder + Sheet population (17 tabs)",
+      "depth": 2,
+      "startLine": 83,
+      "body": "\n```bash\nnode create-sheet.mjs\n```\n\nIdempotent. Reuses the existing folder + sheet (look-up by name), refreshes all 17 base tabs:\n\n| Tab | Purpose |\n|---|---|\n| README | Methodology, sources, refresh date, attribution coverage caveat |\n| Raw_Payments | 1,264+ enriched payment rows (revenue_type, referral_norm) |\n| Raw_Prospects | Normalized prospect rows |\n| Attribution_Map | name_key → referral_norm (edit here to override attribution) |\n| Weekly_All / Weekly_Member / Weekly_NonMember | ISO-week × referral type × $ |\n| Monthly_All / Monthly_Member / Monthly_NonMember | YYYY-MM × referral × $ |\n| Quarterly_All / Quarterly_Member / Quarterly_NonMember | YYYY Qn × referral × $ |\n| YTD_All / YTD_Member / YTD_NonMember | Calendar year × referral × $ |\n| Cross_Check | Reconciliation log (Phase 4 appends to top of this tab) |\n\nAfter this phase the sheet is populated but PLAIN — no styling, no Dashboard/Charts/Summary tabs.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node create-sheet.mjs"
+      ],
+      "files": [],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "3"
+    },
+    {
+      "heading": "Phase 4 — Apply styling + add Dashboard/Charts/Summary tabs",
+      "depth": 2,
+      "startLine": 107,
+      "body": "\n```bash\nnode style-and-charts.mjs\n```\n\nIdempotent. Wipes existing bandings/CFs/merges/charts first, then re-applies. Adds 3 new tabs and reorders so the final tab order is:\n\n1. **README** (slate)\n2. **Dashboard** (purple — hero, scorecards + KPIs)\n3. **Charts** (indigo — 5 embedded charts)\n4. **Summary** (violet — exec rollup tables)\n5. Raw_Payments / Raw_Prospects / Attribution_Map (slate)\n6. Weekly_* (blue), Monthly_* (teal), Quarterly_* (green), YTD_* (amber)\n7. Cross_Check (red)\n\nApplies universal styling on every data tab:\n- Roboto font, navy-900 header row with bold white text\n- Frozen header row + frozen first column\n- Alternating row banding (white / slate-50)\n- Currency format on $ columns, bold amber TOTAL footer\n- 3-color heat-map (red → amber → green) on the TOTAL column of every pivot\n\nEmbeds 5 charts on the Charts tab:\n1. Monthly Revenue — Member vs Non-Member (stacked column)\n2. Top 10 Attribution Sources (horizontal bar)\n3. Weekly Revenue Trend — last 26 weeks (line)\n4. Quarterly Revenue (column)\n5. Attribution Mix — Top 8 Sources (donut)\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node style-and-charts.mjs"
+      ],
+      "files": [],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "4"
+    },
+    {
+      "heading": "Phase 5 — Read-back verification + email",
+      "depth": 2,
+      "startLine": 139,
+      "body": "\n```bash\nnode verify-and-email.mjs\n```\n\nReads `Raw_Payments` + all 12 pivot TOTAL columns back from the live Sheet via Sheets API (using `valueRenderOption: 'UNFORMATTED_VALUE'` — currency format would otherwise return display strings), reconciles against raw CSV totals, runs 17 checks:\n\n- ✅ Raw_Payments row count = expected\n- ✅ Raw_Payments $ total = expected\n- ✅ Member + Non-Member = Total\n- ✅ Each of 12 pivot TOTAL-column sums = expected (per slice)\n\nAppends a verification block to the top of **Cross_Check**. Emails Angelo at 4434lifeline@gmail.com with the result. If any check fails, subject is prefixed `[FAIL]`.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "node verify-and-email.mjs"
+      ],
+      "files": [],
+      "urls": [],
+      "isPhase": true,
+      "phaseNumber": "5"
+    },
+    {
+      "heading": "All-in-one shortcut",
+      "depth": 2,
+      "startLine": 156,
+      "body": "\n```bash\ncd ~/Workspaces/reenergized/weekly-revenue-by-attribution && \\\n  python3 build-weekly-revenue.py && \\\n  node create-sheet.mjs && \\\n  node style-and-charts.mjs && \\\n  node verify-and-email.mjs\n```\n\n---\n\n",
+      "subsections": [],
+      "scripts": [
+        "python3 build-weekly-revenue.py",
+        "node create-sheet.mjs",
+        "node style-and-charts.mjs",
+        "node verify-and-email.mjs"
+      ],
+      "files": [
+        "~/Workspaces/reenergized/weekly-revenue-by-attribution"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "After successful run, EROS reports",
+      "depth": 2,
+      "startLine": 168,
+      "body": "\n1. **Totals** — new row count, new $ total (deltas vs prior week from a saved `last-run-totals.json` if present).\n2. **Top movers** — which attribution buckets grew week-over-week.\n3. **Attribution coverage** — name-match rate (% rows / % $) and the \"Unattributed (Pre-Tracking)\" pool size. If <50% coverage, flag.\n4. **Member share** — Member % of total revenue and per-quarter trend.\n5. **Cross-check status** — 17/17 PASS or list failing checks.\n6. **Sheet URL** for Angelo to open.\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Gotchas / known quirks",
+      "depth": 2,
+      "startLine": 179,
+      "body": "\n- **Filename suffix `(N)`**: ClubReady appends `(1)`, `(2)`, etc. on re-download. `ls -t` returns newest first by mtime, which is reliable. Don't rely on the highest number.\n- **Prospect List export date is the cutoff**: any payment whose payer name doesn't match a prospect added before the export date lands in `Unattributed (Pre-Tracking)`. Each weekly refresh REQUIRES a fresh prospect-list export to shrink this bucket.\n- **\"Unknown API\" is the website/phone funnel** — NOT noise. Leads via CallTrackingMetrics phone tracking + PerformanceIQ Book Now web form. Treat as a primary channel.\n- **Sheets API quirks** (see [[sheets-api-quirks]] memory):\n  - `legendPosition: 'NO_LEGEND'`, not `'NONE'`.\n  - BAR chart series target `BOTTOM_AXIS`, COLUMN/LINE target `LEFT_AXIS`.\n  - LINE charts must NOT have a `stackedType` field.\n  - `values.get` returns formatted display strings; pass `valueRenderOption: 'UNFORMATTED_VALUE'` when summing.\n  - `addBanding` errors on re-run — delete existing bandings/CFs/merges first.\n- **Quota**: Sheets read quota = 60/min/user. The script batches all reads into ONE `values.batchGet` to stay under. If you ever hit `RESOURCE_EXHAUSTED`, wait 70s and re-run — fully idempotent.\n- **Phase 1 unknown InvoiceDescription**: if ClubReady adds a new product type, Phase 1 gate will halt and print the offender. Add a regex to `MEMBER_PATTERNS` or `NONMEMBER_PATTERNS` at the top of `build-weekly-revenue.py` and re-run.\n- **Email rule**: Phase 5 only sends to 4434lifeline@gmail.com. Never to third parties (see [[email-send-only-to-angelo]]).\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "File layout",
+      "depth": 2,
+      "startLine": 196,
+      "body": "\n```\n~/Workspaces/reenergized/weekly-revenue-by-attribution/\n├── PLAN.md                              ← Original plan (v1)\n├── PLAN-V2-website-phone-attribution.md ← Plan for splitting CTM vs Book Now (deferred)\n├── build-weekly-revenue.py              ← Phase 1+2 ETL + pivots\n├── create-sheet.mjs                     ← Phase 3 Sheet population\n├── style-and-charts.mjs                 ← Phase 4 styling + Dashboard/Charts/Summary\n├── verify-and-email.mjs                 ← Phase 5 verification + email\n├── weekly-revenue-by-attribution-info.json ← Folder + Sheet IDs (do not delete)\n└── data/\n    ├── raw_payments.json\n    ├── raw_prospects.json\n    ├── attribution_map.json\n    └── tables.json\n```\n\n---\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [
+        "~/Workspaces/reenergized/weekly-revenue-by-attribution/"
+      ],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    },
+    {
+      "heading": "Future enhancements (deferred)",
+      "depth": 2,
+      "startLine": 216,
+      "body": "\nSee `PLAN-V2-website-phone-attribution.md` for the full plan to split `Unknown API` into:\n- **CTM Phone Calls** (CallTrackingMetrics source — Google Ads / Organic / GBP / Direct / Yelp)\n- **Book Now Web** (PerformanceIQ form submissions with UTM)\n\nCurrently both are bundled as one `Unknown API` bucket. To split, EROS would need either:\n- ClubReady Referrals report at wider date range (15 min from Angelo), OR\n- CTM CSV/API export (1 day to build), OR\n- PerformanceIQ Book Now submission log (half day to build).\n\n",
+      "subsections": [],
+      "scripts": [],
+      "files": [],
+      "urls": [],
+      "isPhase": false,
+      "phaseNumber": null
+    }
+  ],
+  "rawLength": 10969,
+  "sectionCount": 12,
+  "phaseCount": 5
+}

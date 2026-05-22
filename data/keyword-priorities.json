@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T13:57:15.128Z",
+  "generatedAt": "2026-05-22T00:56:11.130Z",
   "total": 19,
   "opportunities": [
     {
@@ -7,10 +7,10 @@
       "kind": "microsite",
       "keyword": "bail money loans rowland heights ca",
       "position": 5.2,
-      "impressions": 10630,
+      "impressions": 9013,
       "currentCtr": 1,
       "expectedCtr": 5.2,
-      "monthlyClicksUpside": 446.5,
+      "monthlyClicksUpside": 378.5,
       "action": "CTR-FIX (rewrite meta)"
     },
     {
@@ -23,17 +23,6 @@
       "expectedCtr": 1.7,
       "monthlyClicksUpside": 2.3,
       "action": "CONTENT-PUSH (add depth/links)"
-    },
-    {
-      "site": "ReEnergized",
-      "kind": "main",
-      "keyword": "are there combination devices for red light and other wellness modalities?",
-      "position": 2,
-      "impressions": 7,
-      "currentCtr": 0,
-      "expectedCtr": 18.7,
-      "monthlyClicksUpside": 1.3,
-      "action": "CTR-FIX (rewrite meta)"
     },
     {
       "site": "gardenabailbonds",
@@ -73,10 +62,10 @@
       "kind": "main",
       "keyword": "\"viome precision health\"",
       "position": 2,
-      "impressions": 4,
+      "impressions": 5,
       "currentCtr": 0,
       "expectedCtr": 18.7,
-      "monthlyClicksUpside": 0.7,
+      "monthlyClicksUpside": 0.9,
       "action": "CTR-FIX (rewrite meta)"
     },
     {
@@ -138,12 +127,23 @@
       "site": "ReEnergized",
       "kind": "main",
       "keyword": "aduro led mask",
-      "position": 10.7,
+      "position": 10.8,
       "impressions": 20,
       "currentCtr": 0,
       "expectedCtr": 1.8,
       "monthlyClicksUpside": 0.4,
       "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "360 dna",
+      "position": 9.1,
+      "impressions": 7,
+      "currentCtr": 0,
+      "expectedCtr": 2.2,
+      "monthlyClicksUpside": 0.2,
+      "action": "CTR-FIX (rewrite meta)"
     },
     {
       "site": "ReEnergized",
@@ -159,12 +159,12 @@
     {
       "site": "ReEnergized",
       "kind": "main",
-      "keyword": "360 dna",
-      "position": 10,
-      "impressions": 6,
+      "keyword": "aduro red light mask",
+      "position": 5,
+      "impressions": 4,
       "currentCtr": 0,
-      "expectedCtr": 1.9,
-      "monthlyClicksUpside": 0.1,
+      "expectedCtr": 5.2,
+      "monthlyClicksUpside": 0.2,
       "action": "CTR-FIX (rewrite meta)"
     },
     {
@@ -192,17 +192,6 @@
     {
       "site": "ReEnergized",
       "kind": "main",
-      "keyword": "aduro mask",
-      "position": 13,
-      "impressions": 5,
-      "currentCtr": 0,
-      "expectedCtr": 1.5,
-      "monthlyClicksUpside": 0.1,
-      "action": "CONTENT-PUSH (add depth/links)"
-    },
-    {
-      "site": "ReEnergized",
-      "kind": "main",
       "keyword": "algae bits",
       "position": 23,
       "impressions": 5,
@@ -210,6 +199,17 @@
       "expectedCtr": 1,
       "monthlyClicksUpside": 0.1,
       "action": "CONTENT-PUSH (add depth/links)"
+    },
+    {
+      "site": "ReEnergized",
+      "kind": "main",
+      "keyword": "aduro mask",
+      "position": 9.3,
+      "impressions": 4,
+      "currentCtr": 0,
+      "expectedCtr": 2.2,
+      "monthlyClicksUpside": 0.1,
+      "action": "CTR-FIX (rewrite meta)"
     }
   ]
 }
